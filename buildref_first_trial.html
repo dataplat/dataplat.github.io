@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="shortcut icon" type="image/ico" href="http://www.datatables.net/favicon.ico">
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=2.0">
+	<title>DataTables example - Ajax data source (arrays)</title>
+	<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css" >
+	<script type="text/javascript" language="javascript" src="//code.jquery.com/jquery-1.12.4.js" ></script>
+	<script type="text/javascript" language="javascript" src="//cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+	
+	<script type="text/javascript" language="javascript">
+$(document).ready(function() {
+	var t = $('#example').DataTable({
+	"order": [0, 'desc'],
+	"lengthMenu": [ [25, 50, 100, -1], [25, 50, 100, "All"] ],
+	"pageLength": 100,
+	"columnDefs": [
+            {
+                "targets": [ 0 ],
+                "visible": false,
+                "searchable": false
+            }
+        ]
+	});
+	$('button.filterName').on('click', function() {
+		t.columns( 2 )
+        .search( $(this).data('filtervalue') )
+        .draw();
+	})
+	$.ajax({
+	  dataType: "json",
+	  url: 'https://sqlcollaborative.github.io/assets/dbatools-buildref-index.json',
+	  success: function (data) {
+		var newarr = []
+		var prevName = '.'
+		var prevSP = '.'
+		var prevCU = '.'
+		var prevSupportedUntil = '.'
+		$.each(data.Data, function(i, el) {
+			if(el.Name && el.Name.length > 3) {
+				if(el.Name != prevName) {
+					prevName = el.Name
+					prevSP = '.'
+					prevCU = '.'
+					prevSupportedUntil = '.'
+				}
+			}
+			if(el.SP) {
+				var compareSP = ''
+				if($.isArray(el.SP)) {
+					compareSP = el.SP.join()
+				} else {
+					compareSP = el.SP
+				}
+				if(compareSP != prevSP) {
+					prevSP = compareSP
+					prevCU = '.'
+					prevSupportedUntil = '.'
+				}
+			}
+			if(el.CU && el.CU.length > 2) {
+				if(el.CU != prevCU) {
+					prevCU = el.CU
+				}
+			}
+			if(el.SupportedUntil && el.SupportedUntil.length > 2) {
+				if(el.SupportedUntil != prevSupportedUntil) {
+					prevSupportedUntil = el.SupportedUntil.substring(0,10)
+				}
+			}
+			var nKBList = '.'
+			if(el.KBList) {
+				if($.isArray(el.KBList)) {
+					var KBArr = []
+					for(var i=0;i<el.KBList.length;i++) {
+						KBArr.push('<a target="_blank" href="https://duckduckgo.com/?q=kb' + el.KBList[i] + '">KB' + el.KBList[i] + '</a>')
+					}
+					nKBList = KBArr.join()
+				} else {
+					nKBList = '<a target="_blank" href="https://duckduckgo.com/?q=kb' + el.KBList + '">KB' + el.KBList + '</a>'
+				}
+			}
+			t.row.add(
+				[i, el.Version, prevName, prevSP, prevCU, prevSupportedUntil, nKBList]
+			)
+		})
+		t.draw(false)
+	  }
+	});
+	
+	
+	
+} );
+
+	</script>
+</head>
+<body class="dt-example">
+	<div class="container">
+		<section>
+			<h1>DataTables example <span>Ajax data source (arrays)</span></h1>
+			
+			<div class="demo-html">
+				<button class="filterName" data-filtervalue="2000">2000</button>
+				<button class="filterName" data-filtervalue="2005">2005</button>
+				<button class="filterName" data-filtervalue="2008">2008</button>
+				<button class="filterName" data-filtervalue="2008R2">2008R2</button>
+				<button class="filterName" data-filtervalue="2012">2012</button>
+				<button class="filterName" data-filtervalue="2014">2014</button>
+				<button class="filterName" data-filtervalue="2016">2016</button>
+				<button class="filterName" data-filtervalue="">All</button>
+			</div>
+			<table id="example" class="display" cellspacing="0" width="100%">
+				<thead>
+					<tr>
+						<th>Id</th>
+						<th>Version</th>
+						<th>Name</th>
+						<th>SP</th>
+						<th>CU</th>
+						<th>End Of Support</th>
+						<th>KB Ref</th>
+					</tr>
+				</thead>
+				<tfoot>
+					<tr>
+						<th>Id</th>
+						<th>Version</th>
+						<th>Name</th>
+						<th>SP</th>
+						<th>CU</th>
+						<th>End Of Support</th>
+						<th>KB Ref</th>
+					</tr>
+				</tfoot>
+			</table>
+			
+		</section>
+	</div>
+	<section>
+	</section>
+</body>
+</html>
