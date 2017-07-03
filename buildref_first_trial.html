@@ -1,11 +1,17 @@
+
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
 	<link rel="shortcut icon" type="image/ico" href="http://www.datatables.net/favicon.ico">
 	<meta name="viewport" content="initial-scale=1.0, maximum-scale=2.0">
-	<title>DataTables example - Ajax data source (arrays)</title>
+	<title>BuildRef example</title>
 	<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css" >
+	<style>
+		button.filter.pressed {
+			border-color: red;
+		}
+	</style>
 	<script type="text/javascript" language="javascript" src="//code.jquery.com/jquery-1.12.4.js" ></script>
 	<script type="text/javascript" language="javascript" src="//cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
 	
@@ -27,6 +33,61 @@ $(document).ready(function() {
 		t.columns( 2 )
         .search( $(this).data('filtervalue') )
         .draw();
+		$('button.filterName').removeClass('pressed')
+		$(this).addClass('pressed');
+		
+	})
+	$('button.filterSP').on('click', function() {
+		if($(this).hasClass('pressed')) {
+					$(this).removeClass('pressed')
+					t.columns( 7 )
+					.search("")
+					.draw();
+		} else {
+			$(this).addClass('pressed')
+			t.columns( 7 )
+			.search( $(this).data('filtervalue') )
+			.draw();
+		}
+	})
+	$('button.filterCU').on('click', function() {
+		if($(this).hasClass('pressed')) {
+					$(this).removeClass('pressed')
+					t.columns( 8 )
+					.search("")
+					.draw();
+		} else {
+			$(this).addClass('pressed')
+			t.columns( 8 )
+			.search( $(this).data('filtervalue') )
+			.draw();
+		}
+	})
+	$('button.filterLatestSP').on('click', function() {
+		if($(this).hasClass('pressed')) {
+					$(this).removeClass('pressed')
+					t.columns( 9 )
+					.search("")
+					.draw();
+		} else {
+			$(this).addClass('pressed')
+			t.columns( 9 )
+			.search( $(this).data('filtervalue') )
+			.draw();
+		}
+	})
+	$('button.filterLatestCU').on('click', function() {
+		if($(this).hasClass('pressed')) {
+					$(this).removeClass('pressed')
+					t.columns( 10 )
+					.search("")
+					.draw();
+		} else {
+			$(this).addClass('pressed')
+			t.columns( 10 )
+			.search( $(this).data('filtervalue') )
+			.draw();
+		}
 	})
 	$.ajax({
 	  dataType: "json",
@@ -37,16 +98,24 @@ $(document).ready(function() {
 		var prevSP = '.'
 		var prevCU = '.'
 		var prevSupportedUntil = '.'
+		var prevrow = null
+		var results = [];
 		$.each(data.Data, function(i, el) {
+			var is_SP = '.'
+			var is_CU = '.'
+			var is_LatestSP = '.'
+			var is_LatestCU = '.'
 			if(el.Name && el.Name.length > 3) {
 				if(el.Name != prevName) {
 					prevName = el.Name
 					prevSP = '.'
 					prevCU = '.'
+					is_LatestCU = 'X'
 					prevSupportedUntil = '.'
 				}
 			}
 			if(el.SP) {
+				is_SP = 'X'
 				var compareSP = ''
 				if($.isArray(el.SP)) {
 					compareSP = el.SP.join()
@@ -56,10 +125,12 @@ $(document).ready(function() {
 				if(compareSP != prevSP) {
 					prevSP = compareSP
 					prevCU = '.'
+					is_LatestCU = 'X'
 					prevSupportedUntil = '.'
 				}
 			}
 			if(el.CU && el.CU.length > 2) {
+				is_CU = 'X'
 				if(el.CU != prevCU) {
 					prevCU = el.CU
 				}
@@ -81,10 +152,26 @@ $(document).ready(function() {
 					nKBList = '<a target="_blank" href="https://duckduckgo.com/?q=kb' + el.KBList + '">KB' + el.KBList + '</a>'
 				}
 			}
-			t.row.add(
-				[i, el.Version, prevName, prevSP, prevCU, prevSupportedUntil, nKBList]
+			if (prevSP.indexOf('LATEST') !== -1) {
+				is_LatestSP = 'X'
+				prevSP = prevSP.replace(',LATEST', '')
+			}
+			if (is_LatestCU !== '.') {
+				if(results.length > prevrow) {
+					if (results[prevrow][4] !== '.') {
+						results[prevrow][10] = 'X'
+					}
+				}
+			}
+			prevrow = i
+			results.push(
+				[i, el.Version, prevName, prevSP, prevCU, prevSupportedUntil, nKBList, is_SP, is_CU, is_LatestSP, '.']
 			)
 		})
+		if(results[results.length-1][4] !== '.') {
+			results[results.length-1][10] = 'X'
+		}
+		t.rows.add(results)
 		t.draw(false)
 	  }
 	});
@@ -98,17 +185,27 @@ $(document).ready(function() {
 <body class="dt-example">
 	<div class="container">
 		<section>
-			<h1>DataTables example <span>Ajax data source (arrays)</span></h1>
+			<h1>BuildRef example</h1>
 			
 			<div class="demo-html">
-				<button class="filterName" data-filtervalue="2000">2000</button>
-				<button class="filterName" data-filtervalue="2005">2005</button>
-				<button class="filterName" data-filtervalue="2008">2008</button>
-				<button class="filterName" data-filtervalue="2008R2">2008R2</button>
-				<button class="filterName" data-filtervalue="2012">2012</button>
-				<button class="filterName" data-filtervalue="2014">2014</button>
-				<button class="filterName" data-filtervalue="2016">2016</button>
-				<button class="filterName" data-filtervalue="">All</button>
+				<h5>Filter by SQL Version</h5>
+				<button class="filter filterName" data-filtervalue="2000">2000</button>
+				<button class="filter filterName" data-filtervalue="2005">2005</button>
+				<button class="filter filterName" data-filtervalue="2008">2008</button>
+				<button class="filter filterName" data-filtervalue="2008R2">2008R2</button>
+				<button class="filter filterName" data-filtervalue="2012">2012</button>
+				<button class="filter filterName" data-filtervalue="2014">2014</button>
+				<button class="filter filterName" data-filtervalue="2016">2016</button>
+				<button class="filter filterName" data-filtervalue="">All</button>
+			</div>
+			<div class="demo-html">
+				<h5>Filter by Attributes</h5>
+				<button class="filter filterSP" data-filtervalue="X">Filter for Service Packs</button>
+				<button class="filter filterCU" data-filtervalue="X">Filter for CU</button>
+				<button class="filter filterLatestSP" data-filtervalue="X">Filter for Latest SP</button>
+				<button class="filter filterLatestCU" data-filtervalue="X">Filter for Latest CU</button>
+			</div>
+			<div class="demo-html">
 			</div>
 			<table id="example" class="display" cellspacing="0" width="100%">
 				<thead>
@@ -120,6 +217,10 @@ $(document).ready(function() {
 						<th>CU</th>
 						<th>End Of Support</th>
 						<th>KB Ref</th>
+						<th>is SP</th>
+						<th>is CU</th>
+						<th>is Latest SP</th>
+						<th>is Latest CU</th>
 					</tr>
 				</thead>
 				<tfoot>
@@ -131,6 +232,10 @@ $(document).ready(function() {
 						<th>CU</th>
 						<th>End Of Support</th>
 						<th>KB Ref</th>
+						<th>is SP</th>
+						<th>is CU</th>
+						<th>is Latest SP</th>
+						<th>is Latest CU</th>
 					</tr>
 				</tfoot>
 			</table>
