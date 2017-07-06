@@ -29,8 +29,12 @@ $(document).ready(function() {
         ]
 	});
 	$('button.filterName').on('click', function() {
+		var  filtername = $(this).data('filtervalue').toString()
+		if(filtername.length > 0) {
+			filtername = '^' + filtername +'$';
+		}
 		t.columns( 2 )
-        .search( $(this).data('filtervalue') )
+        .search( filtername, true, false )
         .draw();
 		$('button.filterName').removeClass('pressed')
 		$(this).addClass('pressed');
