@@ -147,8 +147,8 @@ $(document).ready(function() {
 			if(el.KBList) {
 				if($.isArray(el.KBList)) {
 					var KBArr = []
-					for(var i=0;i<el.KBList.length;i++) {
-						KBArr.push('<a target="_blank" href="https://duckduckgo.com/?q=kb' + el.KBList[i] + '">KB' + el.KBList[i] + '</a>')
+					for(var kbl=0;kbl<el.KBList.length;kbl++) {
+						KBArr.push('<a target="_blank" href="https://duckduckgo.com/?q=kb' + el.KBList[kbl] + '">KB' + el.KBList[kbl] + '</a>')
 					}
 					nKBList = KBArr.join()
 				} else {
