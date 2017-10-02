@@ -4,19 +4,33 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="initial-scale=1.0, maximum-scale=2.0">
-	<title>BuildRef example</title>
-	<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css" >
+	<title>dbatools BuildReference</title>
+	<link rel="icon" href="https://dbatools.io/wp-content/uploads/2016/05/dbatools.png" sizes="32x32">
+	<link rel="icon" href="https://dbatools.io/wp-content/uploads/2016/05/dbatools.png" sizes="192x192"> 
+	<link rel="apple-touch-icon-precomposed" href="https://dbatools.io/wp-content/uploads/2016/05/dbatools.png">
+	<meta name="msapplication-TileImage" content="https://dbatools.io/wp-content/uploads/2016/05/dbatools.png">
+	<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/v/bs4-4.0.0-beta/jszip-2.5.0/dt-1.10.16/b-1.4.2/b-html5-1.4.2/r-2.2.0/datatables.min.css" >
 	<style>
-		button.filter.pressed {
-			border-color: red;
+		.customnav {
+			background: #e3e3e3
 		}
+		body {
+  min-height: 75rem;
+  padding-top: 6.5rem;
+}
+
 	</style>
-	<script type="text/javascript" language="javascript" src="//code.jquery.com/jquery-1.12.4.js" ></script>
-	<script type="text/javascript" language="javascript" src="//cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+	<script type="text/javascript" language="javascript" src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" ></script>
+	<script type="text/javascript" language="javascript" src="//cdn.datatables.net/v/bs4-4.0.0-beta/jq-3.2.1/jq-3.2.1/jszip-2.5.0/dt-1.10.16/b-1.4.2/b-html5-1.4.2/r-2.2.0/datatables.min.js" ></script>
+	<script type="text/javascript" language="javascript" src="//cdn.jsdelivr.net/npm/lodash@4.17.4/lodash.min.js" ></script>
 	
 	<script type="text/javascript" language="javascript">
 $(document).ready(function() {
-	var t = $('#example').DataTable({
+	var t = $('#buildref').DataTable({
+	dom: 'Bfrtip',
+	buttons: [
+        'copy', 'excel', 'pdf'
+    ],
 	"order": [0, 'desc'],
 	"lengthMenu": [ [25, 50, 100, -1], [25, 50, 100, "All"] ],
 	"pageLength": 100,
@@ -25,6 +39,19 @@ $(document).ready(function() {
                 "targets": [ 0 ],
                 "visible": false,
                 "searchable": false
+            },
+			{
+                "targets": [ 7,8,9,10 ],
+				"className" : "text-center",
+                "render": function ( data, type, row, meta ) {
+				  return data == 'X' ? '&#10003;' : '';
+				}
+            },
+			{
+                "targets": [ 3,4,5,6 ],
+                "render": function ( data, type, row, meta ) {
+				  return data == '.' ? '' : data;
+				}
             }
         ]
 	});
@@ -36,57 +63,57 @@ $(document).ready(function() {
 		t.columns( 2 )
         .search( filtername, true, false )
         .draw();
-		$('button.filterName').removeClass('pressed')
-		$(this).addClass('pressed');
+		$('button.filterName').removeClass('active')
+		$(this).addClass('active');
 		
 	})
 	$('button.filterSP').on('click', function() {
-		if($(this).hasClass('pressed')) {
-					$(this).removeClass('pressed')
+		if($(this).hasClass('active')) {
+					$(this).removeClass('active')
 					t.columns( 7 )
 					.search("")
 					.draw();
 		} else {
-			$(this).addClass('pressed')
+			$(this).addClass('active')
 			t.columns( 7 )
 			.search( $(this).data('filtervalue') )
 			.draw();
 		}
 	})
 	$('button.filterCU').on('click', function() {
-		if($(this).hasClass('pressed')) {
-					$(this).removeClass('pressed')
+		if($(this).hasClass('active')) {
+					$(this).removeClass('active')
 					t.columns( 8 )
 					.search("")
 					.draw();
 		} else {
-			$(this).addClass('pressed')
+			$(this).addClass('active')
 			t.columns( 8 )
 			.search( $(this).data('filtervalue') )
 			.draw();
 		}
 	})
 	$('button.filterLatestSP').on('click', function() {
-		if($(this).hasClass('pressed')) {
-					$(this).removeClass('pressed')
+		if($(this).hasClass('active')) {
+					$(this).removeClass('active')
 					t.columns( 9 )
 					.search("")
 					.draw();
 		} else {
-			$(this).addClass('pressed')
+			$(this).addClass('active')
 			t.columns( 9 )
 			.search( $(this).data('filtervalue') )
 			.draw();
 		}
 	})
 	$('button.filterLatestCU').on('click', function() {
-		if($(this).hasClass('pressed')) {
-					$(this).removeClass('pressed')
+		if($(this).hasClass('active')) {
+					$(this).removeClass('active')
 					t.columns( 10 )
 					.search("")
 					.draw();
 		} else {
-			$(this).addClass('pressed')
+			$(this).addClass('active')
 			t.columns( 10 )
 			.search( $(this).data('filtervalue') )
 			.draw();
@@ -103,7 +130,8 @@ $(document).ready(function() {
 		var prevSupportedUntil = '.'
 		var prevrow = null
 		var results = [];
-		$.each(data.Data, function(i, el) {
+		_.forEach(data.Data, function(el, i) {
+		//$.each(data.Data, function(i, el) {
 			var is_SP = '.'
 			var is_CU = '.'
 			var is_LatestSP = '.'
@@ -120,7 +148,7 @@ $(document).ready(function() {
 			if(el.SP) {
 				is_SP = 'X'
 				var compareSP = ''
-				if($.isArray(el.SP)) {
+				if(_.isArray(el.SP)) {
 					compareSP = el.SP.join()
 				} else {
 					compareSP = el.SP
@@ -145,7 +173,7 @@ $(document).ready(function() {
 			}
 			var nKBList = '.'
 			if(el.KBList) {
-				if($.isArray(el.KBList)) {
+				if(_.isArray(el.KBList)) {
 					var KBArr = []
 					for(var kbl=0;kbl<el.KBList.length;kbl++) {
 						KBArr.push('<a target="_blank" href="https://duckduckgo.com/?q=kb' + el.KBList[kbl] + '">KB' + el.KBList[kbl] + '</a>')
@@ -185,67 +213,123 @@ $(document).ready(function() {
 
 	</script>
 </head>
-<body class="dt-example">
-	<div class="container">
-		<section>
+
+
+<body>
+
+    <nav class="navbar navbar-expand-md fixed-top customnav">
+	  <a href="https://dbatools.io/" class="navbar-brand" rel="home" itemprop="url"><img width="223" height="64" src="https://dbatools.io/wp-content/uploads/2016/05/dbatools-logo-1.png" class="custom-logo" alt="dbatools" itemprop="logo" scale="0"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+		  <li class="nav-item active">
+            <a class="nav-link" href="#">Build Reference</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://dbatools.io/getting-started/">Get Started</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://dbatools.io/download/">Download</a>
+          </li>
+		  <li class="nav-item">
+            <a class="nav-link" href="https://dbatools.io/functions/">Command Index</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://dbatools.io/team/">Team</a>
+          </li>
+		  <li class="nav-item">
+            <a class="nav-link" href="https://dbatools.io/presentations">On tour</a>
+          </li>
+		  <li class="nav-item">
+            <a class="nav-link" href="https://dbatools.io/subscribe/">Subscribe</a>
+          </li>
+		  <li class="nav-item">
+            <a class="nav-link" href="https://dbatools.io/slack">Find us</a>
+          </li>
+		  
+        </ul>
+        
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col">
 			<h1>BuildRef example</h1>
-			
-			<div class="demo-html">
-				<h5>Filter by SQL Version</h5>
-				<button class="filter filterName" data-filtervalue="2000">2000</button>
-				<button class="filter filterName" data-filtervalue="2005">2005</button>
-				<button class="filter filterName" data-filtervalue="2008">2008</button>
-				<button class="filter filterName" data-filtervalue="2008R2">2008R2</button>
-				<button class="filter filterName" data-filtervalue="2012">2012</button>
-				<button class="filter filterName" data-filtervalue="2014">2014</button>
-				<button class="filter filterName" data-filtervalue="2016">2016</button>
-				<button class="filter filterName" data-filtervalue="">All</button>
+		</div>
+	   </div>
+	   <div class="row">
+				<div class="col version filter">
+					<h5>Filter by SQL Version</h5>
+					<div class="btn-group" role="group">
+						<button class="btn btn-primary filter filterName" data-filtervalue="2000">2000</button>
+						<button class="btn btn-primary filter filterName" data-filtervalue="2005">2005</button>
+						<button class="btn btn-primary filter filterName" data-filtervalue="2008">2008</button>
+						<button class="btn btn-primary filter filterName" data-filtervalue="2008R2">2008R2</button>
+						<button class="btn btn-primary filter filterName" data-filtervalue="2012">2012</button>
+						<button class="btn btn-primary filter filterName" data-filtervalue="2014">2014</button>
+						<button class="btn btn-primary filter filterName" data-filtervalue="2016">2016</button>
+						<button class="btn btn-primary filter filterName" data-filtervalue="2017">2017</button>
+						<button class="btn btn-primary filter filterName" data-filtervalue="">All</button>
+					</div>
+				</div>
+				<div class="col attribute filter">
+					<h5>Filter by Attributes</h5>
+					<div class="btn-group" role="group">
+						<button class="btn btn-secondary filter filterSP" data-filtervalue="X">Service Packs</button>
+						<button class="btn btn-secondary filter filterCU" data-filtervalue="X">CUs</button>
+						<button class="btn btn-secondary filter filterLatestSP" data-filtervalue="X">Latest SP</button>
+						<button class="btn btn-secondary filter filterLatestCU" data-filtervalue="X">Latest CU</button>
+					</div>
+				</div>
+		</div>
+		<div class="row">
+			<div class="col"> <hr /> </div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<table id="buildref" class="table table-striped table-bordered" cellspacing="0" width="100%">
+					<thead>
+						<tr>
+							<th>Id</th>
+							<th>Version</th>
+							<th>Name</th>
+							<th>SP</th>
+							<th>CU</th>
+							<th>End Of Support</th>
+							<th>KB Ref</th>
+							<th>SP &#10003;</th>
+							<th>CU &#10003;</th>
+							<th>Latest SP &#10003;</th>
+							<th>Latest CU &#10003;</th>
+						</tr>
+					</thead>
+					<tfoot>
+						<tr>
+							<th>Id</th>
+							<th>Version</th>
+							<th>Name</th>
+							<th>SP</th>
+							<th>CU</th>
+							<th>End Of Support</th>
+							<th>KB Ref</th>
+							<th>SP &#10003;</th>
+							<th>CU &#10003;</th>
+							<th>Latest SP &#10003;</th>
+							<th>Latest CU &#10003;</th>
+						</tr>
+					</tfoot>
+				</table>
 			</div>
-			<div class="demo-html">
-				<h5>Filter by Attributes</h5>
-				<button class="filter filterSP" data-filtervalue="X">Filter for Service Packs</button>
-				<button class="filter filterCU" data-filtervalue="X">Filter for CU</button>
-				<button class="filter filterLatestSP" data-filtervalue="X">Filter for Latest SP</button>
-				<button class="filter filterLatestCU" data-filtervalue="X">Filter for Latest CU</button>
-			</div>
-			<div class="demo-html">
-			</div>
-			<table id="example" class="display" cellspacing="0" width="100%">
-				<thead>
-					<tr>
-						<th>Id</th>
-						<th>Version</th>
-						<th>Name</th>
-						<th>SP</th>
-						<th>CU</th>
-						<th>End Of Support</th>
-						<th>KB Ref</th>
-						<th>is SP</th>
-						<th>is CU</th>
-						<th>is Latest SP</th>
-						<th>is Latest CU</th>
-					</tr>
-				</thead>
-				<tfoot>
-					<tr>
-						<th>Id</th>
-						<th>Version</th>
-						<th>Name</th>
-						<th>SP</th>
-						<th>CU</th>
-						<th>End Of Support</th>
-						<th>KB Ref</th>
-						<th>is SP</th>
-						<th>is CU</th>
-						<th>is Latest SP</th>
-						<th>is Latest CU</th>
-					</tr>
-				</tfoot>
-			</table>
-			
-		</section>
-	</div>
-	<section>
-	</section>
+		</div>
+		</div>
+		
+      </div>
+    </div>
+
+
+
 </body>
 </html>
