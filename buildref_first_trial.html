@@ -16,6 +16,9 @@
 		body {
 			min-height: 75rem;
 		}
+		h2 small.text-muted {
+			font-size: 50%;
+		}
 @media (max-width: 575px) {
 	.hidden-xs-down {
 		display: none!important;
@@ -133,6 +136,7 @@ $(document).ready(function() {
 	  dataType: "json",
 	  url: 'https://sqlcollaborative.github.io/assets/dbatools-buildref-index.json',
 	  success: function (data) {
+		$('h2 small.text-muted').text('updated on ' + data.LastUpdated.substring(0,10))
 		var newarr = []
 		var prevName = '.'
 		var prevSP = '.'
@@ -267,7 +271,9 @@ $(document).ready(function() {
     <div class="container-fluid">
       <div class="row">
         <div class="col">
-			<h1>Build Reference</h1>
+            <h2>Build Reference
+                <small class="text-muted"></small>
+            </h2>
 		</div>
 	   </div>
 	   <div class="row">
@@ -317,7 +323,7 @@ $(document).ready(function() {
 		</div>
 		<div class="row">
 			<div class="col">
-				<table id="buildref" class="table table-striped table-bordered" cellspacing="0" width="100%">
+				<table id="buildref" class="table table-striped table-bordered table-sm" cellspacing="0" width="100%">
 					<thead>
 						<tr>
 							<th>Id</th>
