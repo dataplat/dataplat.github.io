@@ -16,6 +16,17 @@
 		body {
 			min-height: 75rem;
 		}
+@media (max-width: 575px) {
+	.hidden-xs-down {
+		display: none!important;
+	}
+}
+@media (min-width: 575px) {
+	.hidden-xs-up {
+		display: none!important;
+	}
+}
+		
 	</style>
 	<script type="text/javascript" language="javascript" src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" ></script>
 	<script type="text/javascript" language="javascript" src="//cdn.datatables.net/v/bs4-4.0.0-beta/jq-3.2.1/jq-3.2.1/jszip-2.5.0/dt-1.10.16/b-1.4.2/b-html5-1.4.2/fh-3.1.3/r-2.2.0/datatables.min.js" ></script>
@@ -262,7 +273,18 @@ $(document).ready(function() {
 	   <div class="row">
 				<div class="col version filter">
 					<h5>Filter by SQL Version</h5>
-					<div class="btn-group" role="group">
+					<div class="btn-group hidden-xs-down" role="group">
+						<button class="btn btn-primary filter filterName" data-filtervalue="2000">2000</button>
+						<button class="btn btn-primary filter filterName" data-filtervalue="2005">2005</button>
+						<button class="btn btn-primary filter filterName" data-filtervalue="2008">2008</button>
+						<button class="btn btn-primary filter filterName" data-filtervalue="2008R2">2008R2</button>
+						<button class="btn btn-primary filter filterName" data-filtervalue="2012">2012</button>
+						<button class="btn btn-primary filter filterName" data-filtervalue="2014">2014</button>
+						<button class="btn btn-primary filter filterName" data-filtervalue="2016">2016</button>
+						<button class="btn btn-primary filter filterName" data-filtervalue="2017">2017</button>
+						<button class="btn btn-primary filter filterName" data-filtervalue="">All</button>
+					</div>
+					<div class="btn-group btn-group-vertical hidden-xs-up" role="group">
 						<button class="btn btn-primary filter filterName" data-filtervalue="2000">2000</button>
 						<button class="btn btn-primary filter filterName" data-filtervalue="2005">2005</button>
 						<button class="btn btn-primary filter filterName" data-filtervalue="2008">2008</button>
@@ -276,7 +298,13 @@ $(document).ready(function() {
 				</div>
 				<div class="col attribute filter">
 					<h5>Filter by Attributes</h5>
-					<div class="btn-group" role="group">
+					<div class="btn-group hidden-xs-down" role="group">
+						<button class="btn btn-secondary filter filterSP" data-filtervalue="&#10003;">Service Packs</button>
+						<button class="btn btn-secondary filter filterCU" data-filtervalue="&#10003;">CUs</button>
+						<button class="btn btn-secondary filter filterLatestSP" data-filtervalue="&#10003;">Latest SP</button>
+						<button class="btn btn-secondary filter filterLatestCU" data-filtervalue="&#10003;">Latest CU</button>
+					</div>
+					<div class="btn-group btn-group-vertical hidden-xs-up" role="group">
 						<button class="btn btn-secondary filter filterSP" data-filtervalue="&#10003;">Service Packs</button>
 						<button class="btn btn-secondary filter filterCU" data-filtervalue="&#10003;">CUs</button>
 						<button class="btn btn-secondary filter filterLatestSP" data-filtervalue="&#10003;">Latest SP</button>
