@@ -69,7 +69,7 @@ $(document).ready(function() {
 		]
 	});
 	$('button.filterName').on('click', function() {
-		var  filtername = $(this).data('filtervalue').toString()
+		var filtername = $(this).data('filtervalue').toString()
 		if(filtername.length > 0) {
 			filtername = '^' + filtername +'$';
 		}
@@ -88,21 +88,24 @@ $(document).ready(function() {
 			.draw();
 	}
 	$('button.filterSP').on('click', function() {
+		resetfilterattr()
 		if($(this).hasClass('active')) {
 			$('button.filterattr').removeClass('active')
-			resetfilterattr()
 		} else {
+			$('button.filterattr').removeClass('active')
 			$(this).addClass('active')
 			t.columns( 6 )
 			.search( $(this).data('filtervalue') )
 			.draw();
 		}
+		
 	})
 	$('button.filterCU').on('click', function() {
+		resetfilterattr()
 		if($(this).hasClass('active')) {
 			$('button.filterattr').removeClass('active')
-			resetfilterattr()
 		} else {
+			$('button.filterattr').removeClass('active')
 			$(this).addClass('active')
 			t.columns( 7 )
 			.search( $(this).data('filtervalue') )
@@ -110,10 +113,11 @@ $(document).ready(function() {
 		}
 	})
 	$('button.filterLatestSP').on('click', function() {
+		resetfilterattr()
 		if($(this).hasClass('active')) {
 			$('button.filterattr').removeClass('active')
-			resetfilterattr()
 		} else {
+			$('button.filterattr').removeClass('active')
 			$(this).addClass('active')
 			t.columns( 8 )
 			.search( $(this).data('filtervalue') )
@@ -121,10 +125,11 @@ $(document).ready(function() {
 		}
 	})
 	$('button.filterLatestCU').on('click', function() {
+		resetfilterattr()
 		if($(this).hasClass('active')) {
 			$('button.filterattr').removeClass('active')
-			resetfilterattr()
 		} else {
+			$('button.filterattr').removeClass('active')
 			$(this).addClass('active')
 			t.columns( 9 )
 			.search( $(this).data('filtervalue') )
