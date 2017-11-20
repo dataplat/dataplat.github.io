@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=2.0">
+	<title>dbatools Bill Of Health</title>
+	<link rel="icon" href="https://dbatools.io/wp-content/uploads/2016/05/dbatools.png" sizes="32x32">
+	<link rel="icon" href="https://dbatools.io/wp-content/uploads/2016/05/dbatools.png" sizes="192x192"> 
+	<link rel="apple-touch-icon-precomposed" href="https://dbatools.io/wp-content/uploads/2016/05/dbatools.png">
+	<meta name="msapplication-TileImage" content="https://dbatools.io/wp-content/uploads/2016/05/dbatools.png">
+	<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/v/bs4-4.0.0-beta/jq-3.2.1/jq-3.2.1/jszip-2.5.0/dt-1.10.16/b-1.4.2/b-html5-1.4.2/fh-3.1.3/r-2.2.0/datatables.min.css" >
+	<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css" >
+	<style>
+		.customnav {
+			background: #e3e3e3
+		}
+		body {
+			min-height: 75rem;
+		}
+		h2 small.text-muted {
+			font-size: 50%;
+		}
+		@media (max-width: 575px) {
+			.hidden-xs-down {
+				display: none!important;
+			}
+		}
+		@media (min-width: 575px) {
+			.hidden-xs-up {
+				display: none!important;
+			}
+		}
+		
+	</style>
+	<script type="text/javascript" language="javascript" src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" ></script>
+	<script type="text/javascript" language="javascript" src="//cdn.datatables.net/v/bs4-4.0.0-beta/jq-3.2.1/jq-3.2.1/jszip-2.5.0/dt-1.10.16/b-1.4.2/b-html5-1.4.2/fh-3.1.3/r-2.2.0/datatables.min.js" ></script>
+	<script type="text/javascript" language="javascript" src="//cdn.jsdelivr.net/npm/lodash@4.17.4/lodash.min.js" ></script>
+	
+	
+	<script type="text/javascript" language="javascript">
+$(document).ready(function() {
+	var t = $('#buildref').DataTable({
+	responsive: true,
+	fixedHeader: true,
+	dom: 'Bfrtip',
+	"deferRender": true,
+	buttons: [
+        {
+            extend: 'copy',
+            text: 'Copy',
+            exportOptions: {
+                orthogonal : null
+            }
+        },
+		{
+            extend: 'excel',
+            text: 'Excel',
+            exportOptions: {
+                orthogonal : null
+            }
+        }
+    ],
+	"ajax": {
+            "url": "assets/dbatools-boh.json",
+            "dataSrc": "data"
+        },
+	//"order": [1, 'desc'],
+	"lengthMenu": [ [25, 50, 100, -1], [25, 50, 100, "All"] ],
+	"pageLength": 100,
+	"columns": [
+            { "data": "Name" },
+            { "data": "Health" },
+            { "data": "Coverage" },
+			{ "data": "ScriptAnalyzer" },
+			{ "data": "Syntax" },
+			{ "data": "Pipeline" },
+			{ "data": "CodeStyle" },
+			{ "data": "FlowControl" },
+			{ "data": "Messaging" },
+			{ "data": "FunctionName" },
+			{ "data": "EnableException" },
+			{ "data": "BreakContinue" },
+			{ "data": "DeprecatedVerbosityCommands" }
+        ],
+	"columnDefs": [
+            {
+                "render": function ( data, type, row ) {
+					if ( type !== 'display' ) {
+						return data;
+					} else {
+						var ccolor = 'red'
+						switch (true) {
+							case (data < 25):
+								ccolor = 'red'
+								break;
+							case (data < 50):
+								ccolor = 'orange'
+								break;
+							case (data < 80):
+								ccolor = 'yellow'
+								break;
+							case (data < 101):
+								ccolor = 'green'
+								break;
+							default:
+								return 'red'
+								break;
+						}
+						return '<a target="_blank" href="https://codecov.io/gh/sqlcollaborative/dbatools/src/development/functions/' + row.Name + '.ps1"><img src="https://img.shields.io/badge/-' + data + '-' + ccolor + '.svg?style=flat-square&amp;maxAge=2592000" alt=""></a>'
+					}
+				},
+                "targets": [2],
+				"className" : "text-right",
+            },
+			{
+                "render": function ( data, type, row ) {
+					if ( type !== 'display' ) {
+						return data;
+					} else {
+						var ccolor = 'red'
+						switch (true) {
+							case (data < 25):
+								ccolor = 'red'
+								break;
+							case (data < 50):
+								ccolor = 'orange'
+								break;
+							case (data < 80):
+								ccolor = 'yellow'
+								break;
+							case (data < 101):
+								ccolor = 'green'
+								break;
+							default:
+								return 'red'
+								break;
+						}
+						return '<img src="https://img.shields.io/badge/-' + data + '-' + ccolor + '.svg?style=flat-square&amp;maxAge=2592000" alt="">'
+					}
+				},
+                "targets": [1],
+				"className" : "text-right",
+            }, 
+			{
+                "render": function ( data, type, row ) {
+					if ( type !== 'display' ) {
+						return data;
+					} else {
+						if (data == 'True') {
+							return '<span class="oi oi-thumb-up text-success"></span>'
+						} else if (data == 'False') {
+							return '<span class="oi oi-thumb-down text-danger"></span>'
+						} else {
+							return data
+						}
+					}
+                },
+                "targets": [3,4,5,6,7,8,9,10,11,12],
+				"className" : "text-center",
+            },
+			{
+                "render": function ( data, type, row ) {
+					if ( type !== 'display' ) {
+						return data;
+					} else {
+						return '<a target="_blank" href="https://github.com/sqlcollaborative/dbatools/blob/development/functions/' + data + '.ps1">' + data + '</a>'
+					}
+                },
+                "targets": [0],
+            }
+        ]
+	});
+	t.on( 'draw', function () {
+		var total = t.data().count();
+		for(i=3;i<13;i++) {
+			var q = t.columns(i).data().flatten()
+			.filter( function ( value, index ) {
+				return value == 'True' ? false : true;
+			} );
+			var h = t.columns(i).header()
+			$(h).find('span.stats').html('(' + q.length + ' left)')
+		}
+		var devstrue = t
+			.columns( [4,5,6,7,8,9,10,11,12] )
+			.data()
+			.flatten()
+			.filter( function ( value, index ) {
+				return value == 'True' ? false : true;
+			} );
+		var devsfalse = t
+			.columns( [4,5,6,7,8,9,10,11,12] )
+			.data()
+			.flatten()
+			.filter( function ( value, index ) {
+				return value == 'False' ? false : true;
+			} );
+		$('#CoreDevs_todo').html(devsfalse.length);
+		$('#CoreDevs_left').html(devstrue.length);
+		var everyonetrue = t
+			.columns( [3] )
+			.data()
+			.flatten()
+			.filter( function ( value, index ) {
+				return value == 'True' ? false : true;
+			} );
+		var everyonefalse = t
+			.columns( [3] )
+			.data()
+			.flatten()
+			.filter( function ( value, index ) {
+				return value == 'False' ? false : true;
+			} );
+		$('#EveryOne_todo').html(everyonefalse.length);
+		$('#EveryOne_left').html(everyonetrue.length);
+	})
+	
+	$('#legendenabler').on('click', function() {
+		$('#legend').toggle();
+	})
+	
+	
+	
+	
+} );
+
+	</script>
+</head>
+
+
+<body>
+
+	<nav class="navbar navbar-expand-md customnav">
+		<a href="https://dbatools.io/" class="navbar-brand" rel="home" itemprop="url"><img width="223" height="64" src="https://dbatools.io/wp-content/uploads/2016/05/dbatools-logo-1.png" class="custom-logo" alt="dbatools" itemprop="logo" scale="0"></a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarCollapse">
+			<ul class="navbar-nav mr-auto">
+			  <li class="nav-item active">
+				<a class="nav-link" href="#">Bill Of Health</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="https://dbatools.io/getting-started/">Get Started</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="https://dbatools.io/download/">Download</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="https://dbatools.io/functions/">Command Index</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="https://dbatools.io/team/">Team</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="https://dbatools.io/presentations">On tour</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="https://dbatools.io/subscribe/">Subscribe</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="https://dbatools.io/slack">Find us</a>
+			  </li>
+			  
+			</ul>
+		</div>
+	</nav>
+
+	<div class="container-fluid">
+		<div class="row">
+		<div class="col">
+			<h2>Bill of Health
+				<small class="text-muted">aka "the road towards 1.0"</small>
+			</h2>
+			<dl>
+				<dt>Tasks for Core-devs</dt>
+				<dd><span id="CoreDevs_todo"></span> done, <span id="CoreDevs_left"></span> left  </dd>
+				<dt>Tasks for everyone</dt>
+				<dd><span id="EveryOne_todo"></span> done, <span id="EveryOne_left"></span> left</dd>
+			</dl>
+		</div>
+		</div>
+		<div class="row">
+			<div class="legend col">
+				<h3>Legend <small class="text-muted" id="legendenabler">click for details ...</small></h3>
+				<div id="legend" style="display: none">
+				<dl>
+					<dt>Health</dt>
+					<dd>General Health. Most of the score comes from Coverage and ScriptAnalyzer columns</dd>
+					<dt>Coverage (everyone)</dt>
+					<dd>Coverage Metric. If is 0, no tests are running for this function: go ahead and create them!</dd>
+					<dt>ScriptAnalyzer (everyone)</dt>
+					<dd>General ScriptAnalyzer checks. <code>Invoke-PSScriptAnalyzer -Path path\functions\functionname -ExcludeRule 'PSUseOutputTypeCorrectly', 'PSAvoidUsingPlainTextForPassword'</code> to get indications</dd>
+					<dt>Syntax (everyone)</dt>
+					<dd>The function has valid syntax</dd>
+					<dt>Pipeline (Core-Devs)</dt>
+					<dd>See <a href="https://github.com/sqlcollaborative/dbatools-progressmanagement/blob/master/dbatools%201.0/Requirements/manually%20signing%20off.md#pipeline-implementation">this</a></dd>
+					<dt>CodeStyle (Core-Devs)</dt>
+					<dd>See <a href="https://github.com/sqlcollaborative/dbatools-progressmanagement/blob/master/dbatools%201.0/Requirements/manually%20signing%20off.md#code-style">this</a></dd>
+					<dt>FlowControl (Core-Devs)</dt>
+					<dd>See <a href="https://github.com/sqlcollaborative/dbatools-progressmanagement/blob/master/dbatools%201.0/Requirements/manually%20signing%20off.md#flow-control">this</a></dd>
+					<dt>Messaging (Core-Devs)</dt>
+					<dd>See <a href="https://github.com/sqlcollaborative/dbatools-progressmanagement/blob/master/dbatools%201.0/Requirements/manually%20signing%20off.md#messaging-usage">this</a></dd>
+					<dt>FunctionName (everyone)</dt>
+					<dd>Matches *-Dba*</dd>
+					<dt>EnableException (everyone)</dt>
+					<dd>Has an EnableException parameter (enables you to catch exceptions with your own try/catch)</dd>
+					<dt>BreakContinue (Core-Devs)</dt>
+					<dd>Should not contain continue/break</dd>
+					<dt>DeprecatedVerbosityCommands (everyone)</dt>
+					<dd>Does not use Write-Verbose, Write-Host, Write-Output, Write-Warning, Write-Debug or Write-Information</dd>
+				</dl>
+				</div>
+			</div>
+			<div class="col attribute filter">
+				
+			</div>
+		</div>
+		<div class="row">
+			<div class="col"> <hr /> </div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<table id="buildref" class="table table-striped table-bordered table-sm" cellspacing="0" width="100%">
+					<thead>
+						<tr>
+							<th>Name <span class="stats"></span></th>
+							<th>Health <span class="stats"></span></th>
+							<th>Coverage <span class="stats"></span></th>
+							<th>ScriptAnalyzer <span class="stats"></span></th>
+							<th>Syntax <span class="stats"></span></th>
+							<th>Pipeline <span class="stats"></span></th>
+							<th>CodeStyle <span class="stats"></span></th>
+							<th>FlowControl <span class="stats"></span></th>
+							<th>Messaging <span class="stats"></span></th>
+							<th>FunctionName <span class="stats"></span></th>
+							<th>EnableException <span class="stats"></span></th>
+							<th>BreakContinue <span class="stats"></span></th>
+							<th>DeprecatedVerbosityCommands <span class="stats"></span></th>
+						</tr>
+					</thead>
+					<tfoot>
+						<tr>
+							<th>Name</th>
+							<th>Health</th>
+							<th>Coverage</th>
+							<th>ScriptAnalyzer</th>
+							<th>Syntax</th>
+							<th>Pipeline</th>
+							<th>CodeStyle</th>
+							<th>FlowControl</th>
+							<th>Messaging</th>
+							<th>FunctionName</th>
+							<th>EnableException</th>
+							<th>BreakContinue</th>
+							<th>DeprecatedVerbosityCommands</th>
+						</tr>
+					</tfoot>
+				</table>
+			</div>
+		</div>
+		</div>
+		
+	  </div>
+	</div>
+</body>
+</html>
