@@ -170,6 +170,7 @@ $(document).ready(function() {
             }
         ]
 	});
+	
 	t.on( 'draw', function () {
 		var total = t.data().count();
 		for(i=3;i<13;i++) {
@@ -181,14 +182,14 @@ $(document).ready(function() {
 			$(h).find('span.stats').html('(' + q.length + ' left)')
 		}
 		var devstrue = t
-			.columns( [4,5,6,7,8,9,10,11,12] )
+			.columns( [5,6,7,8,11] )
 			.data()
 			.flatten()
 			.filter( function ( value, index ) {
 				return value == 'True' ? false : true;
 			} );
 		var devsfalse = t
-			.columns( [4,5,6,7,8,9,10,11,12] )
+			.columns( [5,6,7,8,11] )
 			.data()
 			.flatten()
 			.filter( function ( value, index ) {
@@ -197,14 +198,14 @@ $(document).ready(function() {
 		$('#CoreDevs_todo').html(devsfalse.length);
 		$('#CoreDevs_left').html(devstrue.length);
 		var everyonetrue = t
-			.columns( [3] )
+			.columns( [2,3,4,9,10,12] )
 			.data()
 			.flatten()
 			.filter( function ( value, index ) {
 				return value == 'True' ? false : true;
 			} );
 		var everyonefalse = t
-			.columns( [3] )
+			.columns( [2,3,4,9,10,12] )
 			.data()
 			.flatten()
 			.filter( function ( value, index ) {
