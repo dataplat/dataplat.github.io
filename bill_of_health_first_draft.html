@@ -288,9 +288,9 @@ $(document).ready(function() {
 					<dt>Health</dt>
 					<dd>General Health. Most of the score comes from Coverage and ScriptAnalyzer columns</dd>
 					<dt>Coverage (everyone)</dt>
-					<dd>Coverage Metric. If is 0, no tests are running for this function: go ahead and create them!</dd>
+					<dd>Coverage Metric. <code>.\manual.pester.ps1 -Path <functionname> -Coverage</code> to get indications. If is 0, no tests are running for this function: go ahead and create them!</dd>
 					<dt>ScriptAnalyzer (everyone)</dt>
-					<dd>General ScriptAnalyzer checks. <code>Invoke-PSScriptAnalyzer -Path path\functions\functionname -ExcludeRule 'PSUseOutputTypeCorrectly', 'PSAvoidUsingPlainTextForPassword'</code> to get indications</dd>
+					<dd>General ScriptAnalyzer checks. <code>.\manual.pester.ps1 -Path <functionname> -ScriptAnalyzer</code> to get indications</dd>
 					<dt>Syntax (everyone)</dt>
 					<dd>The function has valid syntax</dd>
 					<dt>Pipeline (Core-Devs)</dt>
