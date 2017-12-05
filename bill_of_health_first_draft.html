@@ -39,6 +39,27 @@
 	
 	<script type="text/javascript" language="javascript">
 $(document).ready(function() {
+	function render_avg_health(avg) {
+		var ccolor = 'red'
+		switch (true) {
+			case (avg < 25):
+				ccolor = 'red'
+				break;
+			case (avg < 50):
+				ccolor = 'orange'
+				break;
+			case (avg < 80):
+				ccolor = 'yellow'
+				break;
+			case (avg < 101):
+				ccolor = 'green'
+				break;
+			default:
+				return 'red'
+				break;
+		}
+		return '<img src="https://img.shields.io/badge/Average%20Health-' + avg + '%25-' + ccolor + '.svg?style=for-the-badge&amp;maxAge=2592000" alt="">'
+	} 
 	var t = $('#buildref').DataTable({
 	responsive: true,
 	fixedHeader: true,
@@ -213,6 +234,13 @@ $(document).ready(function() {
 			} );
 		$('#EveryOne_todo').html(everyonefalse.length);
 		$('#EveryOne_left').html(everyonetrue.length);
+		var averagehealth = t
+			.columns( [1] )
+			.data()
+			.flatten();
+		
+		averagehealth = _.round(_.mean(averagehealth), 2)
+		$('#average_health').html(render_avg_health(averagehealth))
 	})
 	
 	$('#legendenabler').on('click', function() {
@@ -273,6 +301,8 @@ $(document).ready(function() {
 				<small class="text-muted">aka "the road towards 1.0"</small>
 			</h2>
 			<dl>
+				<dt>Score</dt>
+				<dd><span id="average_health"></span></dd>
 				<dt>Tasks for Core-devs</dt>
 				<dd><span id="CoreDevs_todo"></span> done, <span id="CoreDevs_left"></span> left  </dd>
 				<dt>Tasks for everyone</dt>
