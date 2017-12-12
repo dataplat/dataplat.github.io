@@ -11,6 +11,7 @@
 	<meta name="msapplication-TileImage" content="https://dbatools.io/wp-content/uploads/2016/05/dbatools.png">
 	<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/v/bs4-4.0.0-beta/jq-3.2.1/jq-3.2.1/jszip-2.5.0/dt-1.10.16/b-1.4.2/b-html5-1.4.2/fh-3.1.3/r-2.2.0/datatables.min.css">
 	<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/metrics-graphics/2.11.0/metricsgraphics.min.css">
 	<style>
 		.customnav {
 			background: #e3e3e3
@@ -39,6 +40,8 @@
 	<script type="text/javascript" language="javascript" src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
 	<script type="text/javascript" language="javascript" src="//cdn.datatables.net/v/bs4-4.0.0-beta/jq-3.2.1/jq-3.2.1/jszip-2.5.0/dt-1.10.16/b-1.4.2/b-html5-1.4.2/fh-3.1.3/r-2.2.0/datatables.min.js"></script>
 	<script type="text/javascript" language="javascript" src="//cdn.jsdelivr.net/npm/lodash@4.17.4/lodash.min.js"></script>
+	<script type="text/javascript" language="javascript" src="https://d3js.org/d3.v4.min.js"></script>
+	<script type="text/javascript" language="javascript" src="//cdnjs.cloudflare.com/ajax/libs/metrics-graphics/2.11.0/metricsgraphics.min.js"></script>
 
 
 	<script type="text/javascript" language="javascript">
@@ -89,7 +92,6 @@
 					"url": "assets/dbatools-boh.json",
 					"dataSrc": "data"
 				},
-				//"order": [1, 'desc'],
 				"lengthMenu": [[25, 50, 100, -1], [25, 50, 100, "All"]],
 				"pageLength": 100,
 				"columns": [
@@ -130,6 +132,9 @@
 									default:
 										return 'red'
 										break;
+								}
+								if (data == 0) {
+									return '<img src="https://img.shields.io/badge/-' + data + '-' + ccolor + '.svg?style=flat-square&amp;maxAge=2592000" alt="">'
 								}
 								return '<a target="_blank" href="https://codecov.io/gh/sqlcollaborative/dbatools/src/development/functions/' + row.Name + '.ps1"><img src="https://img.shields.io/badge/-' + data + '-' + ccolor + '.svg?style=flat-square&amp;maxAge=2592000" alt=""></a>'
 							}
@@ -251,6 +256,33 @@
 				$('#legend').toggle();
 			})
 
+			d3.json("assets/dbatools-boh.json", function (data) {
+				data = data.history;
+				data = MG.convert.date(data, 'date');
+				var adi_baselines = [{ value: 85, label: '1.0 Ready (85)' }];
+				MG.data_graphic({
+					data: data,
+					mouseover: function (d, i) {
+						var pf = d3.format('.2f');
+						d3.select('#health_trend svg .mg-active-datapoint')
+							.text(d3.timeFormat('%Y-%m-%d')(d.date) + '   Health: ' + pf(d.value));
+					},
+					baselines: adi_baselines,
+					area: true,
+					left: 50,
+					xax_format: d3.timeFormat('%Y-%m-%d'),
+					yax_units: '%',
+					yax_units_append: true,
+					animate_on_load: true,
+					full_width: true,
+					height: 250,
+					right: 90,
+					point_size: 5,
+					target: document.getElementById('health_trend'),
+					x_accessor: 'date',
+					y_accessor: 'value'
+				});
+			})
 
 
 
@@ -308,6 +340,12 @@
 				<h2>Bill of Health
 					<small class="text-muted">aka "the road towards 1.0"</small>
 				</h2>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-10 text-center" id="health_trend"></div>
+			<div class="col-lg-2">
+
 				<dl>
 					<dt>Score</dt>
 					<dd>
@@ -323,16 +361,18 @@
 						<span id="EveryOne_left"></span> left</dd>
 				</dl>
 			</div>
+
 		</div>
 		<div class="row">
 			<div class="legend col">
 				<h3>Legend
-					<small class="text-muted" id="legendenabler">click for details ...</small>
+					<small class="text-muted" id="legendenabler">Click for details ...</small>
 				</h3>
 				<div id="legend" style="display: none">
 					<dl>
 						<dt>Health</dt>
-						<dd>General Health. Most of the score comes from Coverage and ScriptAnalyzer columns</dd>
+						<dd>General Health. Calculated on a total score of 2900. Coverage and ScriptAnalyzer weight 1000, all the others weight
+							100</dd>
 						<dt>Coverage (everyone)</dt>
 						<dd>Coverage Metric.
 							<code>.\manual.pester.ps1 -Path <functionname> -Coverage</code> to get indications. If is 0, no tests are running for this function: go ahead and create them!</dd>
