@@ -43,6 +43,10 @@
         {
             "date": "2017-12-12",
             "value": 44.73
+        },
+        {
+            "date": "2017-12-13",
+            "value": 44.85
         }
     ],
     "data":  [
@@ -693,9 +697,9 @@
         },
         {
             "Name":  "Expand-DbaTLogResponsibly",
-            "Health":  10.34,
+            "Health":  48.28,
             "Coverage":  0,
-            "ScriptAnalyzer":  "False",
+            "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "Pipeline":  "False",
             "CodeStyle":  "False",
@@ -704,7 +708,7 @@
             "FunctionName":  "True",
             "EnableException":  "True",
             "BreakContinue":  "",
-            "DeprecatedVerbosityCommands":  "False"
+            "DeprecatedVerbosityCommands":  "True"
         },
         {
             "Name":  "Export-DbaAvailabilityGroup",
