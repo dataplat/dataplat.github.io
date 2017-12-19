@@ -47,6 +47,10 @@
         {
             "date": "2017-12-13",
             "value": 44.85
+        },
+        {
+            "date": "2017-12-19",
+            "value": 44.97
         }
     ],
     "data":  [
@@ -81,7 +85,7 @@
             "DeprecatedVerbosityCommands":  "True"
         },
         {
-            "Name":  "Backup-DbaDatabaseCertificate",
+            "Name":  "Backup-DbaDatabaseMasterKey",
             "Health":  48.28,
             "Coverage":  0,
             "ScriptAnalyzer":  "True",
@@ -96,7 +100,7 @@
             "DeprecatedVerbosityCommands":  "True"
         },
         {
-            "Name":  "Backup-DbaDatabaseMasterKey",
+            "Name":  "Backup-DbaDbCertificate",
             "Health":  48.28,
             "Coverage":  0,
             "ScriptAnalyzer":  "True",
@@ -1086,6 +1090,21 @@
             "DeprecatedVerbosityCommands":  "False"
         },
         {
+            "Name":  "Get-DbaAgentJobCategory",
+            "Health":  51.72,
+            "Coverage":  0,
+            "ScriptAnalyzer":  "True",
+            "Syntax":  "True",
+            "Pipeline":  "False",
+            "CodeStyle":  "False",
+            "FlowControl":  "False",
+            "Messaging":  "False",
+            "FunctionName":  "True",
+            "EnableException":  "True",
+            "BreakContinue":  "True",
+            "DeprecatedVerbosityCommands":  "True"
+        },
+        {
             "Name":  "Get-DbaAgentJobHistory",
             "Health":  17.24,
             "Coverage":  0,
@@ -1491,21 +1510,6 @@
             "DeprecatedVerbosityCommands":  "False"
         },
         {
-            "Name":  "Get-DbaDatabaseCertificate",
-            "Health":  48.28,
-            "Coverage":  0,
-            "ScriptAnalyzer":  "True",
-            "Syntax":  "True",
-            "Pipeline":  "False",
-            "CodeStyle":  "False",
-            "FlowControl":  "False",
-            "Messaging":  "False",
-            "FunctionName":  "True",
-            "EnableException":  "True",
-            "BreakContinue":  "",
-            "DeprecatedVerbosityCommands":  "True"
-        },
-        {
             "Name":  "Get-DbaDatabaseEncryption",
             "Health":  58.62,
             "Coverage":  20,
@@ -1660,6 +1664,21 @@
             "Health":  13.79,
             "Coverage":  0,
             "ScriptAnalyzer":  "False",
+            "Syntax":  "True",
+            "Pipeline":  "False",
+            "CodeStyle":  "False",
+            "FlowControl":  "False",
+            "Messaging":  "False",
+            "FunctionName":  "True",
+            "EnableException":  "True",
+            "BreakContinue":  "",
+            "DeprecatedVerbosityCommands":  "True"
+        },
+        {
+            "Name":  "Get-DbaDbCertificate",
+            "Health":  48.28,
+            "Coverage":  0,
+            "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "Pipeline":  "False",
             "CodeStyle":  "False",
@@ -3171,6 +3190,21 @@
             "DeprecatedVerbosityCommands":  "True"
         },
         {
+            "Name":  "New-DbaAgentJobCategory",
+            "Health":  51.72,
+            "Coverage":  0,
+            "ScriptAnalyzer":  "True",
+            "Syntax":  "True",
+            "Pipeline":  "False",
+            "CodeStyle":  "False",
+            "FlowControl":  "False",
+            "Messaging":  "False",
+            "FunctionName":  "True",
+            "EnableException":  "True",
+            "BreakContinue":  "True",
+            "DeprecatedVerbosityCommands":  "True"
+        },
+        {
             "Name":  "New-DbaAgentJobStep",
             "Health":  81.62,
             "Coverage":  46.67,
@@ -3276,21 +3310,6 @@
             "DeprecatedVerbosityCommands":  "True"
         },
         {
-            "Name":  "New-DbaDatabaseCertificate",
-            "Health":  51.72,
-            "Coverage":  0,
-            "ScriptAnalyzer":  "True",
-            "Syntax":  "True",
-            "Pipeline":  "False",
-            "CodeStyle":  "False",
-            "FlowControl":  "False",
-            "Messaging":  "False",
-            "FunctionName":  "True",
-            "EnableException":  "True",
-            "BreakContinue":  "True",
-            "DeprecatedVerbosityCommands":  "True"
-        },
-        {
             "Name":  "New-DbaDatabaseMasterKey",
             "Health":  51.72,
             "Coverage":  0,
@@ -3318,6 +3337,21 @@
             "FunctionName":  "True",
             "EnableException":  "True",
             "BreakContinue":  "",
+            "DeprecatedVerbosityCommands":  "True"
+        },
+        {
+            "Name":  "New-DbaDbCertificate",
+            "Health":  51.72,
+            "Coverage":  0,
+            "ScriptAnalyzer":  "True",
+            "Syntax":  "True",
+            "Pipeline":  "False",
+            "CodeStyle":  "False",
+            "FlowControl":  "False",
+            "Messaging":  "False",
+            "FunctionName":  "True",
+            "EnableException":  "True",
+            "BreakContinue":  "True",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -3576,6 +3610,21 @@
             "DeprecatedVerbosityCommands":  "True"
         },
         {
+            "Name":  "Remove-DbaAgentJobCategory",
+            "Health":  51.72,
+            "Coverage":  0,
+            "ScriptAnalyzer":  "True",
+            "Syntax":  "True",
+            "Pipeline":  "False",
+            "CodeStyle":  "False",
+            "FlowControl":  "False",
+            "Messaging":  "False",
+            "FunctionName":  "True",
+            "EnableException":  "True",
+            "BreakContinue":  "True",
+            "DeprecatedVerbosityCommands":  "True"
+        },
+        {
             "Name":  "Remove-DbaAgentJobStep",
             "Health":  65.52,
             "Coverage":  0,
@@ -3681,21 +3730,6 @@
             "DeprecatedVerbosityCommands":  "True"
         },
         {
-            "Name":  "Remove-DbaDatabaseCertificate",
-            "Health":  17.24,
-            "Coverage":  0,
-            "ScriptAnalyzer":  "False",
-            "Syntax":  "True",
-            "Pipeline":  "False",
-            "CodeStyle":  "False",
-            "FlowControl":  "False",
-            "Messaging":  "False",
-            "FunctionName":  "True",
-            "EnableException":  "True",
-            "BreakContinue":  "True",
-            "DeprecatedVerbosityCommands":  "True"
-        },
-        {
             "Name":  "Remove-DbaDatabaseMasterKey",
             "Health":  13.79,
             "Coverage":  0,
@@ -3741,10 +3775,40 @@
             "DeprecatedVerbosityCommands":  "True"
         },
         {
+            "Name":  "Remove-DbaDbCertificate",
+            "Health":  17.24,
+            "Coverage":  0,
+            "ScriptAnalyzer":  "False",
+            "Syntax":  "True",
+            "Pipeline":  "False",
+            "CodeStyle":  "False",
+            "FlowControl":  "False",
+            "Messaging":  "False",
+            "FunctionName":  "True",
+            "EnableException":  "True",
+            "BreakContinue":  "True",
+            "DeprecatedVerbosityCommands":  "True"
+        },
+        {
             "Name":  "Remove-DbaDbUser",
             "Health":  17.24,
             "Coverage":  0,
             "ScriptAnalyzer":  "False",
+            "Syntax":  "True",
+            "Pipeline":  "False",
+            "CodeStyle":  "False",
+            "FlowControl":  "False",
+            "Messaging":  "False",
+            "FunctionName":  "True",
+            "EnableException":  "True",
+            "BreakContinue":  "True",
+            "DeprecatedVerbosityCommands":  "True"
+        },
+        {
+            "Name":  "Remove-DbaLogin",
+            "Health":  51.72,
+            "Coverage":  0,
+            "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "Pipeline":  "False",
             "CodeStyle":  "False",
@@ -3817,7 +3881,7 @@
         },
         {
             "Name":  "Rename-DbaLogin",
-            "Health":  41.38,
+            "Health":  51.72,
             "Coverage":  0,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
@@ -3826,9 +3890,9 @@
             "FlowControl":  "False",
             "Messaging":  "False",
             "FunctionName":  "True",
-            "EnableException":  "",
-            "BreakContinue":  "",
-            "DeprecatedVerbosityCommands":  "False"
+            "EnableException":  "True",
+            "BreakContinue":  "True",
+            "DeprecatedVerbosityCommands":  "True"
         },
         {
             "Name":  "Repair-DbaOrphanUser",
@@ -3936,7 +4000,7 @@
             "DeprecatedVerbosityCommands":  "False"
         },
         {
-            "Name":  "Restore-DbaDatabaseCertificate",
+            "Name":  "Restore-DbaDbCertificate",
             "Health":  17.24,
             "Coverage":  0,
             "ScriptAnalyzer":  "False",
@@ -4005,6 +4069,21 @@
             "CodeStyle":  "True",
             "FlowControl":  "True",
             "Messaging":  "True",
+            "FunctionName":  "True",
+            "EnableException":  "True",
+            "BreakContinue":  "True",
+            "DeprecatedVerbosityCommands":  "True"
+        },
+        {
+            "Name":  "Set-DbaAgentJobCategory",
+            "Health":  51.72,
+            "Coverage":  0,
+            "ScriptAnalyzer":  "True",
+            "Syntax":  "True",
+            "Pipeline":  "False",
+            "CodeStyle":  "False",
+            "FlowControl":  "False",
+            "Messaging":  "False",
             "FunctionName":  "True",
             "EnableException":  "True",
             "BreakContinue":  "True",
@@ -4762,7 +4841,7 @@
         },
         {
             "Name":  "Test-DbaMigrationConstraint",
-            "Health":  51.72,
+            "Health":  48.28,
             "Coverage":  0,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
@@ -4772,7 +4851,7 @@
             "Messaging":  "False",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "True",
+            "BreakContinue":  "",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
