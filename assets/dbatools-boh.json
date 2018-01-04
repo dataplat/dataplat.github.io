@@ -55,6 +55,10 @@
         {
             "date": "2017-12-27",
             "value": 45.36
+        },
+        {
+            "date": "2017-01-04",
+            "value": 45.49
         }
     ],
     "data":  [
@@ -854,6 +858,21 @@
             "DeprecatedVerbosityCommands":  "True"
         },
         {
+            "Name":  "Find-DbaBackup",
+            "Health":  65.52,
+            "Coverage":  0,
+            "ScriptAnalyzer":  "True",
+            "Syntax":  "True",
+            "Pipeline":  "True",
+            "CodeStyle":  "True",
+            "FlowControl":  "True",
+            "Messaging":  "True",
+            "FunctionName":  "True",
+            "EnableException":  "True",
+            "BreakContinue":  "True",
+            "DeprecatedVerbosityCommands":  "True"
+        },
+        {
             "Name":  "Find-DbaCommand",
             "Health":  44.83,
             "Coverage":  0,
@@ -884,7 +903,7 @@
             "DeprecatedVerbosityCommands":  "False"
         },
         {
-            "Name":  "Find-DbaDatabaseGrowthEvent",
+            "Name":  "Find-DbaDbGrowthEvent",
             "Health":  65.52,
             "Coverage":  0,
             "ScriptAnalyzer":  "True",
@@ -1450,6 +1469,21 @@
             "Messaging":  "False",
             "FunctionName":  "True",
             "EnableException":  "",
+            "BreakContinue":  "True",
+            "DeprecatedVerbosityCommands":  "True"
+        },
+        {
+            "Name":  "Get-DbaCpuUsage",
+            "Health":  51.72,
+            "Coverage":  0,
+            "ScriptAnalyzer":  "True",
+            "Syntax":  "True",
+            "Pipeline":  "False",
+            "CodeStyle":  "False",
+            "FlowControl":  "False",
+            "Messaging":  "False",
+            "FunctionName":  "True",
+            "EnableException":  "True",
             "BreakContinue":  "True",
             "DeprecatedVerbosityCommands":  "True"
         },
@@ -2162,6 +2196,21 @@
             "Name":  "Get-DbaOperatingSystem",
             "Health":  78.21,
             "Coverage":  86.79,
+            "ScriptAnalyzer":  "True",
+            "Syntax":  "True",
+            "Pipeline":  "False",
+            "CodeStyle":  "False",
+            "FlowControl":  "False",
+            "Messaging":  "False",
+            "FunctionName":  "True",
+            "EnableException":  "True",
+            "BreakContinue":  "",
+            "DeprecatedVerbosityCommands":  "True"
+        },
+        {
+            "Name":  "Get-DbaOrphanUser",
+            "Health":  48.28,
+            "Coverage":  0,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "Pipeline":  "False",
@@ -3645,14 +3694,14 @@
         },
         {
             "Name":  "Remove-DbaBackup",
-            "Health":  51.72,
+            "Health":  65.52,
             "Coverage":  0,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
-            "Pipeline":  "False",
-            "CodeStyle":  "False",
-            "FlowControl":  "False",
-            "Messaging":  "False",
+            "Pipeline":  "True",
+            "CodeStyle":  "True",
+            "FlowControl":  "True",
+            "Messaging":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
             "BreakContinue":  "True",
@@ -5099,4 +5148,5 @@
             "DeprecatedVerbosityCommands":  "True"
         }
     ]
+
 }
