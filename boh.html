@@ -258,6 +258,8 @@
 
 			d3.json("assets/dbatools-boh.json", function (data) {
 				data = data.history;
+				var lastupdated = _.last(data).date;
+				$('#lastupdatedinfo').text('(as of ' + lastupdated + ')');
 				data = MG.convert.date(data, 'date');
 				var adi_baselines = [{ value: 85, label: '1.0 Ready (85)' }];
 				MG.data_graphic({
@@ -347,7 +349,7 @@
 			<div class="col-lg-2">
 
 				<dl>
-					<dt>Score</dt>
+					<dt>Score <span id="lastupdatedinfo"></span></dt>
 					<dd>
 						<span id="average_health"></span>
 					</dd>
