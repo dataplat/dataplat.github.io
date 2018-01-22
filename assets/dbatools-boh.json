@@ -63,6 +63,10 @@
         {
             "date": "2017-01-11",
             "value": 44.49
+        },
+        {
+            "date": "2017-01-22",
+            "value": 44.48
         }
     ],
     "data": [
@@ -80,6 +84,21 @@
             "EnableException": "True",
             "BreakContinue": "True",
             "DeprecatedVerbosityCommands": "False"
+        },
+        {
+            "Name": "Add-DbaPfDataCollectorCounter",
+            "Health": 51.72,
+            "Coverage": 0,
+            "ScriptAnalyzer": "True",
+            "Syntax": "True",
+            "Pipeline": "False",
+            "CodeStyle": "False",
+            "FlowControl": "False",
+            "Messaging": "False",
+            "FunctionName": "True",
+            "EnableException": "True",
+            "BreakContinue": "True",
+            "DeprecatedVerbosityCommands": "True"
         },
         {
             "Name": "Backup-DbaDatabase",
@@ -169,6 +188,21 @@
             "FunctionName": "True",
             "EnableException": "",
             "BreakContinue": "True",
+            "DeprecatedVerbosityCommands": "True"
+        },
+        {
+            "Name": "ConvertTo-DbaDataTable",
+            "Health": 27.59,
+            "Coverage": 0,
+            "ScriptAnalyzer": "False",
+            "Syntax": "True",
+            "Pipeline": "True",
+            "CodeStyle": "True",
+            "FlowControl": "True",
+            "Messaging": "True",
+            "FunctionName": "True",
+            "EnableException": "True",
+            "BreakContinue": "",
             "DeprecatedVerbosityCommands": "True"
         },
         {
@@ -622,6 +656,21 @@
             "DeprecatedVerbosityCommands": "True"
         },
         {
+            "Name": "Copy-DbaXESessionTemplate",
+            "Health": 51.72,
+            "Coverage": 0,
+            "ScriptAnalyzer": "True",
+            "Syntax": "True",
+            "Pipeline": "False",
+            "CodeStyle": "False",
+            "FlowControl": "False",
+            "Messaging": "False",
+            "FunctionName": "True",
+            "EnableException": "True",
+            "BreakContinue": "True",
+            "DeprecatedVerbosityCommands": "True"
+        },
+        {
             "Name": "Disable-DbaAgHadr",
             "Health": 62.07,
             "Coverage": 0,
@@ -817,6 +866,21 @@
             "DeprecatedVerbosityCommands": "True"
         },
         {
+            "Name": "Export-DbaPfDataCollectorSetTemplate",
+            "Health": 51.72,
+            "Coverage": 0,
+            "ScriptAnalyzer": "True",
+            "Syntax": "True",
+            "Pipeline": "False",
+            "CodeStyle": "False",
+            "FlowControl": "False",
+            "Messaging": "False",
+            "FunctionName": "True",
+            "EnableException": "True",
+            "BreakContinue": "True",
+            "DeprecatedVerbosityCommands": "True"
+        },
+        {
             "Name": "Export-DbaScript",
             "Health": 51.72,
             "Coverage": 0,
@@ -949,6 +1013,21 @@
             "FunctionName": "True",
             "EnableException": "True",
             "BreakContinue": "True",
+            "DeprecatedVerbosityCommands": "True"
+        },
+        {
+            "Name": "Find-DbaDisabledIndex",
+            "Health": 13.79,
+            "Coverage": 0,
+            "ScriptAnalyzer": "False",
+            "Syntax": "True",
+            "Pipeline": "False",
+            "CodeStyle": "False",
+            "FlowControl": "False",
+            "Messaging": "False",
+            "FunctionName": "True",
+            "EnableException": "True",
+            "BreakContinue": "",
             "DeprecatedVerbosityCommands": "True"
         },
         {
@@ -1343,9 +1422,9 @@
         },
         {
             "Name": "Get-DbaBackupHistory",
-            "Health": 54.45,
+            "Health": 92.38,
             "Coverage": 87.92,
-            "ScriptAnalyzer": "False",
+            "ScriptAnalyzer": "True",
             "Syntax": "True",
             "Pipeline": "True",
             "CodeStyle": "True",
@@ -1354,7 +1433,7 @@
             "FunctionName": "True",
             "EnableException": "True",
             "BreakContinue": "",
-            "DeprecatedVerbosityCommands": "False"
+            "DeprecatedVerbosityCommands": "True"
         },
         {
             "Name": "Get-DbaBackupInformation",
@@ -2063,14 +2142,14 @@
         },
         {
             "Name": "Get-DbaLastBackup",
-            "Health": 80.55,
+            "Health": 94.34,
             "Coverage": 93.62,
             "ScriptAnalyzer": "True",
             "Syntax": "True",
-            "Pipeline": "False",
-            "CodeStyle": "False",
-            "FlowControl": "False",
-            "Messaging": "False",
+            "Pipeline": "True",
+            "CodeStyle": "True",
+            "FlowControl": "True",
+            "Messaging": "True",
             "FunctionName": "True",
             "EnableException": "True",
             "BreakContinue": "",
@@ -2168,14 +2247,14 @@
         },
         {
             "Name": "Get-DbaMaxMemory",
-            "Health": 86.21,
+            "Health": 100,
             "Coverage": 100,
             "ScriptAnalyzer": "True",
             "Syntax": "True",
-            "Pipeline": "False",
-            "CodeStyle": "False",
-            "FlowControl": "False",
-            "Messaging": "False",
+            "Pipeline": "True",
+            "CodeStyle": "True",
+            "FlowControl": "True",
+            "Messaging": "True",
             "FunctionName": "True",
             "EnableException": "True",
             "BreakContinue": "True",
@@ -2288,17 +2367,17 @@
         },
         {
             "Name": "Get-DbaPageFileSetting",
-            "Health": 48.28,
+            "Health": 65.52,
             "Coverage": 0,
             "ScriptAnalyzer": "True",
             "Syntax": "True",
-            "Pipeline": "False",
-            "CodeStyle": "False",
-            "FlowControl": "False",
-            "Messaging": "False",
+            "Pipeline": "True",
+            "CodeStyle": "True",
+            "FlowControl": "True",
+            "Messaging": "True",
             "FunctionName": "True",
             "EnableException": "True",
-            "BreakContinue": "",
+            "BreakContinue": "True",
             "DeprecatedVerbosityCommands": "True"
         },
         {
@@ -2315,6 +2394,96 @@
             "EnableException": "True",
             "BreakContinue": "",
             "DeprecatedVerbosityCommands": "False"
+        },
+        {
+            "Name": "Get-DbaPfAvailableCounter",
+            "Health": 51.72,
+            "Coverage": 0,
+            "ScriptAnalyzer": "True",
+            "Syntax": "True",
+            "Pipeline": "False",
+            "CodeStyle": "False",
+            "FlowControl": "False",
+            "Messaging": "False",
+            "FunctionName": "True",
+            "EnableException": "True",
+            "BreakContinue": "True",
+            "DeprecatedVerbosityCommands": "True"
+        },
+        {
+            "Name": "Get-DbaPfDataCollector",
+            "Health": 48.28,
+            "Coverage": 0,
+            "ScriptAnalyzer": "True",
+            "Syntax": "True",
+            "Pipeline": "False",
+            "CodeStyle": "False",
+            "FlowControl": "False",
+            "Messaging": "False",
+            "FunctionName": "True",
+            "EnableException": "True",
+            "BreakContinue": "",
+            "DeprecatedVerbosityCommands": "True"
+        },
+        {
+            "Name": "Get-DbaPfDataCollectorCounter",
+            "Health": 13.79,
+            "Coverage": 0,
+            "ScriptAnalyzer": "False",
+            "Syntax": "True",
+            "Pipeline": "False",
+            "CodeStyle": "False",
+            "FlowControl": "False",
+            "Messaging": "False",
+            "FunctionName": "True",
+            "EnableException": "True",
+            "BreakContinue": "",
+            "DeprecatedVerbosityCommands": "True"
+        },
+        {
+            "Name": "Get-DbaPfDataCollectorCounterSample",
+            "Health": 48.28,
+            "Coverage": 0,
+            "ScriptAnalyzer": "True",
+            "Syntax": "True",
+            "Pipeline": "False",
+            "CodeStyle": "False",
+            "FlowControl": "False",
+            "Messaging": "False",
+            "FunctionName": "True",
+            "EnableException": "True",
+            "BreakContinue": "",
+            "DeprecatedVerbosityCommands": "True"
+        },
+        {
+            "Name": "Get-DbaPfDataCollectorSet",
+            "Health": 44.83,
+            "Coverage": 0,
+            "ScriptAnalyzer": "True",
+            "Syntax": "True",
+            "Pipeline": "False",
+            "CodeStyle": "False",
+            "FlowControl": "False",
+            "Messaging": "False",
+            "FunctionName": "True",
+            "EnableException": "True",
+            "BreakContinue": "",
+            "DeprecatedVerbosityCommands": "False"
+        },
+        {
+            "Name": "Get-DbaPfDataCollectorSetTemplate",
+            "Health": 51.72,
+            "Coverage": 0,
+            "ScriptAnalyzer": "True",
+            "Syntax": "True",
+            "Pipeline": "False",
+            "CodeStyle": "False",
+            "FlowControl": "False",
+            "Messaging": "False",
+            "FunctionName": "True",
+            "EnableException": "True",
+            "BreakContinue": "True",
+            "DeprecatedVerbosityCommands": "True"
         },
         {
             "Name": "Get-DbaPolicy",
@@ -2588,14 +2757,14 @@
         },
         {
             "Name": "Get-DbaSqlInstanceProperty",
-            "Health": 17.24,
+            "Health": 65.52,
             "Coverage": 0,
-            "ScriptAnalyzer": "False",
+            "ScriptAnalyzer": "True",
             "Syntax": "True",
-            "Pipeline": "False",
-            "CodeStyle": "False",
-            "FlowControl": "False",
-            "Messaging": "False",
+            "Pipeline": "True",
+            "CodeStyle": "True",
+            "FlowControl": "True",
+            "Messaging": "True",
             "FunctionName": "True",
             "EnableException": "True",
             "BreakContinue": "True",
@@ -2873,9 +3042,9 @@
         },
         {
             "Name": "Get-DbaUptime",
-            "Health": 17.24,
+            "Health": 51.72,
             "Coverage": 0,
-            "ScriptAnalyzer": "False",
+            "ScriptAnalyzer": "True",
             "Syntax": "True",
             "Pipeline": "False",
             "CodeStyle": "False",
@@ -2947,6 +3116,21 @@
             "DeprecatedVerbosityCommands": "True"
         },
         {
+            "Name": "Get-DbaXEObject",
+            "Health": 51.72,
+            "Coverage": 0,
+            "ScriptAnalyzer": "True",
+            "Syntax": "True",
+            "Pipeline": "False",
+            "CodeStyle": "False",
+            "FlowControl": "False",
+            "Messaging": "False",
+            "FunctionName": "True",
+            "EnableException": "True",
+            "BreakContinue": "True",
+            "DeprecatedVerbosityCommands": "True"
+        },
+        {
             "Name": "Get-DbaXESession",
             "Health": 50.66,
             "Coverage": 96.88,
@@ -2963,9 +3147,9 @@
         },
         {
             "Name": "Get-DbaXESessionTarget",
-            "Health": 45.83,
+            "Health": 80.31,
             "Coverage": 92.86,
-            "ScriptAnalyzer": "False",
+            "ScriptAnalyzer": "True",
             "Syntax": "True",
             "Pipeline": "False",
             "CodeStyle": "False",
@@ -2974,6 +3158,21 @@
             "FunctionName": "True",
             "EnableException": "True",
             "BreakContinue": "",
+            "DeprecatedVerbosityCommands": "True"
+        },
+        {
+            "Name": "Get-DbaXESessionTargetFile",
+            "Health": 51.72,
+            "Coverage": 0,
+            "ScriptAnalyzer": "True",
+            "Syntax": "True",
+            "Pipeline": "False",
+            "CodeStyle": "False",
+            "FlowControl": "False",
+            "Messaging": "False",
+            "FunctionName": "True",
+            "EnableException": "True",
+            "BreakContinue": "True",
             "DeprecatedVerbosityCommands": "True"
         },
         {
@@ -3035,6 +3234,21 @@
             "EnableException": "",
             "BreakContinue": "",
             "DeprecatedVerbosityCommands": "False"
+        },
+        {
+            "Name": "Import-DbaPfDataCollectorSetTemplate",
+            "Health": 17.24,
+            "Coverage": 0,
+            "ScriptAnalyzer": "False",
+            "Syntax": "True",
+            "Pipeline": "False",
+            "CodeStyle": "False",
+            "FlowControl": "False",
+            "Messaging": "False",
+            "FunctionName": "True",
+            "EnableException": "True",
+            "BreakContinue": "True",
+            "DeprecatedVerbosityCommands": "True"
         },
         {
             "Name": "Import-DbaSpConfigure",
@@ -3262,10 +3476,25 @@
             "DeprecatedVerbosityCommands": "True"
         },
         {
-            "Name": "Invoke-DbaSqlCmd",
-            "Health": 65.52,
+            "Name": "Invoke-DbaPfRelog",
+            "Health": 17.24,
             "Coverage": 0,
-            "ScriptAnalyzer": "True",
+            "ScriptAnalyzer": "False",
+            "Syntax": "True",
+            "Pipeline": "False",
+            "CodeStyle": "False",
+            "FlowControl": "False",
+            "Messaging": "False",
+            "FunctionName": "True",
+            "EnableException": "True",
+            "BreakContinue": "True",
+            "DeprecatedVerbosityCommands": "True"
+        },
+        {
+            "Name": "Invoke-DbaSqlCmd",
+            "Health": 27.59,
+            "Coverage": 0,
+            "ScriptAnalyzer": "False",
             "Syntax": "True",
             "Pipeline": "True",
             "CodeStyle": "True",
@@ -3273,7 +3502,7 @@
             "Messaging": "True",
             "FunctionName": "True",
             "EnableException": "True",
-            "BreakContinue": "True",
+            "BreakContinue": "",
             "DeprecatedVerbosityCommands": "True"
         },
         {
@@ -3289,6 +3518,21 @@
             "FunctionName": "True",
             "EnableException": "True",
             "BreakContinue": "True",
+            "DeprecatedVerbosityCommands": "True"
+        },
+        {
+            "Name": "Invoke-DbaXeReplay",
+            "Health": 27.59,
+            "Coverage": 0,
+            "ScriptAnalyzer": "False",
+            "Syntax": "True",
+            "Pipeline": "True",
+            "CodeStyle": "True",
+            "FlowControl": "True",
+            "Messaging": "True",
+            "FunctionName": "True",
+            "EnableException": "True",
+            "BreakContinue": "",
             "DeprecatedVerbosityCommands": "True"
         },
         {
@@ -3727,21 +3971,6 @@
             "DeprecatedVerbosityCommands": "True"
         },
         {
-            "Name": "Out-DbaDataTable",
-            "Health": 62.07,
-            "Coverage": 0,
-            "ScriptAnalyzer": "True",
-            "Syntax": "True",
-            "Pipeline": "True",
-            "CodeStyle": "True",
-            "FlowControl": "True",
-            "Messaging": "True",
-            "FunctionName": "True",
-            "EnableException": "True",
-            "BreakContinue": "True",
-            "DeprecatedVerbosityCommands": "False"
-        },
-        {
             "Name": "Publish-DbaDacpac",
             "Health": 17.24,
             "Coverage": 0,
@@ -4087,6 +4316,36 @@
             "DeprecatedVerbosityCommands": "True"
         },
         {
+            "Name": "Remove-DbaPfDataCollectorCounter",
+            "Health": 51.72,
+            "Coverage": 0,
+            "ScriptAnalyzer": "True",
+            "Syntax": "True",
+            "Pipeline": "False",
+            "CodeStyle": "False",
+            "FlowControl": "False",
+            "Messaging": "False",
+            "FunctionName": "True",
+            "EnableException": "True",
+            "BreakContinue": "True",
+            "DeprecatedVerbosityCommands": "True"
+        },
+        {
+            "Name": "Remove-DbaPfDataCollectorSet",
+            "Health": 48.28,
+            "Coverage": 0,
+            "ScriptAnalyzer": "True",
+            "Syntax": "True",
+            "Pipeline": "False",
+            "CodeStyle": "False",
+            "FlowControl": "False",
+            "Messaging": "False",
+            "FunctionName": "True",
+            "EnableException": "True",
+            "BreakContinue": "True",
+            "DeprecatedVerbosityCommands": "False"
+        },
+        {
             "Name": "Remove-DbaSpn",
             "Health": 58.62,
             "Coverage": 0,
@@ -4133,9 +4392,9 @@
         },
         {
             "Name": "Remove-DbaXESmartTarget",
-            "Health": 17.24,
+            "Health": 51.72,
             "Coverage": 0,
-            "ScriptAnalyzer": "False",
+            "ScriptAnalyzer": "True",
             "Syntax": "True",
             "Pipeline": "False",
             "CodeStyle": "False",
@@ -4537,6 +4796,21 @@
             "DeprecatedVerbosityCommands": "True"
         },
         {
+            "Name": "Set-DbaLogin",
+            "Health": 17.24,
+            "Coverage": 0,
+            "ScriptAnalyzer": "False",
+            "Syntax": "True",
+            "Pipeline": "False",
+            "CodeStyle": "False",
+            "FlowControl": "False",
+            "Messaging": "False",
+            "FunctionName": "True",
+            "EnableException": "True",
+            "BreakContinue": "True",
+            "DeprecatedVerbosityCommands": "True"
+        },
+        {
             "Name": "Set-DbaMaxDop",
             "Health": 13.79,
             "Coverage": 0,
@@ -4553,18 +4827,18 @@
         },
         {
             "Name": "Set-DbaMaxMemory",
-            "Health": 33.66,
+            "Health": 50.9,
             "Coverage": 57.58,
             "ScriptAnalyzer": "False",
             "Syntax": "True",
-            "Pipeline": "False",
-            "CodeStyle": "False",
-            "FlowControl": "False",
-            "Messaging": "False",
+            "Pipeline": "True",
+            "CodeStyle": "True",
+            "FlowControl": "True",
+            "Messaging": "True",
             "FunctionName": "True",
             "EnableException": "True",
             "BreakContinue": "True",
-            "DeprecatedVerbosityCommands": "False"
+            "DeprecatedVerbosityCommands": "True"
         },
         {
             "Name": "Set-DbaNetworkCertificate",
@@ -4747,6 +5021,36 @@
             "DeprecatedVerbosityCommands": "True"
         },
         {
+            "Name": "Start-DbaPfDataCollectorSet",
+            "Health": 17.24,
+            "Coverage": 0,
+            "ScriptAnalyzer": "False",
+            "Syntax": "True",
+            "Pipeline": "False",
+            "CodeStyle": "False",
+            "FlowControl": "False",
+            "Messaging": "False",
+            "FunctionName": "True",
+            "EnableException": "True",
+            "BreakContinue": "True",
+            "DeprecatedVerbosityCommands": "True"
+        },
+        {
+            "Name": "Start-DbaPowerBi",
+            "Health": 17.24,
+            "Coverage": 0,
+            "ScriptAnalyzer": "False",
+            "Syntax": "True",
+            "Pipeline": "False",
+            "CodeStyle": "False",
+            "FlowControl": "False",
+            "Messaging": "False",
+            "FunctionName": "True",
+            "EnableException": "True",
+            "BreakContinue": "True",
+            "DeprecatedVerbosityCommands": "True"
+        },
+        {
             "Name": "Start-DbaSqlService",
             "Health": 49.07,
             "Coverage": 92.31,
@@ -4822,6 +5126,21 @@
             "DeprecatedVerbosityCommands": "False"
         },
         {
+            "Name": "Stop-DbaPfDataCollectorSet",
+            "Health": 17.24,
+            "Coverage": 0,
+            "ScriptAnalyzer": "False",
+            "Syntax": "True",
+            "Pipeline": "False",
+            "CodeStyle": "False",
+            "FlowControl": "False",
+            "Messaging": "False",
+            "FunctionName": "True",
+            "EnableException": "True",
+            "BreakContinue": "True",
+            "DeprecatedVerbosityCommands": "True"
+        },
+        {
             "Name": "Stop-DbaProcess",
             "Health": 77.83,
             "Coverage": 85.71,
@@ -4871,6 +5190,21 @@
             "Health": 34.48,
             "Coverage": 50,
             "ScriptAnalyzer": "False",
+            "Syntax": "True",
+            "Pipeline": "False",
+            "CodeStyle": "False",
+            "FlowControl": "False",
+            "Messaging": "False",
+            "FunctionName": "True",
+            "EnableException": "True",
+            "BreakContinue": "True",
+            "DeprecatedVerbosityCommands": "True"
+        },
+        {
+            "Name": "Stop-DbaXESmartTarget",
+            "Health": 51.72,
+            "Coverage": 0,
+            "ScriptAnalyzer": "True",
             "Syntax": "True",
             "Pipeline": "False",
             "CodeStyle": "False",
@@ -5153,14 +5487,14 @@
         },
         {
             "Name": "Test-DbaMaxMemory",
-            "Health": 80.9,
+            "Health": 94.69,
             "Coverage": 94.59,
             "ScriptAnalyzer": "True",
             "Syntax": "True",
-            "Pipeline": "False",
-            "CodeStyle": "False",
-            "FlowControl": "False",
-            "Messaging": "False",
+            "Pipeline": "True",
+            "CodeStyle": "True",
+            "FlowControl": "True",
+            "Messaging": "True",
             "FunctionName": "True",
             "EnableException": "True",
             "BreakContinue": "",
@@ -5362,6 +5696,21 @@
             "DeprecatedVerbosityCommands": "False"
         },
         {
+            "Name": "Update-DbaPowerBiDataSource",
+            "Health": 17.24,
+            "Coverage": 0,
+            "ScriptAnalyzer": "False",
+            "Syntax": "True",
+            "Pipeline": "False",
+            "CodeStyle": "False",
+            "FlowControl": "False",
+            "Messaging": "False",
+            "FunctionName": "True",
+            "EnableException": "True",
+            "BreakContinue": "True",
+            "DeprecatedVerbosityCommands": "True"
+        },
+        {
             "Name": "Update-DbaSqlServiceAccount",
             "Health": 74.86,
             "Coverage": 67.06,
@@ -5438,7 +5787,7 @@
         },
         {
             "Name": "Write-DbaDataTable",
-            "Health": 31.03,
+            "Health": 27.59,
             "Coverage": 0,
             "ScriptAnalyzer": "False",
             "Syntax": "True",
@@ -5448,7 +5797,7 @@
             "Messaging": "True",
             "FunctionName": "True",
             "EnableException": "True",
-            "BreakContinue": "True",
+            "BreakContinue": "",
             "DeprecatedVerbosityCommands": "True"
         }
     ]
