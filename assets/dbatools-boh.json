@@ -71,6 +71,10 @@
         {
             "date": "2017-01-30",
             "value": 46.29
+        },
+        {
+            "date": "2017-02-08",
+            "value": 46.30
         }
     ],
     "data": [
@@ -1681,9 +1685,9 @@
         },
         {
             "Name": "Get-DbaDatabaseFile",
-            "Health": 45.83,
+            "Health": 80.31,
             "Coverage": 92.86,
-            "ScriptAnalyzer": "False",
+            "ScriptAnalyzer": "True",
             "Syntax": "True",
             "Pipeline": "False",
             "CodeStyle": "False",
@@ -3769,6 +3773,21 @@
             "Health": 51.72,
             "Coverage": 0,
             "ScriptAnalyzer": "True",
+            "Syntax": "True",
+            "Pipeline": "False",
+            "CodeStyle": "False",
+            "FlowControl": "False",
+            "Messaging": "False",
+            "FunctionName": "True",
+            "EnableException": "True",
+            "BreakContinue": "True",
+            "DeprecatedVerbosityCommands": "True"
+        },
+        {
+            "Name": "New-DbaDbUser",
+            "Health": 17.24,
+            "Coverage": 0,
+            "ScriptAnalyzer": "False",
             "Syntax": "True",
             "Pipeline": "False",
             "CodeStyle": "False",
