@@ -91,6 +91,10 @@
         {
             "date": "2018-03-05",
             "value": 47.16
+        },
+        {
+            "date": "2018-03-11",
+            "value": 47.27
         }
     ],
     "data":  [
@@ -1716,14 +1720,14 @@
         },
         {
             "Name":  "Get-DbaDatabaseFile",
-            "Health":  45.83,
+            "Health":  94.1,
             "Coverage":  92.86,
-            "ScriptAnalyzer":  "False",
+            "ScriptAnalyzer":  "True",
             "Syntax":  "True",
-            "Pipeline":  "False",
-            "CodeStyle":  "False",
-            "FlowControl":  "False",
-            "Messaging":  "False",
+            "Pipeline":  "True",
+            "CodeStyle":  "True",
+            "FlowControl":  "True",
+            "Messaging":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
             "BreakContinue":  "",
@@ -5495,21 +5499,6 @@
             "DeprecatedVerbosityCommands":  "True"
         },
         {
-            "Name":  "Test-DbaFullRecoveryModel",
-            "Health":  51.72,
-            "Coverage":  0,
-            "ScriptAnalyzer":  "True",
-            "Syntax":  "True",
-            "Pipeline":  "False",
-            "CodeStyle":  "False",
-            "FlowControl":  "False",
-            "Messaging":  "False",
-            "FunctionName":  "True",
-            "EnableException":  "True",
-            "BreakContinue":  "True",
-            "DeprecatedVerbosityCommands":  "True"
-        },
-        {
             "Name":  "Test-DbaIdentityUsage",
             "Health":  77.59,
             "Coverage":  85,
@@ -5915,5 +5904,4 @@
             "DeprecatedVerbosityCommands":  "True"
         }
     ]
-
 }
