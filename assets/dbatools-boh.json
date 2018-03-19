@@ -95,6 +95,10 @@
         {
             "date": "2018-03-11",
             "value": 47.27
+        },
+        {
+            "date": "2018-03-19",
+            "value": 47.33
         }
     ],
     "data":  [
@@ -1089,6 +1093,21 @@
             "DeprecatedVerbosityCommands":  "True"
         },
         {
+            "Name":  "Find-DbaInstance",
+            "Health":  27.59,
+            "Coverage":  0,
+            "ScriptAnalyzer":  "False",
+            "Syntax":  "True",
+            "Pipeline":  "True",
+            "CodeStyle":  "True",
+            "FlowControl":  "True",
+            "Messaging":  "True",
+            "FunctionName":  "True",
+            "EnableException":  "True",
+            "BreakContinue":  "",
+            "DeprecatedVerbosityCommands":  "True"
+        },
+        {
             "Name":  "Find-DbaLoginInGroup",
             "Health":  17.24,
             "Coverage":  0,
@@ -1855,9 +1874,9 @@
         },
         {
             "Name":  "Get-DbaDatabaseView",
-            "Health":  13.79,
+            "Health":  48.28,
             "Coverage":  0,
-            "ScriptAnalyzer":  "False",
+            "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "Pipeline":  "False",
             "CodeStyle":  "False",
@@ -5499,6 +5518,21 @@
             "DeprecatedVerbosityCommands":  "True"
         },
         {
+            "Name":  "Test-DbaDiskSpeed",
+            "Health":  51.72,
+            "Coverage":  0,
+            "ScriptAnalyzer":  "True",
+            "Syntax":  "True",
+            "Pipeline":  "False",
+            "CodeStyle":  "False",
+            "FlowControl":  "False",
+            "Messaging":  "False",
+            "FunctionName":  "True",
+            "EnableException":  "True",
+            "BreakContinue":  "True",
+            "DeprecatedVerbosityCommands":  "True"
+        },
+        {
             "Name":  "Test-DbaIdentityUsage",
             "Health":  77.59,
             "Coverage":  85,
@@ -5770,7 +5804,7 @@
         },
         {
             "Name":  "Test-DbaValidLogin",
-            "Health":  44.83,
+            "Health":  48.28,
             "Coverage":  0,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
@@ -5781,7 +5815,7 @@
             "FunctionName":  "True",
             "EnableException":  "True",
             "BreakContinue":  "",
-            "DeprecatedVerbosityCommands":  "False"
+            "DeprecatedVerbosityCommands":  "True"
         },
         {
             "Name":  "Uninstall-DbaWatchUpdate",
@@ -5904,4 +5938,5 @@
             "DeprecatedVerbosityCommands":  "True"
         }
     ]
+
 }
