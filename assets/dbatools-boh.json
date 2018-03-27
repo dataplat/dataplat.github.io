@@ -99,6 +99,10 @@
         {
             "date": "2018-03-19",
             "value": 47.33
+        },
+        {
+            "date": "2018-03-27",
+            "value": 47.47
         }
     ],
     "data":  [
@@ -1064,9 +1068,9 @@
         },
         {
             "Name":  "Find-DbaDisabledIndex",
-            "Health":  13.79,
+            "Health":  48.28,
             "Coverage":  0,
-            "ScriptAnalyzer":  "False",
+            "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "Pipeline":  "False",
             "CodeStyle":  "False",
@@ -1903,6 +1907,21 @@
             "DeprecatedVerbosityCommands":  "True"
         },
         {
+            "Name":  "Get-DbaDbExtentDiff",
+            "Health":  17.24,
+            "Coverage":  0,
+            "ScriptAnalyzer":  "False",
+            "Syntax":  "True",
+            "Pipeline":  "False",
+            "CodeStyle":  "False",
+            "FlowControl":  "False",
+            "Messaging":  "False",
+            "FunctionName":  "True",
+            "EnableException":  "True",
+            "BreakContinue":  "True",
+            "DeprecatedVerbosityCommands":  "True"
+        },
+        {
             "Name":  "Get-DbaDbMailHistory",
             "Health":  51.72,
             "Coverage":  0,
@@ -2054,14 +2073,14 @@
         },
         {
             "Name":  "Get-DbaDiskSpace",
-            "Health":  48.28,
+            "Health":  62.07,
             "Coverage":  0,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
-            "Pipeline":  "False",
-            "CodeStyle":  "False",
-            "FlowControl":  "False",
-            "Messaging":  "False",
+            "Pipeline":  "True",
+            "CodeStyle":  "True",
+            "FlowControl":  "True",
+            "Messaging":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
             "BreakContinue":  "",
@@ -3209,9 +3228,9 @@
         },
         {
             "Name":  "Get-DbaXESession",
-            "Health":  50.66,
+            "Health":  85.14,
             "Coverage":  96.88,
-            "ScriptAnalyzer":  "False",
+            "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "Pipeline":  "False",
             "CodeStyle":  "False",
@@ -5938,5 +5957,4 @@
             "DeprecatedVerbosityCommands":  "True"
         }
     ]
-
 }
