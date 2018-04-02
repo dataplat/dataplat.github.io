@@ -103,6 +103,10 @@
         {
             "date": "2018-03-27",
             "value": 47.47
+        },
+        {
+            "date": "2018-04-02",
+            "value": 47.47
         }
     ],
     "data":  [
@@ -708,7 +712,7 @@
         },
         {
             "Name":  "Disable-DbaAgHadr",
-            "Health":  62.07,
+            "Health":  65.52,
             "Coverage":  0,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
@@ -718,7 +722,7 @@
             "Messaging":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "True",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -768,7 +772,7 @@
         },
         {
             "Name":  "Enable-DbaAgHadr",
-            "Health":  62.07,
+            "Health":  65.52,
             "Coverage":  0,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
@@ -778,7 +782,7 @@
             "Messaging":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "True",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -4653,7 +4657,7 @@
         },
         {
             "Name":  "Restore-DbaBackupFromDirectory",
-            "Health":  48.28,
+            "Health":  44.83,
             "Coverage":  0,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
@@ -4664,7 +4668,7 @@
             "FunctionName":  "True",
             "EnableException":  "",
             "BreakContinue":  "True",
-            "DeprecatedVerbosityCommands":  "True"
+            "DeprecatedVerbosityCommands":  "False"
         },
         {
             "Name":  "Restore-DbaDatabase",
