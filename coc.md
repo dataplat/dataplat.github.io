@@ -4,6 +4,7 @@ author: "Steph Locke"
 date: "10 December 2018"
 output: html_document
 ---
+# Code of Conduct
 
 ## Purpose
 A primary goal of SQL Server Community Slack is to be inclusive to the largest number of participants, with the most varied and diverse backgrounds possible. As such, we are committed to providing a friendly, safe and welcoming environment for all, regardless of gender, sexual orientation, ability, ethnicity, socioeconomic status, and religion (or lack thereof).
