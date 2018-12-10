@@ -38,7 +38,7 @@ The following behaviors are expected and requested of all community members:
 - When we disagree, try to understand why. Disagreements, both social and technical, happen all the time and SQL is no exception. It is important that we resolve disagreements and differing views constructively. Remember that we’re different. The strength of our community comes from its diversity, people from a wide range of backgrounds. Different people have different perspectives on issues. Being unable to understand why someone holds a viewpoint doesn’t mean that they’re wrong. Don’t forget that it is human to err and blaming each other doesn’t get us anywhere. Instead, focus on helping to resolve issues and learning from mistakes.
 - Moderators reserve the right to delete excessive self-promotional or commercial posts.
 - Content that has been identified as objectionable, inappropriate, or off-topic will be subject to deletion by channel moderators. Posters will receive a warning and risk being blocked from the channel if unacceptable behavior persists.
-- These decisions are made by SQL SErver Communit Slack administrators in its sole discretion.
+- These decisions are made by SQL Server Community Slack administrators in its sole discretion.
 
 ## Consequences of Unacceptable Behavior
 Unacceptable behavior from any community member, including administrators and those with decision-making authority, will not be tolerated.
