@@ -167,6 +167,10 @@
         {
             "date": "2018-12-05",
             "value": 69.91
+        },
+        {
+            "date": "2018-12-11",
+            "value": 68.68
         }
     ],
     "data":  [
@@ -577,9 +581,9 @@
         },
         {
             "Name":  "Copy-DbaCmsRegServer",
-            "Health":  48.28,
+            "Health":  13.79,
             "Coverage":  0,
-            "ScriptAnalyzer":  "True",
+            "ScriptAnalyzer":  "False",
             "Syntax":  "True",
             "Pipeline":  "False",
             "CodeStyle":  "False",
@@ -697,9 +701,9 @@
         },
         {
             "Name":  "Copy-DbaDbTableData",
-            "Health":  59.76,
+            "Health":  94.24,
             "Coverage":  83.33,
-            "ScriptAnalyzer":  "False",
+            "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "Pipeline":  "True",
             "CodeStyle":  "True",
@@ -757,9 +761,9 @@
         },
         {
             "Name":  "Copy-DbaPolicyManagement",
-            "Health":  48.28,
+            "Health":  13.79,
             "Coverage":  0,
-            "ScriptAnalyzer":  "True",
+            "ScriptAnalyzer":  "False",
             "Syntax":  "True",
             "Pipeline":  "False",
             "CodeStyle":  "False",
@@ -2481,6 +2485,21 @@
             "DeprecatedVerbosityCommands":  "True"
         },
         {
+            "Name":  "Get-DbaDbOrphanUser",
+            "Health":  62.07,
+            "Coverage":  0,
+            "ScriptAnalyzer":  "True",
+            "Syntax":  "True",
+            "Pipeline":  "True",
+            "CodeStyle":  "True",
+            "FlowControl":  "True",
+            "Messaging":  "True",
+            "FunctionName":  "True",
+            "EnableException":  "True",
+            "BreakContinue":  "",
+            "DeprecatedVerbosityCommands":  "True"
+        },
+        {
             "Name":  "Get-DbaDbPageInfo",
             "Health":  84.69,
             "Coverage":  55.56,
@@ -3279,21 +3298,6 @@
             "Name":  "Get-DbaOperatingSystem",
             "Health":  90.72,
             "Coverage":  83.12,
-            "ScriptAnalyzer":  "True",
-            "Syntax":  "True",
-            "Pipeline":  "True",
-            "CodeStyle":  "True",
-            "FlowControl":  "True",
-            "Messaging":  "True",
-            "FunctionName":  "True",
-            "EnableException":  "True",
-            "BreakContinue":  "",
-            "DeprecatedVerbosityCommands":  "True"
-        },
-        {
-            "Name":  "Get-DbaOrphanUser",
-            "Health":  87.93,
-            "Coverage":  75,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "Pipeline":  "True",
@@ -4807,9 +4811,9 @@
         },
         {
             "Name":  "Invoke-DbaQuery",
-            "Health":  88.86,
+            "Health":  54.38,
             "Coverage":  77.67,
-            "ScriptAnalyzer":  "True",
+            "ScriptAnalyzer":  "False",
             "Syntax":  "True",
             "Pipeline":  "True",
             "CodeStyle":  "True",
@@ -5886,6 +5890,21 @@
             "DeprecatedVerbosityCommands":  "True"
         },
         {
+            "Name":  "Remove-DbaDbOrphanUser",
+            "Health":  62.07,
+            "Coverage":  0,
+            "ScriptAnalyzer":  "True",
+            "Syntax":  "True",
+            "Pipeline":  "True",
+            "CodeStyle":  "True",
+            "FlowControl":  "True",
+            "Messaging":  "True",
+            "FunctionName":  "True",
+            "EnableException":  "True",
+            "BreakContinue":  "",
+            "DeprecatedVerbosityCommands":  "True"
+        },
+        {
             "Name":  "Remove-DbaDbSnapshot",
             "Health":  88.14,
             "Coverage":  65.62,
@@ -5958,21 +5977,6 @@
             "FunctionName":  "True",
             "EnableException":  "True",
             "BreakContinue":  "True",
-            "DeprecatedVerbosityCommands":  "True"
-        },
-        {
-            "Name":  "Remove-DbaOrphanUser",
-            "Health":  62.07,
-            "Coverage":  0,
-            "ScriptAnalyzer":  "True",
-            "Syntax":  "True",
-            "Pipeline":  "True",
-            "CodeStyle":  "True",
-            "FlowControl":  "True",
-            "Messaging":  "True",
-            "FunctionName":  "True",
-            "EnableException":  "True",
-            "BreakContinue":  "",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -6111,9 +6115,9 @@
             "DeprecatedVerbosityCommands":  "True"
         },
         {
-            "Name":  "Repair-DbaOrphanUser",
-            "Health":  82.17,
-            "Coverage":  58.33,
+            "Name":  "Repair-DbaDbOrphanUser",
+            "Health":  62.07,
+            "Coverage":  0,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "Pipeline":  "True",
