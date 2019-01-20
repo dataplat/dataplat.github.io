@@ -173,8 +173,12 @@
             "value": 68.68
         },
         {
-            "date": "2019-12-07",
+            "date": "2019-01-07",
             "value": 68.28
+        },
+        {
+            "date": "2019-01-20",
+            "value": 68.15
         }
     ],
     "data":  [
@@ -4590,9 +4594,9 @@
         },
         {
             "Name":  "Install-DbaMaintenanceSolution",
-            "Health":  73.69,
+            "Health":  39.21,
             "Coverage":  23.73,
-            "ScriptAnalyzer":  "True",
+            "ScriptAnalyzer":  "False",
             "Syntax":  "True",
             "Pipeline":  "True",
             "CodeStyle":  "True",
@@ -6780,9 +6784,9 @@
         },
         {
             "Name":  "Set-DbaLogin",
-            "Health":  79.93,
+            "Health":  45.45,
             "Coverage":  81.82,
-            "ScriptAnalyzer":  "True",
+            "ScriptAnalyzer":  "False",
             "Syntax":  "True",
             "Pipeline":  "False",
             "CodeStyle":  "False",
