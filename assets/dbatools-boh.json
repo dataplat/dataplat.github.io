@@ -179,6 +179,10 @@
         {
             "date": "2019-01-20",
             "value": 68.15
+        },
+        {
+            "date": "2019-02-05",
+            "value": 68.08
         }
     ],
     "data":  [
@@ -634,9 +638,9 @@
         },
         {
             "Name":  "Copy-DbaDatabase",
-            "Health":  68.24,
+            "Health":  33.76,
             "Coverage":  57.9,
-            "ScriptAnalyzer":  "True",
+            "ScriptAnalyzer":  "False",
             "Syntax":  "True",
             "Pipeline":  "False",
             "CodeStyle":  "False",
