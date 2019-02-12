@@ -183,6 +183,10 @@
         {
             "date": "2019-02-05",
             "value": 68.08
+        },
+        {
+            "date": "2019-02-13",
+            "value": 68.08
         }
     ],
     "data":  [
@@ -4658,7 +4662,7 @@
         },
         {
             "Name":  "Invoke-DbaAdvancedRestore",
-            "Health":  83.21,
+            "Health":  79.76,
             "Coverage":  91.3,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
@@ -4668,7 +4672,7 @@
             "Messaging":  "False",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "True",
+            "BreakContinue":  "",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
