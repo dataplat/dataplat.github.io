@@ -187,6 +187,10 @@
         {
             "date": "2019-02-13",
             "value": 68.08
+        },
+        {
+            "date": "2019-02-25",
+            "value": 68.11
         }
     ],
     "data":  [
@@ -4602,9 +4606,9 @@
         },
         {
             "Name":  "Install-DbaMaintenanceSolution",
-            "Health":  39.21,
+            "Health":  73.69,
             "Coverage":  23.73,
-            "ScriptAnalyzer":  "False",
+            "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "Pipeline":  "True",
             "CodeStyle":  "True",
@@ -4673,6 +4677,21 @@
             "FunctionName":  "True",
             "EnableException":  "True",
             "BreakContinue":  "",
+            "DeprecatedVerbosityCommands":  "True"
+        },
+        {
+            "Name":  "Invoke-DbaAdvancedUpdate",
+            "Health":  51.72,
+            "Coverage":  0,
+            "ScriptAnalyzer":  "True",
+            "Syntax":  "True",
+            "Pipeline":  "False",
+            "CodeStyle":  "False",
+            "FlowControl":  "False",
+            "Messaging":  "False",
+            "FunctionName":  "True",
+            "EnableException":  "True",
+            "BreakContinue":  "True",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -5369,6 +5388,21 @@
             "Name":  "New-DbaDbCertificate",
             "Health":  93.72,
             "Coverage":  81.82,
+            "ScriptAnalyzer":  "True",
+            "Syntax":  "True",
+            "Pipeline":  "True",
+            "CodeStyle":  "True",
+            "FlowControl":  "True",
+            "Messaging":  "True",
+            "FunctionName":  "True",
+            "EnableException":  "True",
+            "BreakContinue":  "True",
+            "DeprecatedVerbosityCommands":  "True"
+        },
+        {
+            "Name":  "New-DbaDbMailProfile",
+            "Health":  65.52,
+            "Coverage":  0,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "Pipeline":  "True",
