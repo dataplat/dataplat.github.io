@@ -195,6 +195,10 @@
         {
             "date": "2019-03-04",
             "value": 68.11
+        },
+        {
+            "date": "2019-03-13",
+            "value": 68.09
         }
     ],
     "data":  [
@@ -425,7 +429,7 @@
         },
         {
             "Name":  "Connect-DbaInstance",
-            "Health":  32.62,
+            "Health":  29.17,
             "Coverage":  54.62,
             "ScriptAnalyzer":  "False",
             "Syntax":  "True",
@@ -435,7 +439,7 @@
             "Messaging":  "False",
             "FunctionName":  "True",
             "EnableException":  "",
-            "BreakContinue":  "True",
+            "BreakContinue":  "",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -785,9 +789,9 @@
         },
         {
             "Name":  "Copy-DbaPolicyManagement",
-            "Health":  13.79,
+            "Health":  48.28,
             "Coverage":  0,
-            "ScriptAnalyzer":  "False",
+            "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "Pipeline":  "False",
             "CodeStyle":  "False",
@@ -5300,9 +5304,9 @@
         },
         {
             "Name":  "New-DbaConnectionString",
-            "Health":  48.28,
+            "Health":  10.34,
             "Coverage":  0,
-            "ScriptAnalyzer":  "True",
+            "ScriptAnalyzer":  "False",
             "Syntax":  "True",
             "Pipeline":  "False",
             "CodeStyle":  "False",
@@ -5310,7 +5314,7 @@
             "Messaging":  "False",
             "FunctionName":  "True",
             "EnableException":  "",
-            "BreakContinue":  "True",
+            "BreakContinue":  "",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -5392,6 +5396,21 @@
             "Name":  "New-DbaDbCertificate",
             "Health":  93.72,
             "Coverage":  81.82,
+            "ScriptAnalyzer":  "True",
+            "Syntax":  "True",
+            "Pipeline":  "True",
+            "CodeStyle":  "True",
+            "FlowControl":  "True",
+            "Messaging":  "True",
+            "FunctionName":  "True",
+            "EnableException":  "True",
+            "BreakContinue":  "True",
+            "DeprecatedVerbosityCommands":  "True"
+        },
+        {
+            "Name":  "New-DbaDbMailAccount",
+            "Health":  65.52,
+            "Coverage":  0,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "Pipeline":  "True",
