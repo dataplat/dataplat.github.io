@@ -199,6 +199,10 @@
         {
             "date": "2019-03-13",
             "value": 68.09
+        },
+        {
+            "date": "2019-03-20",
+            "value": 68.03
         }
     ],
     "data":  [
@@ -504,9 +508,9 @@
         },
         {
             "Name":  "Copy-DbaAgentJob",
-            "Health":  32.45,
+            "Health":  66.93,
             "Coverage":  54.05,
-            "ScriptAnalyzer":  "False",
+            "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "Pipeline":  "False",
             "CodeStyle":  "False",
@@ -654,9 +658,9 @@
         },
         {
             "Name":  "Copy-DbaDatabase",
-            "Health":  33.76,
+            "Health":  68.24,
             "Coverage":  57.9,
-            "ScriptAnalyzer":  "False",
+            "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "Pipeline":  "False",
             "CodeStyle":  "False",
@@ -1142,6 +1146,21 @@
             "CodeStyle":  "False",
             "FlowControl":  "False",
             "Messaging":  "False",
+            "FunctionName":  "True",
+            "EnableException":  "True",
+            "BreakContinue":  "True",
+            "DeprecatedVerbosityCommands":  "True"
+        },
+        {
+            "Name":  "Export-DbaDbTableData",
+            "Health":  31.03,
+            "Coverage":  0,
+            "ScriptAnalyzer":  "False",
+            "Syntax":  "True",
+            "Pipeline":  "True",
+            "CodeStyle":  "True",
+            "FlowControl":  "True",
+            "Messaging":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
             "BreakContinue":  "True",
@@ -4613,6 +4632,21 @@
             "DeprecatedVerbosityCommands":  "True"
         },
         {
+            "Name":  "Install-DbaInstance",
+            "Health":  13.79,
+            "Coverage":  0,
+            "ScriptAnalyzer":  "False",
+            "Syntax":  "True",
+            "Pipeline":  "False",
+            "CodeStyle":  "False",
+            "FlowControl":  "False",
+            "Messaging":  "False",
+            "FunctionName":  "True",
+            "EnableException":  "True",
+            "BreakContinue":  "",
+            "DeprecatedVerbosityCommands":  "True"
+        },
+        {
             "Name":  "Install-DbaMaintenanceSolution",
             "Health":  73.69,
             "Coverage":  23.73,
@@ -4659,6 +4693,21 @@
         },
         {
             "Name":  "Install-DbaWhoIsActive",
+            "Health":  51.72,
+            "Coverage":  0,
+            "ScriptAnalyzer":  "True",
+            "Syntax":  "True",
+            "Pipeline":  "False",
+            "CodeStyle":  "False",
+            "FlowControl":  "False",
+            "Messaging":  "False",
+            "FunctionName":  "True",
+            "EnableException":  "True",
+            "BreakContinue":  "True",
+            "DeprecatedVerbosityCommands":  "True"
+        },
+        {
+            "Name":  "Invoke-DbaAdvancedInstall",
             "Health":  51.72,
             "Coverage":  0,
             "ScriptAnalyzer":  "True",
@@ -5304,9 +5353,9 @@
         },
         {
             "Name":  "New-DbaConnectionString",
-            "Health":  10.34,
+            "Health":  44.83,
             "Coverage":  0,
-            "ScriptAnalyzer":  "False",
+            "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "Pipeline":  "False",
             "CodeStyle":  "False",
@@ -5724,9 +5773,9 @@
         },
         {
             "Name":  "Read-DbaBackupHeader",
-            "Health":  53.45,
+            "Health":  87.93,
             "Coverage":  65.05,
-            "ScriptAnalyzer":  "False",
+            "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "Pipeline":  "True",
             "CodeStyle":  "True",
@@ -6369,9 +6418,9 @@
         },
         {
             "Name":  "Resolve-DbaNetworkName",
-            "Health":  72.86,
+            "Health":  38.38,
             "Coverage":  71.29,
-            "ScriptAnalyzer":  "True",
+            "ScriptAnalyzer":  "False",
             "Syntax":  "True",
             "Pipeline":  "False",
             "CodeStyle":  "False",
@@ -7973,9 +8022,9 @@
             "DeprecatedVerbosityCommands":  "True"
         },
         {
-            "Name":  "Write-DbaDataTable",
-            "Health":  87.83,
-            "Coverage":  74.74,
+            "Name":  "Write-DbaDbTableData",
+            "Health":  62.07,
+            "Coverage":  0,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "Pipeline":  "True",
