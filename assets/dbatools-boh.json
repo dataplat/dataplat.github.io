@@ -203,6 +203,10 @@
         {
             "date": "2019-03-20",
             "value": 68.03
+        },
+        {
+            "date": "2019-04-08",
+            "value": 67.73
         }
     ],
     "data":  [
@@ -891,6 +895,21 @@
             "CodeStyle":  "False",
             "FlowControl":  "False",
             "Messaging":  "True",
+            "FunctionName":  "True",
+            "EnableException":  "True",
+            "BreakContinue":  "",
+            "DeprecatedVerbosityCommands":  "True"
+        },
+        {
+            "Name":  "Copy-DbaStartupProcedure",
+            "Health":  48.28,
+            "Coverage":  0,
+            "ScriptAnalyzer":  "True",
+            "Syntax":  "True",
+            "Pipeline":  "False",
+            "CodeStyle":  "False",
+            "FlowControl":  "False",
+            "Messaging":  "False",
             "FunctionName":  "True",
             "EnableException":  "True",
             "BreakContinue":  "",
@@ -3717,6 +3736,66 @@
             "DeprecatedVerbosityCommands":  "True"
         },
         {
+            "Name":  "Get-DbaRandomizedDataset",
+            "Health":  51.72,
+            "Coverage":  0,
+            "ScriptAnalyzer":  "True",
+            "Syntax":  "True",
+            "Pipeline":  "False",
+            "CodeStyle":  "False",
+            "FlowControl":  "False",
+            "Messaging":  "False",
+            "FunctionName":  "True",
+            "EnableException":  "True",
+            "BreakContinue":  "True",
+            "DeprecatedVerbosityCommands":  "True"
+        },
+        {
+            "Name":  "Get-DbaRandomizedDatasetTemplate",
+            "Health":  51.72,
+            "Coverage":  0,
+            "ScriptAnalyzer":  "True",
+            "Syntax":  "True",
+            "Pipeline":  "False",
+            "CodeStyle":  "False",
+            "FlowControl":  "False",
+            "Messaging":  "False",
+            "FunctionName":  "True",
+            "EnableException":  "True",
+            "BreakContinue":  "True",
+            "DeprecatedVerbosityCommands":  "True"
+        },
+        {
+            "Name":  "Get-DbaRandomizedType",
+            "Health":  51.72,
+            "Coverage":  0,
+            "ScriptAnalyzer":  "True",
+            "Syntax":  "True",
+            "Pipeline":  "False",
+            "CodeStyle":  "False",
+            "FlowControl":  "False",
+            "Messaging":  "False",
+            "FunctionName":  "True",
+            "EnableException":  "True",
+            "BreakContinue":  "True",
+            "DeprecatedVerbosityCommands":  "True"
+        },
+        {
+            "Name":  "Get-DbaRandomizedValue",
+            "Health":  51.72,
+            "Coverage":  0,
+            "ScriptAnalyzer":  "True",
+            "Syntax":  "True",
+            "Pipeline":  "False",
+            "CodeStyle":  "False",
+            "FlowControl":  "False",
+            "Messaging":  "False",
+            "FunctionName":  "True",
+            "EnableException":  "True",
+            "BreakContinue":  "True",
+            "DeprecatedVerbosityCommands":  "True"
+        },
+        {
             "Name":  "Get-DbaRegistryRoot",
             "Health":  77.9,
             "Coverage":  75.86,
@@ -4842,6 +4921,21 @@
             "DeprecatedVerbosityCommands":  "True"
         },
         {
+            "Name":  "Invoke-DbaDbDataGenerator",
+            "Health":  13.79,
+            "Coverage":  0,
+            "ScriptAnalyzer":  "False",
+            "Syntax":  "True",
+            "Pipeline":  "False",
+            "CodeStyle":  "False",
+            "FlowControl":  "False",
+            "Messaging":  "False",
+            "FunctionName":  "True",
+            "EnableException":  "True",
+            "BreakContinue":  "",
+            "DeprecatedVerbosityCommands":  "True"
+        },
+        {
             "Name":  "Invoke-DbaDbDataMasking",
             "Health":  13.79,
             "Coverage":  0,
@@ -5454,6 +5548,21 @@
             "FunctionName":  "True",
             "EnableException":  "True",
             "BreakContinue":  "True",
+            "DeprecatedVerbosityCommands":  "True"
+        },
+        {
+            "Name":  "New-DbaDbDataGeneratorConfig",
+            "Health":  13.79,
+            "Coverage":  0,
+            "ScriptAnalyzer":  "False",
+            "Syntax":  "True",
+            "Pipeline":  "False",
+            "CodeStyle":  "False",
+            "FlowControl":  "False",
+            "Messaging":  "False",
+            "FunctionName":  "True",
+            "EnableException":  "True",
+            "BreakContinue":  "",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -7018,9 +7127,9 @@
         },
         {
             "Name":  "Set-DbaStartupParameter",
-            "Health":  31.03,
+            "Health":  65.52,
             "Coverage":  0,
-            "ScriptAnalyzer":  "False",
+            "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "Pipeline":  "True",
             "CodeStyle":  "True",
