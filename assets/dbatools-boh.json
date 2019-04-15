@@ -207,6 +207,10 @@
         {
             "date": "2019-04-08",
             "value": 67.73
+        },
+        {
+            "date": "2019-04-15",
+            "value": 67.67
         }
     ],
     "data":  [
@@ -6962,9 +6966,9 @@
         },
         {
             "Name":  "Set-DbaDbState",
-            "Health":  83.69,
+            "Health":  49.21,
             "Coverage":  72.73,
-            "ScriptAnalyzer":  "True",
+            "ScriptAnalyzer":  "False",
             "Syntax":  "True",
             "Pipeline":  "True",
             "CodeStyle":  "False",
