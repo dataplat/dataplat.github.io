@@ -215,6 +215,10 @@
         {
             "date": "2019-05-07",
             "value": 67.77
+        },
+        {
+            "date": "2019-05-13",
+            "value": 67.77
         }
     ],
     "data":  [
@@ -5125,9 +5129,9 @@
         },
         {
             "Name":  "Invoke-DbaDbMirroring",
-            "Health":  31.03,
+            "Health":  65.52,
             "Coverage":  0,
-            "ScriptAnalyzer":  "False",
+            "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "Pipeline":  "True",
             "CodeStyle":  "True",
@@ -7555,9 +7559,9 @@
         },
         {
             "Name":  "Sync-DbaLoginPermission",
-            "Health":  77.45,
+            "Health":  42.97,
             "Coverage":  84.62,
-            "ScriptAnalyzer":  "True",
+            "ScriptAnalyzer":  "False",
             "Syntax":  "True",
             "Pipeline":  "False",
             "CodeStyle":  "False",
