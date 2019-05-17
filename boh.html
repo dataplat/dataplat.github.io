@@ -102,10 +102,10 @@
                     { "data": "Coverage" },
                     { "data": "ScriptAnalyzer" },
                     { "data": "Syntax" },
-                    { "data": "Pipeline" },
-                    { "data": "CodeStyle" },
-                    { "data": "FlowControl" },
-                    { "data": "Messaging" },
+                    //{ "data": "Pipeline" },
+                    //{ "data": "CodeStyle" },
+                    //{ "data": "FlowControl" },
+                    //{ "data": "Messaging" },
                     { "data": "FunctionName" },
                     { "data": "EnableException" },
                     { "data": "BreakContinue" },
@@ -187,7 +187,7 @@
                                 }
                             }
                         },
-                        "targets": [3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+                        "targets": [3, 4, 5, 6, 7, 8],
                         "className": "text-center",
                     },
                     {
@@ -205,7 +205,7 @@
 
             t.on('init', function () {
                 var total = t.data().count();
-                for (i = 3; i < 13; i++) {
+                for (i = 3; i < 8; i++) {
                     var q = t.columns(i).data().flatten()
                         .filter(function (value, index) {
                             return value == 'True' ? false : true;
@@ -214,14 +214,14 @@
                     $(h).find('span.stats').html('(' + q.length + ' left)')
                 }
                 var devstrue = t
-                    .columns([5, 6, 7, 8, 11])
+                    .columns([7])
                     .data()
                     .flatten()
                     .filter(function (value, index) {
                         return value == 'True' ? false : true;
                     });
                 var devsfalse = t
-                    .columns([5, 6, 7, 8, 11])
+                    .columns([7])
                     .data()
                     .flatten()
                     .filter(function (value, index) {
@@ -230,14 +230,14 @@
                 $('#CoreDevs_todo').html(devsfalse.length);
                 $('#CoreDevs_left').html(devstrue.length);
                 var everyonetrue = t
-                    .columns([2, 3, 4, 9, 10, 12])
+                    .columns([2, 3, 4, 5, 6, 8])
                     .data()
                     .flatten()
                     .filter(function (value, index) {
                         return value == 'True' ? false : true;
                     });
                 var everyonefalse = t
-                    .columns([2, 3, 4, 9, 10, 12])
+                    .columns([2, 3, 4, 5, 6, 8])
                     .data()
                     .flatten()
                     .filter(function (value, index) {
@@ -402,22 +402,6 @@
                             indications</dd>
                         <dt>Syntax (everyone)</dt>
                         <dd>The function has valid syntax</dd>
-                        <dt>Pipeline (Core-Devs)</dt>
-                        <dd>See
-                            <a href="https://github.com/sqlcollaborative/dbatools-progressmanagement/blob/master/dbatools%201.0/Requirements/manually%20signing%20off.md#pipeline-implementation">this</a>
-                        </dd>
-                        <dt>CodeStyle (Core-Devs)</dt>
-                        <dd>See
-                            <a href="https://github.com/sqlcollaborative/dbatools-progressmanagement/blob/master/dbatools%201.0/Requirements/manually%20signing%20off.md#code-style">this</a>
-                        </dd>
-                        <dt>FlowControl (Core-Devs)</dt>
-                        <dd>See
-                            <a href="https://github.com/sqlcollaborative/dbatools-progressmanagement/blob/master/dbatools%201.0/Requirements/manually%20signing%20off.md#flow-control">this</a>
-                        </dd>
-                        <dt>Messaging (Core-Devs)</dt>
-                        <dd>See
-                            <a href="https://github.com/sqlcollaborative/dbatools-progressmanagement/blob/master/dbatools%201.0/Requirements/manually%20signing%20off.md#messaging-usage">this</a>
-                        </dd>
                         <dt>FunctionName (everyone)</dt>
                         <dd>Matches *-Dba*</dd>
                         <dt>EnableException (everyone)</dt>
@@ -462,18 +446,6 @@
                             <th>Syntax
                                 <span class="stats"></span>
                             </th>
-                            <th>Pipeline
-                                <span class="stats"></span>
-                            </th>
-                            <th>CodeStyle
-                                <span class="stats"></span>
-                            </th>
-                            <th>FlowControl
-                                <span class="stats"></span>
-                            </th>
-                            <th>Messaging
-                                <span class="stats"></span>
-                            </th>
                             <th>FunctionName
                                 <span class="stats"></span>
                             </th>
@@ -495,10 +467,6 @@
                             <th>Coverage</th>
                             <th>ScriptAnalyzer</th>
                             <th>Syntax</th>
-                            <th>Pipeline</th>
-                            <th>CodeStyle</th>
-                            <th>FlowControl</th>
-                            <th>Messaging</th>
                             <th>FunctionName</th>
                             <th>EnableException</th>
                             <th>BreakContinue</th>
