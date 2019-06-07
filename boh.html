@@ -48,6 +48,7 @@
 
     <script type="text/javascript" language="javascript">
         $(document).ready(function () {
+            var activebranch = 'prerelease'
             function render_avg_health(avg) {
                 var ccolor = 'red'
                 switch (true) {
@@ -138,7 +139,7 @@
                                 if (data == 0) {
                                     return '<img src="https://img.shields.io/badge/-' + data + '-' + ccolor + '.svg?style=flat-square&amp;maxAge=2592000" alt="">'
                                 }
-                                return '<a target="_blank" href="https://codecov.io/gh/sqlcollaborative/dbatools/src/development/functions/' + row.Name + '.ps1"><img src="https://img.shields.io/badge/-' + data + '-' + ccolor + '.svg?style=flat-square&amp;maxAge=2592000" alt=""></a>'
+                                return '<a target="_blank" href="https://codecov.io/gh/sqlcollaborative/dbatools/src/' + activebranch + '/functions/' + row.Name + '.ps1"><img src="https://img.shields.io/badge/-' + data + '-' + ccolor + '.svg?style=flat-square&amp;maxAge=2592000" alt=""></a>'
                             }
                         },
                         "targets": [2],
@@ -195,7 +196,7 @@
                             if (type !== 'display') {
                                 return data;
                             } else {
-                                return '<a target="_blank" href="https://github.com/sqlcollaborative/dbatools/blob/development/functions/' + data + '.ps1">' + data + '</a>'
+                                return '<a target="_blank" href="https://github.com/sqlcollaborative/dbatools/blob/' + activebranch + '/functions/' + data + '.ps1">' + data + '</a>'
                             }
                         },
                         "targets": [0],
@@ -260,9 +261,9 @@
             })
 
             d3.json("assets/dbatools-boh.json", function (data) {
-                data = data.history;
+                data = _.takeRight(data.history, 30);
                 var lastupdated = _.last(data).date;
-                $('#lastupdatedinfo').text('(as of ' + lastupdated + ')');
+                $('#lastupdatedinfo').text('(as of ' + lastupdated + '), branch ' + activebranch);
                 data = MG.convert.date(data, 'date');
                 var adi_baselines = [{ value: 85, label: '1.0 Ready (85)' }];
                 MG.data_graphic({
