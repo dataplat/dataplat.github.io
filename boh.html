@@ -9,9 +9,12 @@
     <link rel="icon" href="https://dbatools.io/wp-content/uploads/2016/05/dbatools.png" sizes="192x192">
     <link rel="apple-touch-icon-precomposed" href="https://dbatools.io/wp-content/uploads/2016/05/dbatools.png">
     <meta name="msapplication-TileImage" content="https://dbatools.io/wp-content/uploads/2016/05/dbatools.png">
-    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/v/bs4-4.0.0-beta/jq-3.2.1/jq-3.2.1/jszip-2.5.0/dt-1.10.16/b-1.4.2/b-html5-1.4.2/fh-3.1.3/r-2.2.0/datatables.min.css">
-    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/metrics-graphics/2.11.0/metricsgraphics.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="//cdn.datatables.net/v/bs4-4.0.0-beta/jq-3.2.1/jq-3.2.1/jszip-2.5.0/dt-1.10.16/b-1.4.2/b-html5-1.4.2/fh-3.1.3/r-2.2.0/datatables.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="//cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="//cdnjs.cloudflare.com/ajax/libs/metrics-graphics/2.11.0/metricsgraphics.min.css">
     <style>
         .customnav {
             background: #e3e3e3
@@ -24,31 +27,37 @@
         h2 small.text-muted {
             font-size: 50%;
         }
+
         #remove-filter {
             margin-left: 15px;
         }
+
         @media (max-width: 575px) {
             .hidden-xs-down {
-                display: none!important;
+                display: none !important;
             }
         }
 
         @media (min-width: 575px) {
             .hidden-xs-up {
-                display: none!important;
+                display: none !important;
             }
         }
     </style>
-    <script type="text/javascript" language="javascript" src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
-    <script type="text/javascript" language="javascript" src="//cdn.datatables.net/v/bs4-4.0.0-beta/jq-3.2.1/jq-3.2.1/jszip-2.5.0/dt-1.10.16/b-1.4.2/b-html5-1.4.2/fh-3.1.3/r-2.2.0/datatables.min.js"></script>
-    <script type="text/javascript" language="javascript" src="//cdn.jsdelivr.net/npm/lodash@4.17.4/lodash.min.js"></script>
+    <script type="text/javascript" language="javascript"
+        src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+    <script type="text/javascript" language="javascript"
+        src="//cdn.datatables.net/v/bs4-4.0.0-beta/jq-3.2.1/jq-3.2.1/jszip-2.5.0/dt-1.10.16/b-1.4.2/b-html5-1.4.2/fh-3.1.3/r-2.2.0/datatables.min.js"></script>
+    <script type="text/javascript" language="javascript"
+        src="//cdn.jsdelivr.net/npm/lodash@4.17.4/lodash.min.js"></script>
     <script type="text/javascript" language="javascript" src="https://d3js.org/d3.v4.min.js"></script>
-    <script type="text/javascript" language="javascript" src="//cdnjs.cloudflare.com/ajax/libs/metrics-graphics/2.11.0/metricsgraphics.min.js"></script>
+    <script type="text/javascript" language="javascript"
+        src="//cdnjs.cloudflare.com/ajax/libs/metrics-graphics/2.11.0/metricsgraphics.min.js"></script>
 
 
     <script type="text/javascript" language="javascript">
         $(document).ready(function () {
-            var activebranch = 'prerelease'
+            var activebranch = 'development'
             function render_avg_health(avg) {
                 var ccolor = 'red'
                 switch (true) {
@@ -312,11 +321,11 @@
 
     <nav class="navbar navbar-expand-md customnav">
         <a href="https://dbatools.io/" class="navbar-brand" rel="home" itemprop="url">
-            <img width="265" height="64" src="https://dbatools.io/wp-content/uploads/2016/05/dbatools-logo-1.png" class="custom-logo"
-                alt="dbatools" itemprop="logo" scale="0">
+            <img width="265" height="64" src="https://dbatools.io/wp-content/uploads/2016/05/dbatools-logo-1.png"
+                class="custom-logo" alt="dbatools" itemprop="logo" scale="0">
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
-            aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="oi oi-menu"></span>
         </button>
         <div class="collapse navbar-collapse flex-grow-1 text-right" id="navbarCollapse">
@@ -357,7 +366,7 @@
         <div class="row">
             <div class="col">
                 <h2>Bill of Health
-                    <small class="text-muted">aka "the road towards 1.0"</small>
+                    <small class="text-muted">aka "the road post 1.0"</small>
                 </h2>
             </div>
         </div>
@@ -406,11 +415,13 @@
                         <dt>FunctionName (everyone)</dt>
                         <dd>Matches *-Dba*</dd>
                         <dt>EnableException (everyone)</dt>
-                        <dd>Has an EnableException parameter (enables you to catch exceptions with your own try/catch)</dd>
+                        <dd>Has an EnableException parameter (enables you to catch exceptions with your own try/catch)
+                        </dd>
                         <dt>BreakContinue (Core-Devs)</dt>
                         <dd>Should not contain continue/break</dd>
                         <dt>DeprecatedVerbosityCommands (everyone)</dt>
-                        <dd>See <a href="https://github.com/sqlcollaborative/dbatools/wiki/Implementing-the-messaging-system">Messaging
+                        <dd>See <a
+                                href="https://github.com/sqlcollaborative/dbatools/wiki/Implementing-the-messaging-system">Messaging
                                 system</a>. Does not use Write-Verbose, Write-Host, Write-Output, Write-Warning,
                             Write-Debug or Write-Information</dd>
                     </dl>
