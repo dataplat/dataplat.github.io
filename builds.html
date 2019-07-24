@@ -220,16 +220,21 @@
                             [i, el.Version, prevName, prevSP, prevCU, prevSupportedUntil, is_SP, is_CU, '.', '.', nKBList]
                         )
                     })
-
-                    if (results[results.length - 1][4] !== '.') {
-                        results[results.length - 1][9] = 'X'
-                    }
-                    var spdata = _.filter(_.reverse(results.slice()), function (o) { return o[6] === 'X' })
+                    var datareverse = _.reverse(results.slice())
+                    var spdata = _.filter(datareverse, function (o) { return o[6] === 'X' })
                     var lastrel = ''
                     _.forEach(spdata, function (el, i) {
                         if (el[2] != lastrel) {
                             results[el[0]][8] = 'X'
                             lastrel = el[2]
+                        }
+                    })
+                    var cudata = _.filter(datareverse, function (o) { return o[7] === 'X' })
+                    var lastrel = ''
+                    _.forEach(cudata, function (el, i) {
+                        if (el[2] + el[3] != lastrel) {
+                            results[el[0]][9] = 'X'
+                            lastrel = el[2] + el[3]
                         }
                     })
                     t.rows.add(results)
