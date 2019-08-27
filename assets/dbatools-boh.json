@@ -239,6 +239,10 @@
         {
             "date": "2019-07-16",
             "value": 78.38
+        },
+        {
+            "date": "2019-08-27",
+            "value": 80.17
         }
     ],
     "data":  [
@@ -342,6 +346,17 @@
             "DeprecatedVerbosityCommands":  "True"
         },
         {
+            "Name":  "Add-DbaServerRoleMember",
+            "Health":  82.32,
+            "Coverage":  65.79,
+            "ScriptAnalyzer":  "True",
+            "Syntax":  "True",
+            "FunctionName":  "True",
+            "EnableException":  "True",
+            "BreakContinue":  "",
+            "DeprecatedVerbosityCommands":  "True"
+        },
+        {
             "Name":  "Backup-DbaDatabase",
             "Health":  90.56,
             "Coverage":  76.38,
@@ -354,8 +369,8 @@
         },
         {
             "Name":  "Backup-DbaDbCertificate",
-            "Health":  60,
-            "Coverage":  0,
+            "Health":  83.28,
+            "Coverage":  58.21,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -365,8 +380,8 @@
         },
         {
             "Name":  "Backup-DbaDbMasterKey",
-            "Health":  56,
-            "Coverage":  0,
+            "Health":  84.72,
+            "Coverage":  71.79,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -431,8 +446,8 @@
         },
         {
             "Name":  "Connect-DbaInstance",
-            "Health":  34.84,
-            "Coverage":  57.14,
+            "Health":  30.8,
+            "Coverage":  46.98,
             "ScriptAnalyzer":  "False",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -442,8 +457,8 @@
         },
         {
             "Name":  "ConvertTo-DbaDataTable",
-            "Health":  84.88,
-            "Coverage":  72.16,
+            "Health":  88.16,
+            "Coverage":  80.41,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -486,8 +501,8 @@
         },
         {
             "Name":  "Copy-DbaAgentJob",
-            "Health":  77.44,
-            "Coverage":  53.57,
+            "Health":  77.6,
+            "Coverage":  53.98,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -937,8 +952,8 @@
         },
         {
             "Name":  "Expand-DbaDbLogFile",
-            "Health":  56,
-            "Coverage":  0,
+            "Health":  79.56,
+            "Coverage":  58.92,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -969,9 +984,20 @@
             "DeprecatedVerbosityCommands":  "True"
         },
         {
+            "Name":  "Export-DbaDbRole",
+            "Health":  89.72,
+            "Coverage":  74.29,
+            "ScriptAnalyzer":  "True",
+            "Syntax":  "True",
+            "FunctionName":  "True",
+            "EnableException":  "True",
+            "BreakContinue":  "True",
+            "DeprecatedVerbosityCommands":  "True"
+        },
+        {
             "Name":  "Export-DbaDbTableData",
-            "Health":  60,
-            "Coverage":  0,
+            "Health":  100,
+            "Coverage":  100,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -1025,8 +1051,8 @@
         },
         {
             "Name":  "Export-DbaLogin",
-            "Health":  86.76,
-            "Coverage":  76.88,
+            "Health":  86.6,
+            "Coverage":  76.47,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -1069,8 +1095,19 @@
         },
         {
             "Name":  "Export-DbaScript",
-            "Health":  88.64,
-            "Coverage":  71.58,
+            "Health":  88.2,
+            "Coverage":  70.53,
+            "ScriptAnalyzer":  "True",
+            "Syntax":  "True",
+            "FunctionName":  "True",
+            "EnableException":  "True",
+            "BreakContinue":  "True",
+            "DeprecatedVerbosityCommands":  "True"
+        },
+        {
+            "Name":  "Export-DbaServerRole",
+            "Health":  93.6,
+            "Coverage":  84.04,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -1082,6 +1119,17 @@
             "Name":  "Export-DbaSpConfigure",
             "Health":  95.2,
             "Coverage":  88,
+            "ScriptAnalyzer":  "True",
+            "Syntax":  "True",
+            "FunctionName":  "True",
+            "EnableException":  "True",
+            "BreakContinue":  "True",
+            "DeprecatedVerbosityCommands":  "True"
+        },
+        {
+            "Name":  "Export-DbatoolsConfig",
+            "Health":  60,
+            "Coverage":  0,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -1109,6 +1157,17 @@
             "FunctionName":  "True",
             "EnableException":  "True",
             "BreakContinue":  "",
+            "DeprecatedVerbosityCommands":  "True"
+        },
+        {
+            "Name":  "Export-DbaXESession",
+            "Health":  92.88,
+            "Coverage":  82.22,
+            "ScriptAnalyzer":  "True",
+            "Syntax":  "True",
+            "FunctionName":  "True",
+            "EnableException":  "True",
+            "BreakContinue":  "True",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -1168,8 +1227,8 @@
         },
         {
             "Name":  "Find-DbaDbDisabledIndex",
-            "Health":  56,
-            "Coverage":  0,
+            "Health":  90.56,
+            "Coverage":  86.36,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -1179,8 +1238,8 @@
         },
         {
             "Name":  "Find-DbaDbDuplicateIndex",
-            "Health":  60,
-            "Coverage":  0,
+            "Health":  90,
+            "Coverage":  75,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -1520,8 +1579,8 @@
         },
         {
             "Name":  "Get-DbaBackupInformation",
-            "Health":  81.52,
-            "Coverage":  53.85,
+            "Health":  84.6,
+            "Coverage":  61.54,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -1542,8 +1601,8 @@
         },
         {
             "Name":  "Get-DbaClientAlias",
-            "Health":  93.24,
-            "Coverage":  93.1,
+            "Health":  94.52,
+            "Coverage":  96.3,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -1597,8 +1656,8 @@
         },
         {
             "Name":  "Get-DbaComputerSystem",
-            "Health":  60,
-            "Coverage":  0,
+            "Health":  81.04,
+            "Coverage":  52.63,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -1608,8 +1667,8 @@
         },
         {
             "Name":  "Get-DbaConnection",
-            "Health":  60,
-            "Coverage":  0,
+            "Health":  88.56,
+            "Coverage":  71.43,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -1652,8 +1711,8 @@
         },
         {
             "Name":  "Get-DbaCustomError",
-            "Health":  75,
-            "Coverage":  37.5,
+            "Health":  95,
+            "Coverage":  87.5,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -1663,8 +1722,8 @@
         },
         {
             "Name":  "Get-DbaDatabase",
-            "Health":  86.04,
-            "Coverage":  65.06,
+            "Health":  87.96,
+            "Coverage":  69.88,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -1685,8 +1744,8 @@
         },
         {
             "Name":  "Get-DbaDbBackupHistory",
-            "Health":  89.96,
-            "Coverage":  84.91,
+            "Health":  90.32,
+            "Coverage":  85.85,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -1729,8 +1788,8 @@
         },
         {
             "Name":  "Get-DbaDbccSessionBuffer",
-            "Health":  60,
-            "Coverage":  0,
+            "Health":  96.96,
+            "Coverage":  92.41,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -1784,8 +1843,8 @@
         },
         {
             "Name":  "Get-DbaDbCompatibility",
-            "Health":  56,
-            "Coverage":  0,
+            "Health":  93.16,
+            "Coverage":  92.86,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -1806,8 +1865,8 @@
         },
         {
             "Name":  "Get-DbaDbDbccOpenTran",
-            "Health":  60,
-            "Coverage":  0,
+            "Health":  86.68,
+            "Coverage":  66.67,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -1828,8 +1887,8 @@
         },
         {
             "Name":  "Get-DbaDbEncryption",
-            "Health":  60,
-            "Coverage":  0,
+            "Health":  66.68,
+            "Coverage":  16.67,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -1861,8 +1920,8 @@
         },
         {
             "Name":  "Get-DbaDbFile",
-            "Health":  92.4,
-            "Coverage":  81.01,
+            "Health":  97.96,
+            "Coverage":  94.94,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -1894,8 +1953,8 @@
         },
         {
             "Name":  "Get-DbaDbIdentity",
-            "Health":  60,
-            "Coverage":  0,
+            "Health":  93.84,
+            "Coverage":  84.62,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -1912,6 +1971,17 @@
             "FunctionName":  "True",
             "EnableException":  "True",
             "BreakContinue":  "",
+            "DeprecatedVerbosityCommands":  "True"
+        },
+        {
+            "Name":  "Get-DbaDbLogSpace",
+            "Health":  84.24,
+            "Coverage":  60.61,
+            "ScriptAnalyzer":  "True",
+            "Syntax":  "True",
+            "FunctionName":  "True",
+            "EnableException":  "True",
+            "BreakContinue":  "True",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -2048,8 +2118,8 @@
         },
         {
             "Name":  "Get-DbaDbOrphanUser",
-            "Health":  56,
-            "Coverage":  0,
+            "Health":  86,
+            "Coverage":  75,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -2092,8 +2162,8 @@
         },
         {
             "Name":  "Get-DbaDbQueryStoreOption",
-            "Health":  96,
-            "Coverage":  100,
+            "Health":  78.84,
+            "Coverage":  57.14,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -2125,13 +2195,13 @@
         },
         {
             "Name":  "Get-DbaDbRole",
-            "Health":  98,
-            "Coverage":  95,
+            "Health":  94.08,
+            "Coverage":  95.24,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "True",
+            "BreakContinue":  "",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -2290,8 +2360,8 @@
         },
         {
             "Name":  "Get-DbaDeprecatedFeature",
-            "Health":  60,
-            "Coverage":  0,
+            "Health":  88.56,
+            "Coverage":  71.43,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -2334,8 +2404,8 @@
         },
         {
             "Name":  "Get-DbaErrorLog",
-            "Health":  56,
-            "Coverage":  0,
+            "Health":  93.88,
+            "Coverage":  94.74,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -2543,8 +2613,8 @@
         },
         {
             "Name":  "Get-DbaLastGoodCheckDb",
-            "Health":  95.56,
-            "Coverage":  88.89,
+            "Health":  60,
+            "Coverage":  0,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -2972,8 +3042,8 @@
         },
         {
             "Name":  "Get-DbaRandomizedValue",
-            "Health":  70.72,
-            "Coverage":  26.77,
+            "Health":  69.88,
+            "Coverage":  24.75,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -3126,8 +3196,8 @@
         },
         {
             "Name":  "Get-DbaServerRole",
-            "Health":  97.76,
-            "Coverage":  94.44,
+            "Health":  96.36,
+            "Coverage":  90.91,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -3275,6 +3345,28 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
+            "BreakContinue":  "True",
+            "DeprecatedVerbosityCommands":  "True"
+        },
+        {
+            "Name":  "Get-DbatoolsConfig",
+            "Health":  72,
+            "Coverage":  40,
+            "ScriptAnalyzer":  "True",
+            "Syntax":  "True",
+            "FunctionName":  "True",
+            "EnableException":  "",
+            "BreakContinue":  "True",
+            "DeprecatedVerbosityCommands":  "True"
+        },
+        {
+            "Name":  "Get-DbatoolsConfigValue",
+            "Health":  90.28,
+            "Coverage":  85.71,
+            "ScriptAnalyzer":  "True",
+            "Syntax":  "True",
+            "FunctionName":  "True",
+            "EnableException":  "",
             "BreakContinue":  "True",
             "DeprecatedVerbosityCommands":  "True"
         },
@@ -3631,6 +3723,17 @@
             "DeprecatedVerbosityCommands":  "True"
         },
         {
+            "Name":  "Import-DbatoolsConfig",
+            "Health":  56,
+            "Coverage":  0,
+            "ScriptAnalyzer":  "True",
+            "Syntax":  "True",
+            "FunctionName":  "True",
+            "EnableException":  "True",
+            "BreakContinue":  "",
+            "DeprecatedVerbosityCommands":  "True"
+        },
+        {
             "Name":  "Import-DbaXESessionTemplate",
             "Health":  60,
             "Coverage":  0,
@@ -3709,8 +3812,8 @@
         },
         {
             "Name":  "Invoke-DbaAdvancedInstall",
-            "Health":  89.6,
-            "Coverage":  74.05,
+            "Health":  89.68,
+            "Coverage":  74.24,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -3764,8 +3867,8 @@
         },
         {
             "Name":  "Invoke-DbaCycleErrorLog",
-            "Health":  60,
-            "Coverage":  0,
+            "Health":  83.04,
+            "Coverage":  57.58,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -3775,8 +3878,8 @@
         },
         {
             "Name":  "Invoke-DbaDbccDropCleanBuffer",
-            "Health":  60,
-            "Coverage":  0,
+            "Health":  96,
+            "Coverage":  90,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -3819,8 +3922,8 @@
         },
         {
             "Name":  "Invoke-DbaDbDataMasking",
-            "Health":  76.88,
-            "Coverage":  52.23,
+            "Health":  76.8,
+            "Coverage":  52.02,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -3841,8 +3944,8 @@
         },
         {
             "Name":  "Invoke-DbaDbDbccCleanTable",
-            "Health":  60,
-            "Coverage":  0,
+            "Health":  95.12,
+            "Coverage":  87.8,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -3852,8 +3955,8 @@
         },
         {
             "Name":  "Invoke-DbaDbDbccUpdateUsage",
-            "Health":  60,
-            "Coverage":  0,
+            "Health":  90.84,
+            "Coverage":  77.08,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -3918,8 +4021,8 @@
         },
         {
             "Name":  "Invoke-DbaDbPiiScan",
-            "Health":  90.4,
-            "Coverage":  76,
+            "Health":  88.4,
+            "Coverage":  70.97,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -3973,8 +4076,8 @@
         },
         {
             "Name":  "Invoke-DbaQuery",
-            "Health":  87.04,
-            "Coverage":  77.57,
+            "Health":  86.84,
+            "Coverage":  77.14,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -4050,8 +4153,8 @@
         },
         {
             "Name":  "Measure-DbaDbVirtualLogFile",
-            "Health":  60,
-            "Coverage":  0,
+            "Health":  95.88,
+            "Coverage":  89.66,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -4083,8 +4186,8 @@
         },
         {
             "Name":  "Mount-DbaDatabase",
-            "Health":  60,
-            "Coverage":  0,
+            "Health":  90,
+            "Coverage":  75,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -4204,8 +4307,8 @@
         },
         {
             "Name":  "New-DbaClientAlias",
-            "Health":  88,
-            "Coverage":  80,
+            "Health":  89.04,
+            "Coverage":  82.61,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -4270,8 +4373,8 @@
         },
         {
             "Name":  "New-DbaDacOption",
-            "Health":  60,
-            "Coverage":  0,
+            "Health":  95.2,
+            "Coverage":  88,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -4281,8 +4384,8 @@
         },
         {
             "Name":  "New-DbaDacProfile",
-            "Health":  60,
-            "Coverage":  0,
+            "Health":  91.48,
+            "Coverage":  78.72,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -4303,8 +4406,8 @@
         },
         {
             "Name":  "New-DbaDbCertificate",
-            "Health":  60,
-            "Coverage":  0,
+            "Health":  92.72,
+            "Coverage":  81.82,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -4314,8 +4417,8 @@
         },
         {
             "Name":  "New-DbaDbDataGeneratorConfig",
-            "Health":  56,
-            "Coverage":  0,
+            "Health":  75.6,
+            "Coverage":  49.03,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -4347,9 +4450,9 @@
         },
         {
             "Name":  "New-DbaDbMaskingConfig",
-            "Health":  56,
-            "Coverage":  0,
-            "ScriptAnalyzer":  "True",
+            "Health":  33.96,
+            "Coverage":  44.92,
+            "ScriptAnalyzer":  "False",
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
@@ -4391,8 +4494,8 @@
         },
         {
             "Name":  "New-DbaDbTable",
-            "Health":  60,
-            "Coverage":  0,
+            "Health":  79.12,
+            "Coverage":  47.83,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -4468,8 +4571,8 @@
         },
         {
             "Name":  "New-DbaServerRole",
-            "Health":  92.72,
-            "Coverage":  81.82,
+            "Health":  91.56,
+            "Coverage":  78.95,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -4600,8 +4703,8 @@
         },
         {
             "Name":  "Read-DbaBackupHeader",
-            "Health":  85.4,
-            "Coverage":  63.46,
+            "Health":  86.16,
+            "Coverage":  65.38,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -4640,6 +4743,17 @@
             "FunctionName":  "True",
             "EnableException":  "True",
             "BreakContinue":  "",
+            "DeprecatedVerbosityCommands":  "True"
+        },
+        {
+            "Name":  "Register-DbatoolsConfig",
+            "Health":  60,
+            "Coverage":  0,
+            "ScriptAnalyzer":  "True",
+            "Syntax":  "True",
+            "FunctionName":  "True",
+            "EnableException":  "True",
+            "BreakContinue":  "True",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -4820,8 +4934,8 @@
         },
         {
             "Name":  "Remove-DbaDbCertificate",
-            "Health":  60,
-            "Coverage":  0,
+            "Health":  95,
+            "Coverage":  87.5,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -4908,8 +5022,8 @@
         },
         {
             "Name":  "Remove-DbaDbUser",
-            "Health":  60,
-            "Coverage":  0,
+            "Health":  90.44,
+            "Coverage":  76.12,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -5084,8 +5198,8 @@
         },
         {
             "Name":  "Repair-DbaDbOrphanUser",
-            "Health":  56,
-            "Coverage":  0,
+            "Health":  79.32,
+            "Coverage":  58.33,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -5113,6 +5227,17 @@
             "FunctionName":  "True",
             "EnableException":  "True",
             "BreakContinue":  "True",
+            "DeprecatedVerbosityCommands":  "True"
+        },
+        {
+            "Name":  "Reset-DbatoolsConfig",
+            "Health":  56,
+            "Coverage":  0,
+            "ScriptAnalyzer":  "True",
+            "Syntax":  "True",
+            "FunctionName":  "True",
+            "EnableException":  "True",
+            "BreakContinue":  "",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -5150,8 +5275,8 @@
         },
         {
             "Name":  "Restore-DbaDbCertificate",
-            "Health":  60,
-            "Coverage":  0,
+            "Health":  96.36,
+            "Coverage":  90.91,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -5414,8 +5539,8 @@
         },
         {
             "Name":  "Set-DbaDbQueryStoreOption",
-            "Health":  81.76,
-            "Coverage":  64.44,
+            "Health":  74.92,
+            "Coverage":  47.3,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -5634,8 +5759,8 @@
         },
         {
             "Name":  "Start-DbaMigration",
-            "Health":  80.88,
-            "Coverage":  52.21,
+            "Health":  80.72,
+            "Coverage":  51.75,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -5865,8 +5990,8 @@
         },
         {
             "Name":  "Test-DbaConnection",
-            "Health":  60,
-            "Coverage":  0,
+            "Health":  93.56,
+            "Coverage":  83.87,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -5876,8 +6001,8 @@
         },
         {
             "Name":  "Test-DbaConnectionAuthScheme",
-            "Health":  60,
-            "Coverage":  0,
+            "Health":  75.56,
+            "Coverage":  38.89,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -5887,8 +6012,8 @@
         },
         {
             "Name":  "Test-DbaDbCollation",
-            "Health":  60,
-            "Coverage":  0,
+            "Health":  95.56,
+            "Coverage":  88.89,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -5920,8 +6045,8 @@
         },
         {
             "Name":  "Test-DbaDbDataGeneratorConfig",
-            "Health":  73.6,
-            "Coverage":  34.04,
+            "Health":  79.56,
+            "Coverage":  48.94,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -5931,8 +6056,8 @@
         },
         {
             "Name":  "Test-DbaDbDataMaskingConfig",
-            "Health":  68.6,
-            "Coverage":  21.52,
+            "Health":  73.16,
+            "Coverage":  32.91,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -5953,8 +6078,8 @@
         },
         {
             "Name":  "Test-DbaDbOwner",
-            "Health":  60,
-            "Coverage":  0,
+            "Health":  98.28,
+            "Coverage":  95.65,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -6008,8 +6133,8 @@
         },
         {
             "Name":  "Test-DbaDiskSpeed",
-            "Health":  60,
-            "Coverage":  0,
+            "Health":  93.84,
+            "Coverage":  84.62,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -6238,6 +6363,17 @@
             "DeprecatedVerbosityCommands":  "True"
         },
         {
+            "Name":  "Unregister-DbatoolsConfig",
+            "Health":  52,
+            "Coverage":  0,
+            "ScriptAnalyzer":  "True",
+            "Syntax":  "True",
+            "FunctionName":  "True",
+            "EnableException":  "",
+            "BreakContinue":  "",
+            "DeprecatedVerbosityCommands":  "True"
+        },
+        {
             "Name":  "Update-DbaInstance",
             "Health":  55.04,
             "Coverage":  87.59,
@@ -6305,8 +6441,8 @@
         },
         {
             "Name":  "Write-DbaDbTableData",
-            "Health":  56,
-            "Coverage":  0,
+            "Health":  85.48,
+            "Coverage":  73.74,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
