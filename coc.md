@@ -23,7 +23,8 @@ If you see someone who is making an extra effort to ensure our community is welc
 ## Expected Behavior
 The following behaviors are expected and requested of all community members:
 
-- Be friendly and patient.
+- Be friendly. We all are seeking some form of SQL help in our careers at some point. We all were learning at one point. Some things that may be obvious to you might not be obvious to others. Avoid condescending tones.
+- Be patient. Time zones are a funny thing. People might or might not respond to you in a timely manner. They could be helping to research your question, or sometimes people don't know and don't respond. Don't always expect immediate feedback or answers.
 - Be welcoming. We strive to be a community that welcomes and supports people of all backgrounds and identities. This includes, but is not limited to members of any race, ethnicity, culture, national origin, color, immigration status, social and economic class, educational level, sex, sexual orientation, gender identity and expression, age, size, family status, political belief, religion, and mental and physical ability.
 - Be considerate. Your work can be used by other people, and you in turn will depend on the work of others. Any decision you take will affect users and colleagues, and you should take those consequences into account when making decisions. Remember that we're a world-wide community, so you might not be communicating in someone else's primary language.
 - Be respectful. Not all of us will agree all the time, but disagreement is no excuse for poor behavior and poor manners. We might all experience some frustration now and then, but we cannot allow that frustration to turn into a personal attack. It’s important to remember that a community where people feel uncomfortable or threatened is not a productive one. Members of the SQL Server Community community should be respectful when dealing with other members as well as with people outside the SQL community.
