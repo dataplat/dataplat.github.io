@@ -1,14 +1,18 @@
 name: update-build-ref
 
-on:
-  schedule:
-    - cron: 15,30 * * * *
+on: ['updateref']
 
 jobs:
   updateref:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
+    - name: 'Checkout'
+      uses: 'actions/checkout@v1'
+    - name: 'Deployment pending'
+      uses: 'deliverybot/status@master'
+      with:
+        state: 'pending'
+        token: '${{ secrets.GITHUB_TOKEN }}'
     - name: create remote to dbatools
       shell: pwsh
       run: git remote add dbatools git@github.com:sqlcollaborative/dbatools.git
