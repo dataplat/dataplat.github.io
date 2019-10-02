@@ -2,7 +2,7 @@ name: update-build-ref
 
 on:
   schedule:
-    - cron: 45 20 01 10 *
+    - cron: * * * * *
 
 jobs:
   build:
