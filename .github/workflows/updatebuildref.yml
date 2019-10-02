@@ -12,7 +12,7 @@ jobs:
     - name: create remote to dbatools
       shell: pwsh
       run: git remote add dbatools https://github.blog/2019-10-01-new-workflow-editor-for-github-actions
-    - name: fetch dbatools master
+    - name: fetch dbatools
       shell: pwsh
       run: git fetch dbatools master
     - name: checkout buildref file
