@@ -17,14 +17,10 @@ jobs:
     - name: create remote to dbatools
       shell: pwsh
       run: Invoke-WebRequest -Uri https://raw.githubusercontent.com/sqlcollaborative/dbatools/master/bin/dbatools-buildref-index.json -OutFile assets/dbatools-buildref-index.json
-    - name: Commit changes
-      uses: EndBug/add-and-commit@v2.1.0
+    - name: commit changes
+    - uses: stefanzweifel/git-auto-commit-action@v2.1.0
       with:
-        author_name: Shawn Melton
-        author_email: wshawnmelton@gmail.com
-        message: "Update buildref file"
-        path: "assets/dbatools-buildref-index.json"
-        pattern: "dbatools-buildref-index.json"
-        force: false
+        commit_message: Updating build ref file
+        branch: master
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
