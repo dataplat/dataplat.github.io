@@ -24,9 +24,6 @@ jobs:
         Move-Item bin/dbatools-buildref-index.json assets/dbatools-buildref-index.json -Force -Confirm:$false,
         Remove-Item bin/ -Force -Confirm:$false,
         git reset
-    - name: Add if unstaged file
+    - name: Commit changed file
       shell: pwsh
-      run: if (git status --porcelain |Where {$_ -match '^\?\?'}){ git add .\assets\dbatools-buildref-index.json }
-    - name: commit if file changed
-      shell: pwsh
-      run: if (git status --porcelain |Where {$_ -notmatch '^\?\?'}) { git commit -m 'updating buildref file' }
+      run: if ( (git status --porcelain) -ne $null ){ git add .\assets\dbatools-buildref-index.json; git commit -m 'updating buildref file' }
