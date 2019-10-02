@@ -5,13 +5,13 @@ on:
     - cron: 15,30 * * * *
 
 jobs:
-  build:
+  updateref:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
     - name: create remote to dbatools
       shell: pwsh
-      run: git remote add dbatools https://github.blog/2019-10-01-new-workflow-editor-for-github-actions
+      run: git remote add dbatools git@github.com:sqlcollaborative/dbatools.git
     - name: fetch dbatools
       shell: pwsh
       run: git fetch dbatools master
