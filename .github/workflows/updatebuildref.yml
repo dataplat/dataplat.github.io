@@ -1,0 +1,29 @@
+name: update-build-ref
+
+on:
+  schedule:
+    - cron: 15 * * * *
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: create remote to dbatools
+      shell: pwsh
+      run: git remote add dbatools https://github.blog/2019-10-01-new-workflow-editor-for-github-actions
+    - name: fetch dbatools master
+      shell: pwsh
+      run: git fetch dbatools master
+    - name: checkout buildref file
+      shell: pwsh
+      run: git checkout dbatools/master -- bin/dbatools-buildref-index.json
+    - name: Move buildref and cleanup
+      shell: pwsh
+      run: |
+        Move-Item bin/dbatools-buildref-index.json assets/dbatools-buildref-index.json -Force -Confirm:$false,
+        Remove-Item bin/ -Force -Confirm:$false,
+        git reset
+    - name: Commit if file changed
+      shell: pwsh
+      run: if (git status --porcelain) -ne $null) { git add .\assets\dbatools-buildref-index.json; git commit -m 'updating buildref file'}
