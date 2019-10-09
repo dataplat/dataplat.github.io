@@ -10,18 +10,13 @@ jobs:
     steps:
     - name: 'Checkout'
       uses: 'actions/checkout@v1'
-    - name: 'Deployment pending'
-      uses: 'deliverybot/status@master'
-      with:
-        state: 'pending'
-        token: '${{ secrets.GITHUB_TOKEN }}'
-    - name: create remote to dbatools
+    - name: Pull build ref file from dbatools
       shell: pwsh
       run: Invoke-WebRequest -Uri https://raw.githubusercontent.com/sqlcollaborative/dbatools/master/bin/dbatools-buildref-index.json -OutFile assets/dbatools-buildref-index.json
-    - name: commit changes
+    - name: Commit build ref file if changed
       uses: stefanzweifel/git-auto-commit-action@v2.1.0
       with:
-        commit_message: Updating build ref file
+        commit_message: uupdating build ref file
         branch: master
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
