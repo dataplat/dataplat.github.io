@@ -1,7 +1,7 @@
 name: update-build-ref
 
 on:
-  deployment: ['updateref']
+  deployment
 
 jobs:
   updateref:
