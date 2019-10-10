@@ -2,7 +2,7 @@ name: update-build-ref
 
 on:
   schedule:
-    - cron: 30 13 * * 1-5
+    - cron: 15 14 * * 1-5
 
 jobs:
   updateref:
@@ -10,13 +10,22 @@ jobs:
     steps:
     - name: 'Checkout'
       uses: 'actions/checkout@v1'
-    - name: Pull build ref file from dbatools
+    - name: show files
+      working-directory: ${{ github.workspace }}
       shell: pwsh
-      run: Invoke-WebRequest -Uri https://raw.githubusercontent.com/sqlcollaborative/dbatools/master/bin/dbatools-buildref-index.json -OutFile assets/dbatools-buildref-index.json
+      run: Get-ChildItem /assets
+    - name: Pull build ref file from dbatools
+      working-directory: ${{ github.workspace }}
+      shell: pwsh
+      run: Invoke-WebRequest -Uri https://raw.githubusercontent.com/sqlcollaborative/dbatools/master/bin/dbatools-buildref-index.json -OutFile /assets/dbatools-buildref-index.json
+    - name: show files
+      working-directory: ${{ github.workspace }}
+      shell: pwsh
+      run: Get-ChildItem /assets
     - name: Commit build ref file if changed
-      uses: stefanzweifel/git-auto-commit-action@v2.1.0
+      uses: matheusalbino/git-commit@v1.0.1
       with:
-        commit_message: uupdating build ref file
-        branch: master
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        user-name: wsmelton
+        user-email: wshawnmelton@gmail.com
+        message: updating build ref file
+        github-token: ${{ secrets.GITHUB_TOKEN }}
