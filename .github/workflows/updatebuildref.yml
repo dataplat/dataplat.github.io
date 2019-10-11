@@ -2,7 +2,7 @@ name: update-build-ref
 
 on:
   schedule:
-    - cron: 00 15 * * 1-5
+    - cron: 15 15 * * 1-5
 
 jobs:
   updateref:
@@ -12,7 +12,7 @@ jobs:
       uses: 'actions/checkout@v1'
     - name: show files
       shell: pwsh
-      run: Get-ChildItems -Recurse
+      run: Get-ChildItem -Recurse
     - name: Pull build ref file from dbatools
       working-directory: assets
       shell: pwsh
