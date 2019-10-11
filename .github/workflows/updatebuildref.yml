@@ -2,7 +2,7 @@ name: update-build-ref
 
 on:
   schedule:
-    - cron: 08 21 * * 1-5
+    - cron: 50 22 * * *
 
 jobs:
   updateref:
@@ -14,8 +14,10 @@ jobs:
       working-directory: assets
       run: head -2 dbatools-buildref-index.json
     - name: Pull build ref file from dbatools
+      uses: wei/curl@v1.1.1
       working-directory: assets
-      run: curl -O https://raw.githubusercontent.com/sqlcollaborative/dbatools/master/bin/dbatools-buildref-index.json && ls -l
+      with:
+        args: -O https://raw.githubusercontent.com/sqlcollaborative/dbatools/master/bin/dbatools-buildref-index.json && ls -l
     - name: show content of build file
       working-directory: assets
       run: head -2 dbatools-buildref-index.json
