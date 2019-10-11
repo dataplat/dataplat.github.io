@@ -10,16 +10,15 @@ jobs:
     steps:
     - name: 'Checkout'
       uses: 'actions/checkout@v1'
-    - name: show files
-      shell: pwsh
-      run: Get-ChildItem -Recurse
+    - name: show content of build file
+      working-directory: assets
+      run: head -2 assets/dbatools-buildref-index.json
     - name: Pull build ref file from dbatools
       working-directory: assets
       run: curl -O https://raw.githubusercontent.com/sqlcollaborative/dbatools/master/bin/dbatools-buildref-index.json
-    - name: show files
-      working-directory: ${{ github.workspace }}
-      shell: pwsh
-      run: Get-ChildItem -Recurse
+    - name: show content of build file
+      working-directory: assets
+      run: head -2 assets/dbatools-buildref-index.json
     - name: Commit build ref file if changed
       uses: matheusalbino/git-commit@v1.0.1
       with:
