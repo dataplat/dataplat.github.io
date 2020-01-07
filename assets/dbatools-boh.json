@@ -255,6 +255,10 @@
         {
             "date": "2019-12-10",
             "value": 80.05
+        }},
+        {
+            "date": "2019-01-07",
+            "value": 80.05
         }
     ],
     "data":  [
@@ -1327,8 +1331,8 @@
         },
         {
             "Name":  "Find-DbaInstance",
-            "Health":  74.68,
-            "Coverage":  46.74,
+            "Health":  74.52,
+            "Coverage":  46.26,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -1811,8 +1815,8 @@
         },
         {
             "Name":  "Get-DbaDbBackupHistory",
-            "Health":  50.48,
-            "Coverage":  86.24,
+            "Health":  46.2,
+            "Coverage":  75.47,
             "ScriptAnalyzer":  "False",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -2561,6 +2565,17 @@
             "Name":  "Get-DbaHelpIndex",
             "Health":  97.4,
             "Coverage":  93.48,
+            "ScriptAnalyzer":  "True",
+            "Syntax":  "True",
+            "FunctionName":  "True",
+            "EnableException":  "True",
+            "BreakContinue":  "True",
+            "DeprecatedVerbosityCommands":  "True"
+        },
+        {
+            "Name":  "Get-DbaHideInstance",
+            "Health":  87.56,
+            "Coverage":  68.89,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -3505,8 +3520,8 @@
         },
         {
             "Name":  "Get-DbaUserPermission",
-            "Health":  95.6,
-            "Coverage":  89.04,
+            "Health":  95.68,
+            "Coverage":  89.19,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -3835,8 +3850,8 @@
         },
         {
             "Name":  "Install-DbaInstance",
-            "Health":  86,
-            "Coverage":  75,
+            "Health":  86.12,
+            "Coverage":  75.31,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -4000,8 +4015,8 @@
         },
         {
             "Name":  "Invoke-DbaDbDataMasking",
-            "Health":  74.76,
-            "Coverage":  46.88,
+            "Health":  74.48,
+            "Coverage":  46.21,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -4033,8 +4048,8 @@
         },
         {
             "Name":  "Invoke-DbaDbDbccUpdateUsage",
-            "Health":  90.84,
-            "Coverage":  77.08,
+            "Health":  90,
+            "Coverage":  75,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -4551,7 +4566,7 @@
         {
             "Name":  "New-DbaDbMaskingConfig",
             "Health":  74.12,
-            "Coverage":  45.28,
+            "Coverage":  45.31,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -5089,8 +5104,8 @@
         },
         {
             "Name":  "Remove-DbaDbOrphanUser",
-            "Health":  88.32,
-            "Coverage":  80.77,
+            "Health":  88.52,
+            "Coverage":  81.31,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -5287,8 +5302,8 @@
         },
         {
             "Name":  "Rename-DbaLogin",
-            "Health":  72.32,
-            "Coverage":  30.77,
+            "Health":  72.6,
+            "Coverage":  31.48,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -5452,8 +5467,8 @@
         },
         {
             "Name":  "Select-DbaBackupInformation",
-            "Health":  95.88,
-            "Coverage":  89.74,
+            "Health":  94.56,
+            "Coverage":  86.42,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
