@@ -10,20 +10,24 @@ jobs:
     steps:
     - name: 'Checkout'
       uses: 'actions/checkout@v1'
+
     - name: show content of build file
       working-directory: assets
       run: pwd && head -2 dbatools-buildref-index.json
+    
     - name: Pull build ref file from dbatools
       working-directory: assets
       run: curl -O https://raw.githubusercontent.com/sqlcollaborative/dbatools/development/bin/dbatools-buildref-index.json
+    
     - name: show content of build file
       working-directory: assets
       run: head -2 dbatools-buildref-index.json
+    
     - name: commit if file changed
       uses: stefanzweifel/git-auto-commit-action@v2.1.0
       with:
         commit_message: updating build ref file
-        branch: master
+
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -32,13 +36,15 @@ jobs:
     steps:
       - name: 'Checkout'
         uses: 'actions/checkout@v1'
+    
       - name: Pull index file from dbatools
         working-directory: assets
         run: curl -O https://raw.githubusercontent.com/sqlcollaborative/dbatools/development/bin/dbatools-buildref-index.json
+      
       - name: commit if file changed
         uses: stefanzweifel/git-auto-commit-action@v2.1.0
         with:
           commit_message: updating build ref file
-          branch: master
+        
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
