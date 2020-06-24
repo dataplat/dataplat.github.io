@@ -57,10 +57,11 @@ Admins are currently:
 - @cl
 - @ck
 - @stephlocke
-- @sqltoolsguy_msft 
 - @aaron
 - @sqldbawithabeard
 - @wsmelton 
+- @alevyinroc
+- @wsuhoey
 
 ## Addressing Issues
 Only permanent resolutions (such as bans) may be changed. To discuss a decision, contact the Chrissy LeMaire at [clemaire@gmail.com](mailto://clemaire@gmail.com) and we will review your question.
