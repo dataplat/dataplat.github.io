@@ -267,13 +267,17 @@
         {
             "date": "2020-04-17",
             "value": 80.03
+        },
+        {
+            "date": "2020-09-09",
+            "value": 79.89
         }
     ],
     "data":  [
         {
             "Name":  "Add-DbaAgDatabase",
-            "Health":  71.44,
-            "Coverage":  28.57,
+            "Health":  72.48,
+            "Coverage":  31.17,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -294,8 +298,8 @@
         },
         {
             "Name":  "Add-DbaAgReplica",
-            "Health":  80.6,
-            "Coverage":  51.52,
+            "Health":  88.32,
+            "Coverage":  70.77,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -377,7 +381,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -421,7 +425,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -486,8 +490,8 @@
             "ScriptAnalyzer":  "False",
             "Syntax":  "True",
             "FunctionName":  "True",
-            "EnableException":  "",
-            "BreakContinue":  "",
+            "EnableException":  "False",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -498,7 +502,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -531,7 +535,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -542,7 +546,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -553,7 +557,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -564,7 +568,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -575,7 +579,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -586,7 +590,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -608,7 +612,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -619,7 +623,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -630,18 +634,18 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
             "Name":  "Copy-DbaDatabase",
-            "Health":  38.96,
-            "Coverage":  57.36,
+            "Health":  39.2,
+            "Coverage":  57.98,
             "ScriptAnalyzer":  "False",
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -652,7 +656,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -663,7 +667,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -674,7 +678,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -685,14 +689,14 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
             "Name":  "Copy-DbaDbTableData",
-            "Health":  93.12,
-            "Coverage":  82.76,
-            "ScriptAnalyzer":  "True",
+            "Health":  54.76,
+            "Coverage":  86.86,
+            "ScriptAnalyzer":  "False",
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
@@ -701,9 +705,9 @@
         },
         {
             "Name":  "Copy-DbaDbViewData",
-            "Health":  92.84,
-            "Coverage":  82.11,
-            "ScriptAnalyzer":  "True",
+            "Health":  60,
+            "Coverage":  100,
+            "ScriptAnalyzer":  "False",
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
@@ -718,7 +722,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -729,7 +733,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -740,7 +744,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -751,7 +755,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -762,18 +766,18 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
             "Name":  "Copy-DbaLogin",
-            "Health":  76.64,
-            "Coverage":  51.57,
+            "Health":  75.84,
+            "Coverage":  49.64,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -784,7 +788,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -795,7 +799,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -806,7 +810,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -817,7 +821,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -828,7 +832,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -839,7 +843,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -861,7 +865,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -938,7 +942,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -949,7 +953,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -1015,7 +1019,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -1026,7 +1030,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -1114,18 +1118,18 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
             "Name":  "Export-DbaLogin",
-            "Health":  86.6,
-            "Coverage":  76.47,
+            "Health":  88.28,
+            "Coverage":  80.68,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -1158,13 +1162,13 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
             "Name":  "Export-DbaScript",
-            "Health":  92,
-            "Coverage":  80,
+            "Health":  91.6,
+            "Coverage":  79,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -1218,8 +1222,8 @@
         },
         {
             "Name":  "Export-DbaUser",
-            "Health":  88.8,
-            "Coverage":  71.97,
+            "Health":  91.96,
+            "Coverage":  79.89,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -1235,7 +1239,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -1295,8 +1299,8 @@
         },
         {
             "Name":  "Find-DbaDatabase",
-            "Health":  88.96,
-            "Coverage":  72.41,
+            "Health":  89.32,
+            "Coverage":  73.33,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -1312,7 +1316,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -1339,13 +1343,13 @@
         },
         {
             "Name":  "Find-DbaDbUnusedIndex",
-            "Health":  56,
-            "Coverage":  0,
+            "Health":  88.48,
+            "Coverage":  81.25,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -1356,7 +1360,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -1367,7 +1371,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -1378,7 +1382,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -1400,7 +1404,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -1411,7 +1415,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -1433,7 +1437,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -1455,14 +1459,14 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
             "Name":  "Get-DbaAgentAlert",
-            "Health":  95.28,
-            "Coverage":  88.24,
-            "ScriptAnalyzer":  "True",
+            "Health":  47.2,
+            "Coverage":  68,
+            "ScriptAnalyzer":  "False",
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
@@ -1482,8 +1486,8 @@
         },
         {
             "Name":  "Get-DbaAgentJob",
-            "Health":  92.72,
-            "Coverage":  81.82,
+            "Health":  96.2,
+            "Coverage":  90.48,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -1504,8 +1508,8 @@
         },
         {
             "Name":  "Get-DbaAgentJobHistory",
-            "Health":  94.88,
-            "Coverage":  87.16,
+            "Health":  94.6,
+            "Coverage":  86.49,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -1570,8 +1574,8 @@
         },
         {
             "Name":  "Get-DbaAgentSchedule",
-            "Health":  84.6,
-            "Coverage":  61.54,
+            "Health":  84.8,
+            "Coverage":  62.04,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -1658,8 +1662,8 @@
         },
         {
             "Name":  "Get-DbaBackupInformation",
-            "Health":  82.76,
-            "Coverage":  56.92,
+            "Health":  82.56,
+            "Coverage":  56.39,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -1675,7 +1679,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -1686,7 +1690,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -1719,7 +1723,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -1829,18 +1833,18 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
             "Name":  "Get-DbaDbBackupHistory",
-            "Health":  46.2,
-            "Coverage":  75.47,
-            "ScriptAnalyzer":  "False",
+            "Health":  85.88,
+            "Coverage":  74.72,
+            "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -1895,7 +1899,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -1917,7 +1921,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -1928,7 +1932,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -1939,7 +1943,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -1977,8 +1981,8 @@
         },
         {
             "Name":  "Get-DbaDbEncryption",
-            "Health":  66.68,
-            "Coverage":  16.67,
+            "Health":  65.64,
+            "Coverage":  14.12,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -2038,7 +2042,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -2060,7 +2064,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -2159,7 +2163,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -2170,7 +2174,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -2181,7 +2185,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -2208,13 +2212,13 @@
         },
         {
             "Name":  "Get-DbaDbOrphanUser",
-            "Health":  88,
-            "Coverage":  80,
+            "Health":  88.6,
+            "Coverage":  81.48,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -2236,7 +2240,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -2247,7 +2251,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -2258,7 +2262,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -2291,7 +2295,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -2335,7 +2339,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -2357,18 +2361,18 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
             "Name":  "Get-DbaDbTable",
-            "Health":  92.68,
-            "Coverage":  91.67,
+            "Health":  93.72,
+            "Coverage":  94.29,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -2390,7 +2394,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -2401,18 +2405,18 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
             "Name":  "Get-DbaDbView",
-            "Health":  90,
-            "Coverage":  85,
+            "Health":  74,
+            "Coverage":  45,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -2445,7 +2449,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -2467,7 +2471,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -2500,7 +2504,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -2786,7 +2790,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -2830,7 +2834,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -2841,7 +2845,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -2874,7 +2878,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -2896,7 +2900,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -2984,7 +2988,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -3006,7 +3010,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -3017,7 +3021,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -3028,7 +3032,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -3039,7 +3043,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -3099,13 +3103,13 @@
         },
         {
             "Name":  "Get-DbaProductKey",
-            "Health":  78.84,
-            "Coverage":  57.14,
+            "Health":  78.28,
+            "Coverage":  55.7,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -3116,7 +3120,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -3154,8 +3158,8 @@
         },
         {
             "Name":  "Get-DbaRandomizedValue",
-            "Health":  68.72,
-            "Coverage":  21.84,
+            "Health":  68.12,
+            "Coverage":  20.27,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -3182,7 +3186,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -3330,8 +3334,8 @@
         },
         {
             "Name":  "Get-DbaService",
-            "Health":  95.52,
-            "Coverage":  88.78,
+            "Health":  95.56,
+            "Coverage":  88.89,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -3369,7 +3373,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -3413,7 +3417,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -3467,7 +3471,7 @@
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
-            "EnableException":  "",
+            "EnableException":  "False",
             "BreakContinue":  "True",
             "DeprecatedVerbosityCommands":  "True"
         },
@@ -3478,7 +3482,7 @@
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
-            "EnableException":  "",
+            "EnableException":  "False",
             "BreakContinue":  "True",
             "DeprecatedVerbosityCommands":  "True"
         },
@@ -3489,7 +3493,7 @@
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
-            "EnableException":  "",
+            "EnableException":  "False",
             "BreakContinue":  "True",
             "DeprecatedVerbosityCommands":  "True"
         },
@@ -3500,14 +3504,14 @@
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
-            "EnableException":  "",
+            "EnableException":  "False",
             "BreakContinue":  "True",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
             "Name":  "Get-DbaTopResourceUsage",
-            "Health":  83.76,
-            "Coverage":  59.38,
+            "Health":  85,
+            "Coverage":  62.5,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -3567,7 +3571,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -3589,7 +3593,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -3743,7 +3747,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -3792,8 +3796,8 @@
         },
         {
             "Name":  "Grant-DbaAgPermission",
-            "Health":  76.28,
-            "Coverage":  40.68,
+            "Health":  81.68,
+            "Coverage":  54.24,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -3853,7 +3857,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -3869,30 +3873,30 @@
         },
         {
             "Name":  "Install-DbaFirstResponderKit",
-            "Health":  84.84,
-            "Coverage":  72.06,
+            "Health":  87.4,
+            "Coverage":  78.48,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
             "Name":  "Install-DbaInstance",
-            "Health":  86.6,
-            "Coverage":  76.49,
+            "Health":  86.68,
+            "Coverage":  76.68,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
             "Name":  "Install-DbaMaintenanceSolution",
-            "Health":  70.16,
-            "Coverage":  25.38,
+            "Health":  70.6,
+            "Coverage":  26.52,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -3946,13 +3950,13 @@
         },
         {
             "Name":  "Invoke-DbaAdvancedRestore",
-            "Health":  90.16,
-            "Coverage":  85.39,
+            "Health":  91.4,
+            "Coverage":  88.48,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -4018,7 +4022,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -4040,18 +4044,18 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
             "Name":  "Invoke-DbaDbDataMasking",
-            "Health":  75.68,
-            "Coverage":  49.16,
-            "ScriptAnalyzer":  "True",
+            "Health":  31.04,
+            "Coverage":  37.59,
+            "ScriptAnalyzer":  "False",
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -4161,7 +4165,18 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
+            "DeprecatedVerbosityCommands":  "True"
+        },
+        {
+            "Name":  "Invoke-DbaDbTransfer",
+            "Health":  98.4,
+            "Coverage":  96,
+            "ScriptAnalyzer":  "True",
+            "Syntax":  "True",
+            "FunctionName":  "True",
+            "EnableException":  "True",
+            "BreakContinue":  "True",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -4172,18 +4187,18 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
             "Name":  "Invoke-DbaDiagnosticQuery",
-            "Health":  87.64,
-            "Coverage":  79.1,
+            "Health":  87.48,
+            "Coverage":  78.65,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -4199,19 +4214,19 @@
         },
         {
             "Name":  "Invoke-DbaQuery",
-            "Health":  86.08,
-            "Coverage":  75.22,
+            "Health":  86.6,
+            "Coverage":  76.52,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
             "Name":  "Invoke-DbatoolsFormatter",
-            "Health":  95.88,
-            "Coverage":  89.66,
+            "Health":  96.36,
+            "Coverage":  90.91,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -4249,7 +4264,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -4293,7 +4308,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -4303,7 +4318,7 @@
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
-            "EnableException":  "",
+            "EnableException":  "False",
             "BreakContinue":  "True",
             "DeprecatedVerbosityCommands":  "True"
         },
@@ -4353,8 +4368,8 @@
         },
         {
             "Name":  "New-DbaAgentJob",
-            "Health":  79.64,
-            "Coverage":  49.11,
+            "Health":  80.36,
+            "Coverage":  50.89,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -4375,8 +4390,8 @@
         },
         {
             "Name":  "New-DbaAgentJobStep",
-            "Health":  83,
-            "Coverage":  57.55,
+            "Health":  83.24,
+            "Coverage":  58.1,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -4392,13 +4407,13 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
             "Name":  "New-DbaAgentSchedule",
-            "Health":  81.84,
-            "Coverage":  54.58,
+            "Health":  86.76,
+            "Coverage":  66.93,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -4408,8 +4423,8 @@
         },
         {
             "Name":  "New-DbaAvailabilityGroup",
-            "Health":  78.92,
-            "Coverage":  47.25,
+            "Health":  78.56,
+            "Coverage":  46.35,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -4436,7 +4451,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -4479,8 +4494,8 @@
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
-            "EnableException":  "",
-            "BreakContinue":  "",
+            "EnableException":  "False",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -4490,7 +4505,7 @@
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
-            "EnableException":  "",
+            "EnableException":  "False",
             "BreakContinue":  "True",
             "DeprecatedVerbosityCommands":  "True"
         },
@@ -4529,8 +4544,8 @@
         },
         {
             "Name":  "New-DbaDatabase",
-            "Health":  70.6,
-            "Coverage":  26.5,
+            "Health":  70.52,
+            "Coverage":  26.27,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -4546,7 +4561,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -4568,7 +4583,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -4595,13 +4610,13 @@
         },
         {
             "Name":  "New-DbaDbMaskingConfig",
-            "Health":  74.2,
-            "Coverage":  45.53,
+            "Health":  74.24,
+            "Coverage":  45.59,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -4634,7 +4649,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -4642,6 +4657,17 @@
             "Health":  76.6,
             "Coverage":  41.51,
             "ScriptAnalyzer":  "True",
+            "Syntax":  "True",
+            "FunctionName":  "True",
+            "EnableException":  "True",
+            "BreakContinue":  "True",
+            "DeprecatedVerbosityCommands":  "True"
+        },
+        {
+            "Name":  "New-DbaDbTransfer",
+            "Health":  53.6,
+            "Coverage":  84,
+            "ScriptAnalyzer":  "False",
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
@@ -4694,8 +4720,8 @@
         },
         {
             "Name":  "New-DbaLogin",
-            "Health":  74,
-            "Coverage":  34.97,
+            "Health":  83.16,
+            "Coverage":  57.87,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -4710,7 +4736,7 @@
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
-            "EnableException":  "",
+            "EnableException":  "False",
             "BreakContinue":  "True",
             "DeprecatedVerbosityCommands":  "True"
         },
@@ -4843,7 +4869,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -4865,7 +4891,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -4887,7 +4913,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -4958,8 +4984,8 @@
         },
         {
             "Name":  "Remove-DbaAgentSchedule",
-            "Health":  94.72,
-            "Coverage":  86.84,
+            "Health":  93.32,
+            "Coverage":  83.33,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -5019,7 +5045,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -5063,7 +5089,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -5092,6 +5118,17 @@
             "Name":  "Remove-DbaDbCertificate",
             "Health":  95,
             "Coverage":  87.5,
+            "ScriptAnalyzer":  "True",
+            "Syntax":  "True",
+            "FunctionName":  "True",
+            "EnableException":  "True",
+            "BreakContinue":  "True",
+            "DeprecatedVerbosityCommands":  "True"
+        },
+        {
+            "Name":  "Remove-DbaDbLogShipping",
+            "Health":  60,
+            "Coverage":  0,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -5140,7 +5177,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -5327,7 +5364,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -5360,7 +5397,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -5371,7 +5408,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -5393,7 +5430,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -5404,13 +5441,13 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
             "Name":  "Restart-DbaService",
-            "Health":  86.2,
-            "Coverage":  65.52,
+            "Health":  81.72,
+            "Coverage":  54.29,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -5420,13 +5457,13 @@
         },
         {
             "Name":  "Restore-DbaDatabase",
-            "Health":  84.72,
-            "Coverage":  71.81,
-            "ScriptAnalyzer":  "True",
+            "Health":  45.12,
+            "Coverage":  72.77,
+            "ScriptAnalyzer":  "False",
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -5547,7 +5584,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -5574,8 +5611,8 @@
         },
         {
             "Name":  "Set-DbaAgentSchedule",
-            "Health":  84.88,
-            "Coverage":  62.24,
+            "Health":  86.6,
+            "Coverage":  66.47,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -5646,7 +5683,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -5657,7 +5694,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -5690,7 +5727,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -5701,7 +5738,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -5723,7 +5760,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -5778,7 +5815,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -5805,8 +5842,8 @@
         },
         {
             "Name":  "Set-DbaPowerPlan",
-            "Health":  88.12,
-            "Coverage":  70.31,
+            "Health":  88.72,
+            "Coverage":  71.83,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -5887,7 +5924,7 @@
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
-            "EnableException":  "",
+            "EnableException":  "False",
             "BreakContinue":  "True",
             "DeprecatedVerbosityCommands":  "True"
         },
@@ -5915,8 +5952,8 @@
         },
         {
             "Name":  "Start-DbaAgentJob",
-            "Health":  80.44,
-            "Coverage":  51.11,
+            "Health":  81.76,
+            "Coverage":  54.39,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -5981,8 +6018,8 @@
         },
         {
             "Name":  "Start-DbaXESession",
-            "Health":  87.52,
-            "Coverage":  68.75,
+            "Health":  100,
+            "Coverage":  100,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -6042,7 +6079,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -6119,7 +6156,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -6130,7 +6167,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -6163,7 +6200,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -6218,7 +6255,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -6234,8 +6271,8 @@
         },
         {
             "Name":  "Test-DbaDbDataMaskingConfig",
-            "Health":  73.16,
-            "Coverage":  32.91,
+            "Health":  69.8,
+            "Coverage":  24.5,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -6251,7 +6288,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -6295,7 +6332,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -6306,7 +6343,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -6339,7 +6376,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -6355,13 +6392,13 @@
         },
         {
             "Name":  "Test-DbaLastBackup",
-            "Health":  44.28,
-            "Coverage":  70.71,
-            "ScriptAnalyzer":  "False",
+            "Health":  84.68,
+            "Coverage":  71.7,
+            "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -6405,7 +6442,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -6416,7 +6453,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -6427,7 +6464,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -6493,7 +6530,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -6515,7 +6552,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -6536,7 +6573,7 @@
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
-            "EnableException":  "",
+            "EnableException":  "False",
             "BreakContinue":  "True",
             "DeprecatedVerbosityCommands":  "True"
         },
@@ -6547,14 +6584,14 @@
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
-            "EnableException":  "",
-            "BreakContinue":  "",
+            "EnableException":  "False",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
             "Name":  "Update-DbaInstance",
             "Health":  57.28,
-            "Coverage":  93.15,
+            "Coverage":  93.2,
             "ScriptAnalyzer":  "False",
             "Syntax":  "True",
             "FunctionName":  "True",
@@ -6592,7 +6629,7 @@
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         },
         {
@@ -6602,7 +6639,7 @@
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
-            "EnableException":  "",
+            "EnableException":  "False",
             "BreakContinue":  "True",
             "DeprecatedVerbosityCommands":  "True"
         },
@@ -6619,13 +6656,13 @@
         },
         {
             "Name":  "Write-DbaDbTableData",
-            "Health":  85.64,
-            "Coverage":  74.09,
+            "Health":  85.68,
+            "Coverage":  74.23,
             "ScriptAnalyzer":  "True",
             "Syntax":  "True",
             "FunctionName":  "True",
             "EnableException":  "True",
-            "BreakContinue":  "",
+            "BreakContinue":  "False",
             "DeprecatedVerbosityCommands":  "True"
         }
     ]
