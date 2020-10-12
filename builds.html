@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1.0, maximum-scale=2.0">
@@ -229,7 +228,7 @@
                     var spdata = _.filter(datareverse, function (o) { return o[6] === 'X' })
                     var lastrel = ''
                     _.forEach(spdata, function (el, i) {
-                        if (el[2] != lastrel && el[1].indexOf('Retired') != -1) {
+                        if (el[2] != lastrel && el[1].indexOf('Retired') === -1) {
                             results[el[0]][8] = 'X'
                             lastrel = el[2]
                         }
@@ -237,7 +236,7 @@
                     var cudata = _.filter(datareverse, function (o) { return o[7] === 'X' })
                     var lastrel = ''
                     _.forEach(cudata, function (el, i) {
-                        if (el[2] + el[3] != lastrel && el[1].indexOf('Retired') != -1) {
+                        if (el[2] + el[3] != lastrel && el[1].indexOf('Retired') === -1 ) {
                             results[el[0]][9] = 'X'
                             lastrel = el[2] + el[3]
                         }
