@@ -29176,7 +29176,7 @@
         "CommandName":  "Install-DbaWhoIsActive",
         "Availability":  "Windows, Linux, macOS",
         "Links":  "https://dbatools.io/Install-DbaWhoIsActive",
-        "Examples":  "-------------------------- EXAMPLE 1 --------------------------\nPS C:\\\u003eInstall-DbaWhoIsActive -SqlInstance sqlserver2014a -Database master\nDownloads sp_WhoisActive from the internet and installs to sqlserver2014a\u0027s master database. Connects to SQL Server using Windows Authentication.\n-------------------------- EXAMPLE 2 --------------------------\nPS C:\\\u003eInstall-DbaWhoIsActive -SqlInstance sqlserver2014a -SqlCredential $cred\nPops up a dialog box asking which database on sqlserver2014a you want to install the procedure into. Connects to SQL Server using SQL Authentication.\n-------------------------- EXAMPLE 3 --------------------------\nPS C:\\\u003eInstall-DbaWhoIsActive -SqlInstance sqlserver2014a -Database master -LocalFile c:\\SQLAdmin\\whoisactive_install.sql\nInstalls sp_WhoisActive to sqlserver2014a\u0027s master database from the local file whoisactive_install.sql\n-------------------------- EXAMPLE 4 --------------------------\nPS C:\\\u003e$instances = Get-DbaRegServer sqlserver\nPS C:\\\u003e Install-DbaWhoIsActive -SqlInstance $instances -Database master\nInstalls sp_WhoisActive to all servers within CMS",
+        "Examples":  "-------------------------- EXAMPLE 1 --------------------------\nPS C:\\\u003eInstall-DbaWhoIsActive -SqlInstance sqlserver2014a -Database master\nDownloads sp_WhoisActive from the internet and installs to sqlserver2014a\u0027s master database. Connects to SQL Server using Windows Authentication.\n-------------------------- EXAMPLE 2 --------------------------\nPS C:\\\u003eInstall-DbaWhoIsActive -SqlInstance sqlserver2014a -SqlCredential $cred\nPops up a dialog box asking which database on sqlserver2014a you want to install the procedure into. Connects to SQL Server using SQL Authentication.\n-------------------------- EXAMPLE 3 --------------------------\nPS C:\\\u003eInstall-DbaWhoIsActive -SqlInstance sqlserver2014a -Database master -LocalFile c:\\SQLAdmin\\who_is_active.sql\nInstalls sp_WhoisActive to sqlserver2014a\u0027s master database from the local file who_is_active.sql.\r\nYou can download this file from https://github.com/amachanic/sp_whoisactive/blob/master/who_is_active.sql\n-------------------------- EXAMPLE 4 --------------------------\nPS C:\\\u003eInstall-DbaWhoIsActive -SqlInstance sqlserver2014a -Database master -LocalFile c:\\SQLAdmin\\sp_whoisactive-11.35.zip\nInstalls sp_WhoisActive to sqlserver2014a\u0027s master database from the local file sp_whoisactive-11.35.zip.\r\nYou can download this file from https://github.com/amachanic/sp_whoisactive/releases\n-------------------------- EXAMPLE 5 --------------------------\nPS C:\\\u003e$instances = Get-DbaRegServer sqlserver\nPS C:\\\u003e Install-DbaWhoIsActive -SqlInstance $instances -Database master\nInstalls sp_WhoisActive to all servers within CMS",
         "Params":  [
                        [
                            "SqlInstance",
@@ -29198,7 +29198,7 @@
                        ],
                        [
                            "LocalFile",
-                           "Specifies the path to a local file to install sp_WhoisActive from. This can be either the zip file as distributed by the website or the expanded SQL script. If this parameter is not specified, the \r\nlatest version will be downloaded and installed from https://whoisactive.com/",
+                           "Specifies the path to a local file to install sp_WhoisActive from. This can be either the zip file as distributed by the website or the expanded SQL script.\r\nIf this parameter is not specified, the latest version will be downloaded and installed from https://github.com/amachanic/sp_whoisactive/releases",
                            "",
                            false,
                            "false",
@@ -29225,7 +29225,7 @@
                        ],
                        [
                            "Force",
-                           "If this switch is enabled, the sp_WhoisActive will be downloaded from the internet even if previously cached.",
+                           "If this switch is enabled, then sp_WhoisActive will be downloaded from the internet even if previously cached.",
                            "",
                            false,
                            "false",
@@ -33430,7 +33430,7 @@
                        [
                            "Filter",
                            "FiltersBoth inclusive and exclusive\r\nSet either filter to \u0027\u0027 to disable\r\nSession is a session ID, and either 0 or \u0027\u0027 can be used to indicate \"all\" sessions\r\nAll other filter types support % or _ as wildcards",
-                           "As",
+                           "",
                            false,
                            "false",
                            "",
@@ -33644,6 +33644,15 @@
                            ""
                        ],
                        [
+                           "As",
+                           "Specifies output type. Valid options for this parameter are \u0027DataSet\u0027, \u0027DataTable\u0027, \u0027DataRow\u0027, \u0027PSObject\u0027. Default is \u0027DataRow\u0027.\nPSObject output introduces overhead but adds flexibility for working with results: https://forums.powershell.org/t/dealing-with-dbnull/2328/2",
+                           "",
+                           false,
+                           "false",
+                           "DataRow",
+                           "DataSet,DataTable,DataRow,PSObject"
+                       ],
+                       [
                            "EnableException",
                            "By default, when something goes wrong we try to catch it, interpret it and give you a friendly warning message.\r\nThis avoids overwhelming you with \"sea of red\" exceptions, but is inconvenient because it basically disables advanced scripting.\r\nUsing this switch turns this \"nice by default\" feature off and enables you to catch exceptions with your own try/catch.",
                            "",
@@ -33653,7 +33662,7 @@
                            ""
                        ]
                    ],
-        "Syntax":  "Invoke-DbaWhoIsActive [-SqlInstance] \u003cDbaInstanceParameter[]\u003e [[-SqlCredential] \u003cPSCredential\u003e] [[-Database] \u003cObject\u003e] [[-Filter] \u003cString\u003e] [[-FilterType] \u003cString\u003e] [[-NotFilter] \u003cString\u003e] [[-NotFilterType] \u003cString\u003e] [-ShowOwnSpid] [-ShowSystemSpids] [[-ShowSleepingSpids] \u003cInt32\u003e] [-GetFullInnerText] [[-GetPlans] \u003cInt32\u003e] [-GetOuterCommand] [-GetTransactionInfo] [[-GetTaskInfo] \u003cInt32\u003e] [-GetLocks] [-GetAverageTime] [-GetAdditonalInfo] [-FindBlockLeaders] [[-DeltaInterval] \u003cInt32\u003e] [[-OutputColumnList] \u003cString\u003e] [[-SortOrder] \u003cString\u003e] [[-FormatOutput] \u003cInt32\u003e] [[-DestinationTable] \u003cString\u003e] \r\n[-ReturnSchema] [[-Schema] \u003cString\u003e] [-Help] [-EnableException] [\u003cCommonParameters\u003e]"
+        "Syntax":  "Invoke-DbaWhoIsActive [-SqlInstance] \u003cDbaInstanceParameter[]\u003e [[-SqlCredential] \u003cPSCredential\u003e] [[-Database] \u003cString\u003e] [[-Filter] \u003cString\u003e] [[-FilterType] \u003cString\u003e] [[-NotFilter] \u003cString\u003e] [[-NotFilterType] \u003cString\u003e] [-ShowOwnSpid] [-ShowSystemSpids] [[-ShowSleepingSpids] \u003cInt32\u003e] [-GetFullInnerText] [[-GetPlans] \u003cInt32\u003e] [-GetOuterCommand] [-GetTransactionInfo] [[-GetTaskInfo] \u003cInt32\u003e] [-GetLocks] [-GetAverageTime] [-GetAdditonalInfo] [-FindBlockLeaders] [[-DeltaInterval] \u003cInt32\u003e] [[-OutputColumnList] \u003cString\u003e] [[-SortOrder] \u003cString\u003e] [[-FormatOutput] \u003cInt32\u003e] [[-DestinationTable] \u003cString\u003e] \r\n[-ReturnSchema] [[-Schema] \u003cString\u003e] [-Help] [[-As] \u003cString\u003e] [-EnableException] [\u003cCommonParameters\u003e]"
     },
     {
         "Name":  "Invoke-DbaXEReplay",
@@ -49974,12 +49983,12 @@
         "Params":  [
                        [
                            "Software",
-                           "Name of the software to download.\r\nOptions include:\r\n* MaintenanceSolution: SQL Server Maintenance Solution created by Ola Hallengren (https://ola.hallengren.com)\r\n* FirstResponderKit: First Responder Kit created by Brent Ozar (http://FirstResponderKit.org)\r\n* DarlingData: Erik Darling\u0027s stored procedures (https://www.erikdarlingdata.com)\r\n* SQLWATCH: SQL Server Monitoring Solution created by Marcin Gminski (https://sqlwatch.io/)",
+                           "Name of the software to download.\r\nOptions include:\r\n* MaintenanceSolution: SQL Server Maintenance Solution created by Ola Hallengren (https://ola.hallengren.com)\r\n* FirstResponderKit: First Responder Kit created by Brent Ozar (http://FirstResponderKit.org)\r\n* DarlingData: Erik Darling\u0027s stored procedures (https://www.erikdarlingdata.com)\r\n* SQLWATCH: SQL Server Monitoring Solution created by Marcin Gminski (https://sqlwatch.io/)\r\n* WhoIsActive: Adam Machanic\u0027s comprehensive activity monitoring stored procedure sp_WhoIsActive (https://github.com/amachanic/sp_whoisactive)",
                            "",
                            false,
                            "false",
                            "",
-                           "MaintenanceSolution,FirstResponderKit,DarlingData,SQLWATCH"
+                           "MaintenanceSolution,FirstResponderKit,DarlingData,SQLWATCH,WhoIsActive"
                        ],
                        [
                            "Branch",
