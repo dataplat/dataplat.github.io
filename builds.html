@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1.0, maximum-scale=2.0">
@@ -236,7 +237,7 @@
                     var cudata = _.filter(datareverse, function (o) { return o[7] === 'X' })
                     var lastrel = ''
                     _.forEach(cudata, function (el, i) {
-                        if (el[2] + el[3] != lastrel && el[1].indexOf('Retired') === -1 ) {
+                        if (el[2] + el[3] != lastrel && el[1].indexOf('Retired') === -1) {
                             results[el[0]][9] = 'X'
                             lastrel = el[2] + el[3]
                         }
@@ -268,31 +269,17 @@
         <div class="collapse navbar-collapse flex-grow-1 text-right" id="navbarCollapse">
             <ul class="navbar-nav ml-auto flex-nowrap">
                 <li class="nav-item">
-                    <a class="nav-link" href="https://dbatools.io/download/">download</a>
+                    <a class="nav-link" style="color:#293E5D" href="https://dbatools.io/download/">⬇ download
+                        dbatools</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="https://dbatools.io/getting-started/">get started</a>
+                    <a class="nav-link" style="color:#293E5D" href="https://dbatools.io/team/">🧑‍💻 team</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="https://dbatools.io/commands/">commands</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="https://docs.dbatools.io/">docs</a>
+                    <a class="nav-link" style="color:#293E5D" href="https://dbatools.io/slack">🔍 find us</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="https://dbatools.io/team/">team</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://dbatools.io/subscribe/">subscribe</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://dbatools.io/slack">find us</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="https://dbatools.io/builds">build reference</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://dbatools.io/boh">bill of health</a>
+                    <a class="nav-link" style="color:#293E5D" href="https://dbatools.io/book">📘 dbatools book</a>
                 </li>
             </ul>
             <div class="p-2 flex-shrink-0 bd-highlight invisible">cl said "add this much | |"</div>
