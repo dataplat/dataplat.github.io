@@ -14,11 +14,11 @@ jobs:
     
     - name: Pull build ref file from dbatools
       working-directory: assets
-      run: curl -O https://raw.githubusercontent.com/sqlcollaborative/dbatools/development/bin/dbatools-buildref-index.json
+      run: curl -O https://raw.githubusercontent.com/dataplat/dbatools/development/bin/dbatools-buildref-index.json
     
     - name: Pull index file from dbatools
       working-directory: assets
-      run: curl -O https://raw.githubusercontent.com/sqlcollaborative/dbatools/development/bin/dbatools-index.json
+      run: curl -O https://raw.githubusercontent.com/dataplat/dbatools/development/bin/dbatools-index.json
     
     - name: commit if file changed
       uses: stefanzweifel/git-auto-commit-action@v4
