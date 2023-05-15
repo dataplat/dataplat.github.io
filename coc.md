@@ -59,9 +59,10 @@ Admins are currently:
 - @stephlocke
 - @aaron
 - @sqldbawithabeard
-- @wsmelton 
+- @shawn 
 - @alevyinroc
 - @wsuhoey
+- @ben.thul
 
 ## Addressing Issues
 Only permanent resolutions (such as bans) may be changed. To discuss a decision, contact the Chrissy LeMaire at [clemaire@gmail.com](mailto://clemaire@gmail.com) and we will review your question.
