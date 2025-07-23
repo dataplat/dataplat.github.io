@@ -42,6 +42,11 @@ The following behaviors are expected and requested of all community members:
 - Content that has been identified as objectionable, inappropriate, or off-topic will be subject to deletion by channel moderators. Posters will receive a warning and risk being blocked from the channel if unacceptable behavior persists.
 - These decisions are made by SQL Server Community Slack administrators in its sole discretion.
 
+## Unsolicited Engagement, Spam, and Scams
+This community exists to support technical collaboration, mutual learning, and professional growth. Members must not use this space to solicit engagement for personal gain, promote unrelated products or services, or share deceptive content. This includes (but is not limited to) unsolicited direct messages, spam posts, promotional links, and scam attempts.
+
+Such messages may be deleted without warning and further action may be taken at the discretion of the moderators.
+
 ## Consequences of Unacceptable Behavior
 Unacceptable behavior from any community member, including administrators and those with decision-making authority, will not be tolerated.
 
