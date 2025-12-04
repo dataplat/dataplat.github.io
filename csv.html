@@ -1268,7 +1268,7 @@ bulkCopy.<span class="method">WriteToServer</span>(reader);
         <p style="text-align: center; color: var(--text-muted); margin-top: 2rem; font-size: 0.875rem;">
             Sep and Sylvan are faster for raw parsing. Dataplat wins for <strong style="color: var(--text-primary);">complete database workflows</strong>: IDataReader + compression + progress + messy data handling.
             <br><br>
-            <strong style="color: var(--accent-purple);">Why the difference?</strong> Single column read matches how SqlBulkCopy typically accesses data—one column at a time as needed.
+            <strong style="color: var(--accent-purple);">Why the gap?</strong> Sep/Sylvan use <code style="background: var(--bg-tertiary); padding: 0.1rem 0.3rem; border-radius: 3px;">Span&lt;T&gt;</code> and defer string allocation. The IDataReader interface requires returning actual objects—a fundamental tradeoff for SqlBulkCopy compatibility.
         </p>
     </section>
 
