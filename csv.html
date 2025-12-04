@@ -4,12 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dataplat.Dbatools.Csv - High-Performance CSV for .NET</title>
-    <meta name="description" content="High-performance CSV reader and writer for .NET. 6x faster with 40x less memory than LumenWorks. Streaming IDataReader, compression support, and parallel processing.">
+    <meta name="description" content="High-performance CSV reader and writer for .NET built for database workflows. Native IDataReader for SqlBulkCopy, built-in compression, progress reporting. Up to 6x faster than LumenWorks for database imports.">
     <meta name="keywords" content="csv, parser, .net, nuget, datareader, sqlbulkcopy, dbatools, high-performance">
 
     <!-- Open Graph -->
     <meta property="og:title" content="Dataplat.Dbatools.Csv">
-    <meta property="og:description" content="High-performance CSV reader and writer for .NET. 6x faster with 40x less memory than LumenWorks.">
+    <meta property="og:description" content="High-performance CSV reader and writer for .NET. Native IDataReader, built-in compression, and database-first design.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://dataplat.dbatools.io/csv">
     <meta property="og:image" content="https://dataplat.dbatools.io/csv-social.png">
@@ -803,7 +803,7 @@
                 <a href="#features">Features</a>
                 <a href="#examples">Examples</a>
                 <a href="#performance">Performance</a>
-                <a href="https://github.com/dataplat/dbatools.library" target="_blank">GitHub</a>
+                <a href="https://github.com/dataplat/dbatools.library/tree/main/project/Dataplat.Dbatools.Csv" target="_blank">GitHub</a>
                 <a href="https://www.nuget.org/packages/Dataplat.Dbatools.Csv" target="_blank" class="nav-cta">
                     <i class="fa-solid fa-download"></i> Install
                 </a>
@@ -815,17 +815,17 @@
     <section class="hero">
         <div class="badge">
             <span class="badge-dot"></span>
-            <span>v1.0.2 Released</span>
+            <span>v1.1.0 Released</span>
         </div>
 
         <h1>
-            <span class="gradient-text">6x Faster</span> CSV<br>
-            for .NET & PowerShell
+            <span class="gradient-text">High-Performance</span> CSV<br>
+            for Database Professionals
         </h1>
 
         <p>
-            A blazing-fast CSV reader and writer with 40x less memory usage.
-            Streaming IDataReader, compression support, and parallel processing. From the trusted dbatools project.
+            The CSV library built for database workflows. Native IDataReader for SqlBulkCopy,
+            built-in compression, progress reporting, and real-world data handling. From the trusted dbatools project.
         </p>
 
         <div class="hero-buttons">
@@ -833,7 +833,7 @@
                 <i class="fa-solid fa-download"></i>
                 Get Started
             </a>
-            <a href="https://github.com/dataplat/dbatools.library" target="_blank" class="btn btn-secondary">
+            <a href="https://github.com/dataplat/dbatools.library/tree/main/project/Dataplat.Dbatools.Csv" target="_blank" class="btn btn-secondary">
                 <i class="fa-brands fa-github"></i>
                 View on GitHub
             </a>
@@ -850,16 +850,16 @@
 
         <div class="stats">
             <div class="stat">
-                <div class="stat-value">6.1x</div>
-                <div class="stat-label">Faster than LumenWorks</div>
+                <div class="stat-value">6x</div>
+                <div class="stat-label">Faster for SqlBulkCopy</div>
             </div>
             <div class="stat">
-                <div class="stat-value">40x</div>
-                <div class="stat-label">Less memory usage</div>
+                <div class="stat-value">IDataReader</div>
+                <div class="stat-label">Native SqlBulkCopy</div>
             </div>
             <div class="stat">
-                <div class="stat-value">1.8M</div>
-                <div class="stat-label">Rows per second</div>
+                <div class="stat-value">5</div>
+                <div class="stat-label">Compression formats</div>
             </div>
         </div>
     </section>
@@ -867,8 +867,8 @@
     <!-- Features Section -->
     <section class="features" id="features">
         <div class="section-header">
-            <h2>Built for Performance</h2>
-            <p>Everything you need to work with CSV files efficiently in your .NET applications</p>
+            <h2>Built for Database Workflows</h2>
+            <p>Everything you need to import CSV data into SQL Server and other databases</p>
         </div>
 
         <div class="features-grid">
@@ -918,6 +918,22 @@
                 </div>
                 <h3>Robust Error Handling</h3>
                 <p>Collect errors, throw on first error, or skip bad rows. Handle duplicate headers and field count mismatches gracefully.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fa-solid fa-chart-line"></i>
+                </div>
+                <h3>Progress & Cancellation</h3>
+                <p>Monitor import progress with callbacks showing rows/second, percent complete, and elapsed time. Cancel long-running imports with CancellationToken.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fa-solid fa-database"></i>
+                </div>
+                <h3>Database-First Design</h3>
+                <p>Built specifically for database import workflows. Culture-aware parsing, null vs empty handling, and direct integration with ADO.NET.</p>
             </div>
         </div>
     </section>
@@ -1160,55 +1176,99 @@ bulkCopy.<span class="method">WriteToServer</span>(reader);
     <section class="performance" id="performance">
         <div class="section-header">
             <h2>Benchmark Results</h2>
-            <p>Real-world benchmarks comparing Dataplat.Dbatools.Csv vs LumenWorks</p>
+            <p>100,000 rows × 10 columns (.NET 8, AVX-512)</p>
         </div>
 
+        <h3 style="color: var(--text-secondary); font-size: 1rem; margin-bottom: 1rem; margin-top: 2rem;">
+            <i class="fa-solid fa-database" style="color: var(--accent-purple);"></i>
+            Single Column Read <span style="color: var(--text-muted); font-weight: 400;">(typical SqlBulkCopy/IDataReader pattern)</span>
+        </h3>
         <div class="perf-table">
             <table>
                 <thead>
                     <tr>
-                        <th>Scenario</th>
-                        <th>Dataplat</th>
-                        <th>LumenWorks</th>
-                        <th>Speed Boost</th>
-                        <th>Memory Savings</th>
+                        <th>Library</th>
+                        <th>Time (ms)</th>
+                        <th>vs Dataplat</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td><strong>Small</strong> (1K rows)</td>
-                        <td>0.83 ms</td>
-                        <td>3.26 ms</td>
-                        <td class="perf-highlight">3.9x faster</td>
-                        <td class="perf-highlight">25x less</td>
+                        <td><strong>Sep</strong></td>
+                        <td>19 ms</td>
+                        <td>3.8x faster</td>
                     </tr>
                     <tr>
-                        <td><strong>Medium</strong> (100K rows)</td>
-                        <td>65.3 ms</td>
-                        <td>364.5 ms</td>
-                        <td class="perf-highlight">5.6x faster</td>
-                        <td class="perf-highlight">41x less</td>
+                        <td><strong>Sylvan</strong></td>
+                        <td>29 ms</td>
+                        <td>2.5x faster</td>
+                    </tr>
+                    <tr style="background: var(--bg-tertiary);">
+                        <td><strong>Dataplat</strong></td>
+                        <td class="perf-highlight">74 ms</td>
+                        <td>baseline</td>
                     </tr>
                     <tr>
-                        <td><strong>Large</strong> (1M rows)</td>
-                        <td>559 ms</td>
-                        <td>3,435 ms</td>
-                        <td class="perf-highlight">6.1x faster</td>
-                        <td class="perf-highlight">40x less</td>
+                        <td><strong>CsvHelper</strong></td>
+                        <td>76 ms</td>
+                        <td>~same</td>
                     </tr>
                     <tr>
-                        <td><strong>Wide</strong> (100K × 50 cols)</td>
-                        <td>277 ms</td>
-                        <td>493 ms</td>
-                        <td class="perf-highlight">1.8x faster</td>
-                        <td class="perf-highlight">7.3x less</td>
+                        <td><strong>LumenWorks</strong></td>
+                        <td>433 ms</td>
+                        <td class="perf-highlight">5.9x slower</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3 style="color: var(--text-secondary); font-size: 1rem; margin-bottom: 1rem; margin-top: 2.5rem;">
+            <i class="fa-solid fa-table" style="color: var(--accent-cyan);"></i>
+            All Columns Read <span style="color: var(--text-muted); font-weight: 400;">(full row processing)</span>
+        </h3>
+        <div class="perf-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Library</th>
+                        <th>Time (ms)</th>
+                        <th>vs Dataplat</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Sep</strong></td>
+                        <td>35 ms</td>
+                        <td>2.1x faster</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Sylvan</strong></td>
+                        <td>37 ms</td>
+                        <td>2.0x faster</td>
+                    </tr>
+                    <tr style="background: var(--bg-tertiary);">
+                        <td><strong>Dataplat</strong></td>
+                        <td class="perf-highlight">73 ms</td>
+                        <td>baseline</td>
+                    </tr>
+                    <tr>
+                        <td><strong>CsvHelper</strong></td>
+                        <td>101 ms</td>
+                        <td>1.4x slower</td>
+                    </tr>
+                    <tr>
+                        <td><strong>LumenWorks</strong></td>
+                        <td>100 ms</td>
+                        <td>1.4x slower</td>
                     </tr>
                 </tbody>
             </table>
         </div>
 
         <p style="text-align: center; color: var(--text-muted); margin-top: 2rem; font-size: 0.875rem;">
-            Processing 1M rows (96 MB): <strong style="color: var(--text-primary);">0.56s / 420 MB</strong> vs LumenWorks <strong style="color: var(--text-muted);">3.4s / 16.7 GB</strong>
+            Sep and Sylvan are faster for raw parsing. Dataplat wins for <strong style="color: var(--text-primary);">complete database workflows</strong>: IDataReader + compression + progress + messy data handling.
+            <br><br>
+            <strong style="color: var(--accent-purple);">Why the difference?</strong> Single column read matches how SqlBulkCopy typically accesses data—one column at a time as needed.
         </p>
     </section>
 
@@ -1217,39 +1277,38 @@ bulkCopy.<span class="method">WriteToServer</span>(reader);
         <div class="comparison-container">
             <div class="section-header">
                 <h2>Why Choose Dbatools.Csv?</h2>
-                <p>A modern replacement built for today's .NET applications</p>
+                <p>The right tool for database import workflows</p>
             </div>
 
             <div class="comparison-grid">
                 <div class="comparison-card">
                     <h3>
-                        <i class="fa-solid fa-clock-rotate-left"></i>
-                        LumenWorks CsvReader
+                        <i class="fa-solid fa-bolt"></i>
+                        Raw Speed Libraries
                     </h3>
                     <ul class="comparison-list">
-                        <li><i class="fa-solid fa-check"></i> Basic CSV parsing</li>
-                        <li><i class="fa-solid fa-check"></i> IDataReader support</li>
-                        <li><i class="fa-solid fa-xmark"></i> 4KB buffer size</li>
-                        <li><i class="fa-solid fa-xmark"></i> No multi-char delimiters</li>
-                        <li><i class="fa-solid fa-xmark"></i> No compression support</li>
-                        <li><i class="fa-solid fa-xmark"></i> No parallel processing</li>
-                        <li><i class="fa-solid fa-xmark"></i> Limited maintenance</li>
+                        <li><i class="fa-solid fa-check"></i> Sep: Fastest raw parsing (21 GB/s)</li>
+                        <li><i class="fa-solid fa-check"></i> Sylvan: Very fast, IDataReader</li>
+                        <li><i class="fa-solid fa-xmark"></i> No built-in compression</li>
+                        <li><i class="fa-solid fa-xmark"></i> Minimal malformed data handling</li>
+                        <li><i class="fa-solid fa-xmark"></i> No progress reporting</li>
+                        <li><i class="fa-solid fa-xmark"></i> Requires more configuration</li>
                     </ul>
                 </div>
 
                 <div class="comparison-card highlight">
                     <h3>
-                        <i class="fa-solid fa-rocket"></i>
+                        <i class="fa-solid fa-database"></i>
                         Dataplat.Dbatools.Csv
                     </h3>
                     <ul class="comparison-list">
-                        <li><i class="fa-solid fa-check"></i> 6x faster, 40x less memory</li>
-                        <li><i class="fa-solid fa-check"></i> 64KB buffer size</li>
-                        <li><i class="fa-solid fa-check"></i> Multi-char delimiters (::, ||)</li>
-                        <li><i class="fa-solid fa-check"></i> GZip, Deflate, Brotli, ZLib</li>
-                        <li><i class="fa-solid fa-check"></i> Parallel processing</li>
-                        <li><i class="fa-solid fa-check"></i> String interning</li>
-                        <li><i class="fa-solid fa-check"></i> Active maintenance</li>
+                        <li><i class="fa-solid fa-check"></i> Native IDataReader + SqlBulkCopy</li>
+                        <li><i class="fa-solid fa-check"></i> Built-in GZip, Brotli, ZLib</li>
+                        <li><i class="fa-solid fa-check"></i> Lenient parsing for messy data</li>
+                        <li><i class="fa-solid fa-check"></i> Progress reporting & cancellation</li>
+                        <li><i class="fa-solid fa-check"></i> Culture-aware type conversion</li>
+                        <li><i class="fa-solid fa-check"></i> dbatools integration</li>
+                        <li><i class="fa-solid fa-check"></i> 6x faster than LumenWorks (SqlBulkCopy)</li>
                     </ul>
                 </div>
             </div>
@@ -1283,7 +1342,7 @@ bulkCopy.<span class="method">WriteToServer</span>(reader);
             </div>
             <div class="footer-links">
                 <a href="https://dbatools.io" target="_blank">dbatools.io</a>
-                <a href="https://github.com/dataplat/dbatools.library" target="_blank">GitHub</a>
+                <a href="https://github.com/dataplat/dbatools.library/tree/main/project/Dataplat.Dbatools.Csv" target="_blank">GitHub</a>
                 <a href="https://www.nuget.org/packages/Dataplat.Dbatools.Csv" target="_blank">NuGet</a>
                 <a href="https://dbatools.io/slack" target="_blank">Community</a>
             </div>
