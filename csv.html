@@ -815,7 +815,7 @@
     <section class="hero">
         <div class="badge">
             <span class="badge-dot"></span>
-            <span>v1.1.1 Released</span>
+            <span id="version-badge">Loading...</span>
         </div>
 
         <h1>
@@ -1400,6 +1400,18 @@ bulkCopy.<span class="method">WriteToServer</span>(reader);
                 }
             });
         });
+
+        // Fetch latest version from NuGet
+        fetch('https://api.nuget.org/v3-flatcontainer/dataplat.dbatools.csv/index.json')
+            .then(response => response.json())
+            .then(data => {
+                const versions = data.versions;
+                const latest = versions[versions.length - 1];
+                document.getElementById('version-badge').textContent = `v${latest} Released`;
+            })
+            .catch(() => {
+                document.getElementById('version-badge').textContent = 'v1.1.1 Released';
+            });
     </script>
 </body>
 </html>
