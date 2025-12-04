@@ -1265,11 +1265,21 @@ bulkCopy.<span class="method">WriteToServer</span>(reader);
             </table>
         </div>
 
-        <p style="text-align: center; color: var(--text-muted); margin-top: 2rem; font-size: 0.875rem;">
-            Sep and Sylvan are faster for raw parsing. Dataplat wins for <strong style="color: var(--text-primary);">complete database workflows</strong>: IDataReader + compression + progress + messy data handling.
-            <br><br>
-            <strong style="color: var(--accent-purple);">Why the gap?</strong> Sep/Sylvan use <code style="background: var(--bg-tertiary); padding: 0.1rem 0.3rem; border-radius: 3px;">Span&lt;T&gt;</code> and defer string allocation. The IDataReader interface requires returning actual objects—a fundamental tradeoff for SqlBulkCopy compatibility.
-        </p>
+        <div style="max-width: 700px; margin: 2rem auto 0; background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: 12px; padding: 1.5rem;">
+            <div style="display: flex; align-items: flex-start; gap: 1rem;">
+                <div style="color: var(--accent-purple); font-size: 1.25rem; margin-top: 0.125rem;">
+                    <i class="fas fa-lightbulb"></i>
+                </div>
+                <div>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; margin-bottom: 0.75rem;">
+                        Sep and Sylvan are faster for raw parsing. Dataplat wins for <strong style="color: var(--text-primary);">complete database workflows</strong>: IDataReader + compression + progress + messy data handling.
+                    </p>
+                    <p style="color: var(--text-muted); font-size: 0.85rem; line-height: 1.6;">
+                        <strong style="color: var(--accent-purple);">Why the gap?</strong> Sep/Sylvan use <code style="background: var(--bg-tertiary); padding: 0.15rem 0.4rem; border-radius: 4px; font-size: 0.8rem;">Span&lt;T&gt;</code> and defer string allocation. The IDataReader interface requires returning actual objects—a fundamental tradeoff for SqlBulkCopy compatibility.
+                    </p>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Comparison Section -->
