@@ -1,0 +1,1346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dataplat.Dbatools.Csv - High-Performance CSV for .NET</title>
+    <meta name="description" content="High-performance CSV reader and writer for .NET. 6x faster with 40x less memory than LumenWorks. Streaming IDataReader, compression support, and parallel processing.">
+    <meta name="keywords" content="csv, parser, .net, nuget, datareader, sqlbulkcopy, dbatools, high-performance">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Dataplat.Dbatools.Csv">
+    <meta property="og:description" content="High-performance CSV reader and writer for .NET. 6x faster with 40x less memory than LumenWorks.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://dataplat.dbatools.io/csv">
+    <meta property="og:image" content="https://dataplat.dbatools.io/csv-social.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+
+    <!-- Favicon -->
+    <link rel="icon" href="https://dbatools.io/thor.png" sizes="32x32">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+
+    <style>
+        :root {
+            --bg-primary: #000000;
+            --bg-secondary: #0a0a0a;
+            --bg-tertiary: #111111;
+            --bg-card: #0d0d0d;
+            --border-color: #1a1a1a;
+            --border-subtle: #222222;
+            --text-primary: #fafafa;
+            --text-secondary: #a1a1a1;
+            --text-muted: #666666;
+            --accent-purple: #8b5cf6;
+            --accent-blue: #3b82f6;
+            --accent-cyan: #06b6d4;
+            --accent-green: #10b981;
+            --gradient-start: #8b5cf6;
+            --gradient-end: #06b6d4;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            padding: 1rem 2rem;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+            color: var(--text-primary);
+            font-weight: 600;
+            font-size: 1.125rem;
+        }
+
+        .nav-brand img {
+            height: 32px;
+            width: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--text-primary);
+        }
+
+        .nav-cta {
+            background: var(--text-primary);
+            color: var(--bg-primary);
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: opacity 0.2s;
+        }
+
+        .nav-cta:hover {
+            opacity: 0.9;
+            color: var(--bg-primary) !important;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 8rem 2rem 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border-subtle);
+            padding: 0.5rem 1rem;
+            border-radius: 100px;
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+        }
+
+        .badge-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--accent-green);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            max-width: 900px;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin-bottom: 2.5rem;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.875rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.9375rem;
+            text-decoration: none;
+            transition: all 0.2s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: var(--text-primary);
+            color: var(--bg-primary);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(255, 255, 255, 0.15);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--text-primary);
+            border: 1px solid var(--border-subtle);
+        }
+
+        .btn-secondary:hover {
+            background: var(--bg-tertiary);
+            border-color: var(--text-muted);
+        }
+
+        /* Install Command */
+        .install-section {
+            margin-top: 4rem;
+            text-align: center;
+        }
+
+        .install-box {
+            display: inline-flex;
+            align-items: center;
+            gap: 1rem;
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1rem 1.5rem;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.9375rem;
+        }
+
+        .install-box code {
+            color: var(--accent-cyan);
+        }
+
+        .install-box button {
+            background: none;
+            border: none;
+            color: var(--text-muted);
+            cursor: pointer;
+            padding: 0.25rem;
+            transition: color 0.2s;
+        }
+
+        .install-box button:hover {
+            color: var(--text-primary);
+        }
+
+        /* Stats Section */
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 4rem;
+            margin-top: 4rem;
+            flex-wrap: wrap;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stat-label {
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+            margin-top: 0.25rem;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 8rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            color: var(--text-secondary);
+            font-size: 1.125rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .feature-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 2rem;
+            transition: all 0.3s;
+        }
+
+        .feature-card:hover {
+            border-color: var(--border-subtle);
+            transform: translateY(-4px);
+        }
+
+        .feature-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.25rem;
+            font-size: 1.25rem;
+        }
+
+        .feature-card h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+
+        .feature-card p {
+            color: var(--text-secondary);
+            font-size: 0.9375rem;
+            line-height: 1.7;
+        }
+
+        /* Code Example Section */
+        .code-section {
+            padding: 8rem 2rem;
+            background: var(--bg-secondary);
+        }
+
+        .code-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .code-tabs {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .code-tab {
+            background: transparent;
+            border: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            padding: 0.625rem 1.25rem;
+            border-radius: 6px;
+            font-size: 0.875rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: inherit;
+        }
+
+        .code-tab:hover {
+            border-color: var(--text-muted);
+            color: var(--text-primary);
+        }
+
+        .code-tab.active {
+            background: var(--bg-tertiary);
+            border-color: var(--accent-purple);
+            color: var(--text-primary);
+        }
+
+        .code-block {
+            background: var(--bg-primary);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            overflow: hidden;
+            display: none;
+        }
+
+        .code-block.active {
+            display: block;
+        }
+
+        .code-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.75rem 1rem;
+            background: var(--bg-tertiary);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .code-dots {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .code-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--border-subtle);
+        }
+
+        .code-dot.red { background: #ff5f56; }
+        .code-dot.yellow { background: #ffbd2e; }
+        .code-dot.green { background: #27ca40; }
+
+        .code-filename {
+            color: var(--text-muted);
+            font-size: 0.8125rem;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .code-copy {
+            background: none;
+            border: none;
+            color: var(--text-muted);
+            cursor: pointer;
+            padding: 0.25rem;
+            transition: color 0.2s;
+        }
+
+        .code-copy:hover {
+            color: var(--text-primary);
+        }
+
+        pre {
+            padding: 1.5rem;
+            overflow-x: auto;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.875rem;
+            line-height: 1.7;
+        }
+
+        pre code {
+            color: var(--text-secondary);
+        }
+
+        .keyword { color: #c792ea; }
+        .type { color: #82aaff; }
+        .string { color: #c3e88d; }
+        .comment { color: #546e7a; }
+        .method { color: #f78c6c; }
+        .variable { color: #f07178; }
+        .number { color: #f78c6c; }
+
+        /* Performance Section */
+        .performance {
+            padding: 8rem 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .perf-table {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            overflow: hidden;
+            margin-top: 3rem;
+        }
+
+        .perf-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .perf-table th,
+        .perf-table td {
+            padding: 1rem 1.5rem;
+            text-align: left;
+        }
+
+        .perf-table th {
+            background: var(--bg-tertiary);
+            color: var(--text-muted);
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .perf-table td {
+            border-top: 1px solid var(--border-color);
+            font-size: 0.9375rem;
+        }
+
+        .perf-table tr:hover td {
+            background: var(--bg-tertiary);
+        }
+
+        .perf-highlight {
+            color: var(--accent-green);
+            font-weight: 600;
+        }
+
+        /* Comparison Section */
+        .comparison {
+            padding: 8rem 2rem;
+            background: var(--bg-secondary);
+        }
+
+        .comparison-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            .comparison-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .comparison-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 2rem;
+        }
+
+        .comparison-card.highlight {
+            border-color: var(--accent-purple);
+            position: relative;
+        }
+
+        .comparison-card.highlight::before {
+            content: 'Recommended';
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+            color: white;
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 0.25rem 0.75rem;
+            border-radius: 100px;
+        }
+
+        .comparison-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .comparison-list {
+            list-style: none;
+        }
+
+        .comparison-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            padding: 0.75rem 0;
+            color: var(--text-secondary);
+            font-size: 0.9375rem;
+        }
+
+        .comparison-list li i {
+            margin-top: 0.25rem;
+        }
+
+        .comparison-list li i.fa-check {
+            color: var(--accent-green);
+        }
+
+        .comparison-list li i.fa-xmark {
+            color: var(--text-muted);
+        }
+
+        /* CTA Section */
+        .cta {
+            padding: 8rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 1000px;
+            height: 600px;
+            background: radial-gradient(ellipse, rgba(6, 182, 212, 0.1) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .cta p {
+            color: var(--text-secondary);
+            font-size: 1.125rem;
+            max-width: 500px;
+            margin: 0 auto 2rem;
+        }
+
+        /* Footer */
+        footer {
+            padding: 4rem 2rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .footer-brand {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .footer-brand img {
+            height: 28px;
+        }
+
+        .footer-brand span {
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.875rem;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: var(--text-primary);
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .footer-social a {
+            color: var(--text-muted);
+            font-size: 1.25rem;
+            transition: color 0.2s;
+        }
+
+        .footer-social a:hover {
+            color: var(--text-primary);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav {
+                padding: 1rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .stats {
+                gap: 2rem;
+            }
+
+            .stat-value {
+                font-size: 2rem;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .install-box {
+                flex-direction: column;
+                gap: 0.75rem;
+            }
+
+            .footer-container {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate {
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+
+        .delay-1 { animation-delay: 0.1s; }
+        .delay-2 { animation-delay: 0.2s; }
+        .delay-3 { animation-delay: 0.3s; }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="https://dbatools.io" class="nav-brand">
+                <img src="https://dbatools.io/thor.png" alt="dbatools">
+                <span>Dbatools.Csv</span>
+            </a>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#examples">Examples</a>
+                <a href="#performance">Performance</a>
+                <a href="https://github.com/dataplat/dbatools.library" target="_blank">GitHub</a>
+                <a href="https://www.nuget.org/packages/Dataplat.Dbatools.Csv" target="_blank" class="nav-cta">
+                    <i class="fa-solid fa-download"></i> Install
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="badge">
+            <span class="badge-dot"></span>
+            <span>v1.0.2 Released</span>
+        </div>
+
+        <h1>
+            <span class="gradient-text">6x Faster</span> CSV<br>
+            for .NET & PowerShell
+        </h1>
+
+        <p>
+            A blazing-fast CSV reader and writer with 40x less memory usage.
+            Streaming IDataReader, compression support, and parallel processing. From the trusted dbatools project.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="https://www.nuget.org/packages/Dataplat.Dbatools.Csv" target="_blank" class="btn btn-primary">
+                <i class="fa-solid fa-download"></i>
+                Get Started
+            </a>
+            <a href="https://github.com/dataplat/dbatools.library" target="_blank" class="btn btn-secondary">
+                <i class="fa-brands fa-github"></i>
+                View on GitHub
+            </a>
+        </div>
+
+        <div class="install-section">
+            <div class="install-box">
+                <code>dotnet add package Dataplat.Dbatools.Csv</code>
+                <button onclick="copyInstall()" title="Copy to clipboard">
+                    <i class="fa-regular fa-copy"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-value">6.1x</div>
+                <div class="stat-label">Faster than LumenWorks</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">40x</div>
+                <div class="stat-label">Less memory usage</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">1.8M</div>
+                <div class="stat-label">Rows per second</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="section-header">
+            <h2>Built for Performance</h2>
+            <p>Everything you need to work with CSV files efficiently in your .NET applications</p>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fa-solid fa-bolt"></i>
+                </div>
+                <h3>Streaming IDataReader</h3>
+                <p>Works seamlessly with SqlBulkCopy and other ADO.NET consumers. Stream millions of rows with minimal memory usage.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fa-solid fa-microchip"></i>
+                </div>
+                <h3>Parallel Processing</h3>
+                <p>Optional multi-threaded parsing for large files. Process multiple batches concurrently for 2-4x speedup.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fa-solid fa-file-zipper"></i>
+                </div>
+                <h3>Compression Support</h3>
+                <p>Automatic handling of GZip, Deflate, Brotli (.NET 8+), and ZLib (.NET 8+) with decompression bomb protection.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fa-solid fa-memory"></i>
+                </div>
+                <h3>String Interning</h3>
+                <p>Reduce memory pressure for files with repeated values. ArrayPool-based memory management for minimal allocations.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fa-solid fa-globe"></i>
+                </div>
+                <h3>Culture-Aware Parsing</h3>
+                <p>Configurable type converters for dates, numbers, booleans, and GUIDs across different cultures and formats.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <h3>Robust Error Handling</h3>
+                <p>Collect errors, throw on first error, or skip bad rows. Handle duplicate headers and field count mismatches gracefully.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Code Examples Section -->
+    <section class="code-section" id="examples">
+        <div class="code-container">
+            <div class="section-header">
+                <h2>Simple, Powerful API</h2>
+                <p>Get started in seconds with an intuitive API designed for real-world scenarios</p>
+            </div>
+
+            <div class="code-tabs">
+                <button class="code-tab active" onclick="showCode('basic')">C# Basic</button>
+                <button class="code-tab" onclick="showCode('bulk')">SqlBulkCopy</button>
+                <button class="code-tab" onclick="showCode('compressed')">Compressed</button>
+                <button class="code-tab" onclick="showCode('parallel')">Parallel</button>
+                <button class="code-tab" onclick="showCode('errors')">Error Handling</button>
+                <button class="code-tab" onclick="showCode('powershell')">PowerShell</button>
+            </div>
+
+            <div class="code-block active" id="code-basic">
+                <div class="code-header">
+                    <div class="code-dots">
+                        <span class="code-dot red"></span>
+                        <span class="code-dot yellow"></span>
+                        <span class="code-dot green"></span>
+                    </div>
+                    <span class="code-filename">CsvExample.cs</span>
+                    <button class="code-copy" onclick="copyCode('basic')">
+                        <i class="fa-regular fa-copy"></i>
+                    </button>
+                </div>
+                <pre><code><span class="keyword">using</span> <span class="type">Dataplat.Dbatools.Csv.Reader</span>;
+
+<span class="comment">// Simple usage - just pass the file path</span>
+<span class="keyword">using</span> <span class="keyword">var</span> reader = <span class="keyword">new</span> <span class="type">CsvDataReader</span>(<span class="string">"data.csv"</span>);
+
+<span class="keyword">while</span> (reader.<span class="method">Read</span>())
+{
+    <span class="keyword">var</span> name = reader.<span class="method">GetString</span>(<span class="number">0</span>);
+    <span class="keyword">var</span> value = reader.<span class="method">GetInt32</span>(<span class="number">1</span>);
+    <span class="type">Console</span>.<span class="method">WriteLine</span>(<span class="string">$"</span>{name}: {value}<span class="string">"</span>);
+}
+
+<span class="comment">// With options for custom delimiters</span>
+<span class="keyword">var</span> options = <span class="keyword">new</span> <span class="type">CsvReaderOptions</span>
+{
+    Delimiter = <span class="string">";"</span>,
+    HasHeaderRow = <span class="keyword">true</span>,
+    Culture = <span class="type">CultureInfo</span>.<span class="method">GetCultureInfo</span>(<span class="string">"de-DE"</span>)
+};
+<span class="keyword">using</span> <span class="keyword">var</span> reader2 = <span class="keyword">new</span> <span class="type">CsvDataReader</span>(<span class="string">"data.csv"</span>, options);</code></pre>
+            </div>
+
+            <div class="code-block" id="code-bulk">
+                <div class="code-header">
+                    <div class="code-dots">
+                        <span class="code-dot red"></span>
+                        <span class="code-dot yellow"></span>
+                        <span class="code-dot green"></span>
+                    </div>
+                    <span class="code-filename">BulkImport.cs</span>
+                    <button class="code-copy" onclick="copyCode('bulk')">
+                        <i class="fa-regular fa-copy"></i>
+                    </button>
+                </div>
+                <pre><code><span class="keyword">using</span> <span class="type">Dataplat.Dbatools.Csv.Reader</span>;
+<span class="keyword">using</span> <span class="type">Microsoft.Data.SqlClient</span>;
+
+<span class="comment">// Stream CSV directly to SQL Server - minimal memory usage</span>
+<span class="keyword">using</span> <span class="keyword">var</span> reader = <span class="keyword">new</span> <span class="type">CsvDataReader</span>(<span class="string">"large-data.csv"</span>);
+<span class="keyword">using</span> <span class="keyword">var</span> connection = <span class="keyword">new</span> <span class="type">SqlConnection</span>(connectionString);
+connection.<span class="method">Open</span>();
+
+<span class="keyword">using</span> <span class="keyword">var</span> bulkCopy = <span class="keyword">new</span> <span class="type">SqlBulkCopy</span>(connection)
+{
+    DestinationTableName = <span class="string">"MyTable"</span>,
+    BatchSize = <span class="number">10000</span>,
+    BulkCopyTimeout = <span class="number">0</span>
+};
+
+<span class="comment">// Streams directly from CSV to database</span>
+bulkCopy.<span class="method">WriteToServer</span>(reader);
+
+<span class="type">Console</span>.<span class="method">WriteLine</span>(<span class="string">$"Imported </span>{reader.CurrentRecordIndex}<span class="string"> rows"</span>);</code></pre>
+            </div>
+
+            <div class="code-block" id="code-compressed">
+                <div class="code-header">
+                    <div class="code-dots">
+                        <span class="code-dot red"></span>
+                        <span class="code-dot yellow"></span>
+                        <span class="code-dot green"></span>
+                    </div>
+                    <span class="code-filename">Compressed.cs</span>
+                    <button class="code-copy" onclick="copyCode('compressed')">
+                        <i class="fa-regular fa-copy"></i>
+                    </button>
+                </div>
+                <pre><code><span class="keyword">using</span> <span class="type">Dataplat.Dbatools.Csv.Reader</span>;
+
+<span class="comment">// Automatically detects compression from extension</span>
+<span class="comment">// Supports: .gz, .gzip, .deflate, .br, .zlib</span>
+<span class="keyword">using</span> <span class="keyword">var</span> reader = <span class="keyword">new</span> <span class="type">CsvDataReader</span>(<span class="string">"data.csv.gz"</span>);
+
+<span class="keyword">while</span> (reader.<span class="method">Read</span>())
+{
+    <span class="comment">// Process decompressed data normally</span>
+}
+
+<span class="comment">// Or specify explicitly with security limits</span>
+<span class="keyword">var</span> options = <span class="keyword">new</span> <span class="type">CsvReaderOptions</span>
+{
+    CompressionType = <span class="type">CompressionType</span>.GZip,
+    MaxDecompressedSize = <span class="number">100</span> * <span class="number">1024</span> * <span class="number">1024</span>  <span class="comment">// 100MB limit</span>
+};
+<span class="keyword">using</span> <span class="keyword">var</span> reader2 = <span class="keyword">new</span> <span class="type">CsvDataReader</span>(stream, options);</code></pre>
+            </div>
+
+            <div class="code-block" id="code-parallel">
+                <div class="code-header">
+                    <div class="code-dots">
+                        <span class="code-dot red"></span>
+                        <span class="code-dot yellow"></span>
+                        <span class="code-dot green"></span>
+                    </div>
+                    <span class="code-filename">Parallel.cs</span>
+                    <button class="code-copy" onclick="copyCode('parallel')">
+                        <i class="fa-regular fa-copy"></i>
+                    </button>
+                </div>
+                <pre><code><span class="keyword">using</span> <span class="type">Dataplat.Dbatools.Csv.Reader</span>;
+
+<span class="comment">// Enable parallel processing for large files</span>
+<span class="keyword">var</span> options = <span class="keyword">new</span> <span class="type">CsvReaderOptions</span>
+{
+    EnableParallelProcessing = <span class="keyword">true</span>,
+    MaxDegreeOfParallelism = <span class="type">Environment</span>.ProcessorCount
+};
+
+<span class="keyword">using</span> <span class="keyword">var</span> reader = <span class="keyword">new</span> <span class="type">CsvDataReader</span>(<span class="string">"large-file.csv"</span>, options);
+
+<span class="comment">// Process as normal - parallel parsing happens automatically</span>
+<span class="keyword">while</span> (reader.<span class="method">Read</span>())
+{
+    <span class="comment">// GetValue/GetValues are thread-safe in parallel mode</span>
+    <span class="keyword">var</span> values = <span class="keyword">new</span> <span class="keyword">object</span>[reader.FieldCount];
+    reader.<span class="method">GetValues</span>(values);
+    <span class="method">ProcessRecord</span>(values);
+}</code></pre>
+            </div>
+
+            <div class="code-block" id="code-errors">
+                <div class="code-header">
+                    <div class="code-dots">
+                        <span class="code-dot red"></span>
+                        <span class="code-dot yellow"></span>
+                        <span class="code-dot green"></span>
+                    </div>
+                    <span class="code-filename">ErrorHandling.cs</span>
+                    <button class="code-copy" onclick="copyCode('errors')">
+                        <i class="fa-regular fa-copy"></i>
+                    </button>
+                </div>
+                <pre><code><span class="keyword">using</span> <span class="type">Dataplat.Dbatools.Csv.Reader</span>;
+
+<span class="comment">// Collect errors instead of throwing</span>
+<span class="keyword">var</span> options = <span class="keyword">new</span> <span class="type">CsvReaderOptions</span>
+{
+    CollectParseErrors = <span class="keyword">true</span>,
+    MaxParseErrors = <span class="number">100</span>,
+    ParseErrorAction = <span class="type">CsvParseErrorAction</span>.AdvanceToNextLine,
+
+    <span class="comment">// Handle malformed data gracefully</span>
+    DuplicateHeaderBehavior = <span class="type">DuplicateHeaderBehavior</span>.Rename,
+    MismatchedFieldAction = <span class="type">MismatchedFieldAction</span>.PadOrTruncate,
+    QuoteMode = <span class="type">QuoteMode</span>.Lenient
+};
+
+<span class="keyword">using</span> <span class="keyword">var</span> reader = <span class="keyword">new</span> <span class="type">CsvDataReader</span>(<span class="string">"messy-data.csv"</span>, options);
+
+<span class="keyword">while</span> (reader.<span class="method">Read</span>())
+{
+    <span class="comment">// Process valid records</span>
+}
+
+<span class="comment">// Review collected errors</span>
+<span class="keyword">foreach</span> (<span class="keyword">var</span> error <span class="keyword">in</span> reader.ParseErrors)
+{
+    <span class="type">Console</span>.<span class="method">WriteLine</span>(<span class="string">$"Row </span>{error.RowIndex}<span class="string">: </span>{error.Message}<span class="string">"</span>);
+}</code></pre>
+            </div>
+
+            <div class="code-block" id="code-powershell">
+                <div class="code-header">
+                    <div class="code-dots">
+                        <span class="code-dot red"></span>
+                        <span class="code-dot yellow"></span>
+                        <span class="code-dot green"></span>
+                    </div>
+                    <span class="code-filename">PowerShell</span>
+                    <button class="code-copy" onclick="copyCode('powershell')">
+                        <i class="fa-regular fa-copy"></i>
+                    </button>
+                </div>
+                <pre><code><span class="comment"># ─────────────────────────────────────────────────────────────</span>
+<span class="comment"># Option 1: Use with dbatools (recommended for SQL Server work)</span>
+<span class="comment"># ─────────────────────────────────────────────────────────────</span>
+<span class="method">Install-Module</span> dbatools
+<span class="method">Import-DbaCsv</span> <span class="variable">-Path</span> <span class="string">"data.csv"</span> <span class="variable">-SqlInstance</span> sql01 <span class="variable">-Database</span> tempdb <span class="variable">-AutoCreateTable</span>
+
+<span class="comment"># ─────────────────────────────────────────────────────────────</span>
+<span class="comment"># Option 2: Use the library directly (standalone)</span>
+<span class="comment"># ─────────────────────────────────────────────────────────────</span>
+<span class="method">Install-Module</span> dbatools.library
+<span class="method">Import-Module</span> dbatools.library
+
+<span class="comment"># Create reader and read CSV</span>
+<span class="variable">$reader</span> = [Dataplat.Dbatools.Csv.Reader.CsvDataReader]::new(<span class="string">"data.csv"</span>)
+
+<span class="keyword">while</span> (<span class="variable">$reader</span>.Read()) {
+    <span class="variable">$name</span>  = <span class="variable">$reader</span>.GetString(0)
+    <span class="variable">$value</span> = <span class="variable">$reader</span>.GetInt32(1)
+    <span class="method">Write-Output</span> <span class="string">"$name: $value"</span>
+}
+<span class="variable">$reader</span>.Dispose()
+
+<span class="comment"># With options for custom delimiters, compression, etc.</span>
+<span class="variable">$options</span> = [Dataplat.Dbatools.Csv.Reader.CsvReaderOptions]::new()
+<span class="variable">$options</span>.Delimiter = <span class="string">"::"</span>
+<span class="variable">$options</span>.HasHeaderRow = <span class="variable">$true</span>
+
+<span class="variable">$reader</span> = [Dataplat.Dbatools.Csv.Reader.CsvDataReader]::new(<span class="string">"data.csv"</span>, <span class="variable">$options</span>)</code></pre>
+            </div>
+        </div>
+    </section>
+
+    <!-- Performance Section -->
+    <section class="performance" id="performance">
+        <div class="section-header">
+            <h2>Benchmark Results</h2>
+            <p>Real-world benchmarks comparing Dataplat.Dbatools.Csv vs LumenWorks</p>
+        </div>
+
+        <div class="perf-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Scenario</th>
+                        <th>Dataplat</th>
+                        <th>LumenWorks</th>
+                        <th>Speed Boost</th>
+                        <th>Memory Savings</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Small</strong> (1K rows)</td>
+                        <td>0.83 ms</td>
+                        <td>3.26 ms</td>
+                        <td class="perf-highlight">3.9x faster</td>
+                        <td class="perf-highlight">25x less</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Medium</strong> (100K rows)</td>
+                        <td>65.3 ms</td>
+                        <td>364.5 ms</td>
+                        <td class="perf-highlight">5.6x faster</td>
+                        <td class="perf-highlight">41x less</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Large</strong> (1M rows)</td>
+                        <td>559 ms</td>
+                        <td>3,435 ms</td>
+                        <td class="perf-highlight">6.1x faster</td>
+                        <td class="perf-highlight">40x less</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Wide</strong> (100K × 50 cols)</td>
+                        <td>277 ms</td>
+                        <td>493 ms</td>
+                        <td class="perf-highlight">1.8x faster</td>
+                        <td class="perf-highlight">7.3x less</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <p style="text-align: center; color: var(--text-muted); margin-top: 2rem; font-size: 0.875rem;">
+            Processing 1M rows (96 MB): <strong style="color: var(--text-primary);">0.56s / 420 MB</strong> vs LumenWorks <strong style="color: var(--text-muted);">3.4s / 16.7 GB</strong>
+        </p>
+    </section>
+
+    <!-- Comparison Section -->
+    <section class="comparison">
+        <div class="comparison-container">
+            <div class="section-header">
+                <h2>Why Choose Dbatools.Csv?</h2>
+                <p>A modern replacement built for today's .NET applications</p>
+            </div>
+
+            <div class="comparison-grid">
+                <div class="comparison-card">
+                    <h3>
+                        <i class="fa-solid fa-clock-rotate-left"></i>
+                        LumenWorks CsvReader
+                    </h3>
+                    <ul class="comparison-list">
+                        <li><i class="fa-solid fa-check"></i> Basic CSV parsing</li>
+                        <li><i class="fa-solid fa-check"></i> IDataReader support</li>
+                        <li><i class="fa-solid fa-xmark"></i> 4KB buffer size</li>
+                        <li><i class="fa-solid fa-xmark"></i> No multi-char delimiters</li>
+                        <li><i class="fa-solid fa-xmark"></i> No compression support</li>
+                        <li><i class="fa-solid fa-xmark"></i> No parallel processing</li>
+                        <li><i class="fa-solid fa-xmark"></i> Limited maintenance</li>
+                    </ul>
+                </div>
+
+                <div class="comparison-card highlight">
+                    <h3>
+                        <i class="fa-solid fa-rocket"></i>
+                        Dataplat.Dbatools.Csv
+                    </h3>
+                    <ul class="comparison-list">
+                        <li><i class="fa-solid fa-check"></i> 6x faster, 40x less memory</li>
+                        <li><i class="fa-solid fa-check"></i> 64KB buffer size</li>
+                        <li><i class="fa-solid fa-check"></i> Multi-char delimiters (::, ||)</li>
+                        <li><i class="fa-solid fa-check"></i> GZip, Deflate, Brotli, ZLib</li>
+                        <li><i class="fa-solid fa-check"></i> Parallel processing</li>
+                        <li><i class="fa-solid fa-check"></i> String interning</li>
+                        <li><i class="fa-solid fa-check"></i> Active maintenance</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="cta-content">
+            <h2>Ready to get started?</h2>
+            <p>Install Dataplat.Dbatools.Csv and start processing CSV files faster today.</p>
+            <div class="hero-buttons">
+                <a href="https://www.nuget.org/packages/Dataplat.Dbatools.Csv" target="_blank" class="btn btn-primary">
+                    <i class="fa-solid fa-download"></i>
+                    Install from NuGet
+                </a>
+                <a href="https://github.com/dataplat/dbatools.library/tree/main/project/Dataplat.Dbatools.Csv" target="_blank" class="btn btn-secondary">
+                    <i class="fa-solid fa-book"></i>
+                    Read the Docs
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-brand">
+                <img src="https://dbatools.io/thor.png" alt="dbatools">
+                <span>MIT License</span>
+            </div>
+            <div class="footer-links">
+                <a href="https://dbatools.io" target="_blank">dbatools.io</a>
+                <a href="https://github.com/dataplat/dbatools.library" target="_blank">GitHub</a>
+                <a href="https://www.nuget.org/packages/Dataplat.Dbatools.Csv" target="_blank">NuGet</a>
+                <a href="https://dbatools.io/slack" target="_blank">Community</a>
+            </div>
+            <div class="footer-social">
+                <a href="https://github.com/dataplat" target="_blank" title="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://bsky.app/profile/dbatools.io" target="_blank" title="Bluesky">
+                    <i class="fa-brands fa-bluesky"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Copy install command
+        function copyInstall() {
+            navigator.clipboard.writeText('dotnet add package Dataplat.Dbatools.Csv');
+            const btn = document.querySelector('.install-box button');
+            btn.innerHTML = '<i class="fa-solid fa-check"></i>';
+            setTimeout(() => {
+                btn.innerHTML = '<i class="fa-regular fa-copy"></i>';
+            }, 2000);
+        }
+
+        // Code tabs
+        function showCode(tab) {
+            document.querySelectorAll('.code-tab').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.code-block').forEach(b => b.classList.remove('active'));
+
+            document.querySelector(`[onclick="showCode('${tab}')"]`).classList.add('active');
+            document.getElementById(`code-${tab}`).classList.add('active');
+        }
+
+        // Copy code
+        function copyCode(tab) {
+            const codeBlock = document.querySelector(`#code-${tab} pre code`);
+            const text = codeBlock.innerText;
+            navigator.clipboard.writeText(text);
+
+            const btn = document.querySelector(`#code-${tab} .code-copy`);
+            btn.innerHTML = '<i class="fa-solid fa-check"></i>';
+            setTimeout(() => {
+                btn.innerHTML = '<i class="fa-regular fa-copy"></i>';
+            }, 2000);
+        }
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
