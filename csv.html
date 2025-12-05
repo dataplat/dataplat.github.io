@@ -935,6 +935,14 @@
                 <h3>Database-First Design</h3>
                 <p>Built specifically for database import workflows. Culture-aware parsing, null vs empty handling, and direct integration with ADO.NET.</p>
             </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                </div>
+                <h3>Schema Inference</h3>
+                <p>Automatically detect optimal SQL Server column types from CSV data. Sample-based (fast) or full-scan (zero risk) modes with progress reporting.</p>
+            </div>
         </div>
     </section>
 
@@ -949,6 +957,7 @@
             <div class="code-tabs">
                 <button class="code-tab active" onclick="showCode('basic')">C# Basic</button>
                 <button class="code-tab" onclick="showCode('bulk')">SqlBulkCopy</button>
+                <button class="code-tab" onclick="showCode('schema')">Schema Inference</button>
                 <button class="code-tab" onclick="showCode('compressed')">Compressed</button>
                 <button class="code-tab" onclick="showCode('parallel')">Parallel</button>
                 <button class="code-tab" onclick="showCode('errors')">Error Handling</button>
@@ -1020,6 +1029,41 @@ connection.<span class="method">Open</span>();
 bulkCopy.<span class="method">WriteToServer</span>(reader);
 
 <span class="type">Console</span>.<span class="method">WriteLine</span>(<span class="string">$"Imported </span>{reader.CurrentRecordIndex}<span class="string"> rows"</span>);</code></pre>
+            </div>
+
+            <div class="code-block" id="code-schema">
+                <div class="code-header">
+                    <div class="code-dots">
+                        <span class="code-dot red"></span>
+                        <span class="code-dot yellow"></span>
+                        <span class="code-dot green"></span>
+                    </div>
+                    <span class="code-filename">SchemaInference.cs</span>
+                    <button class="code-copy" onclick="copyCode('schema')">
+                        <i class="fa-regular fa-copy"></i>
+                    </button>
+                </div>
+                <pre><code><span class="keyword">using</span> <span class="type">Dataplat.Dbatools.Csv.Reader</span>;
+
+<span class="comment">// Fast: Sample first 1000 rows (tiny risk if data changes later)</span>
+<span class="keyword">var</span> columns = <span class="type">CsvSchemaInference</span>.<span class="method">InferSchemaFromSample</span>(<span class="string">"data.csv"</span>);
+
+<span class="comment">// Safe: Scan entire file with progress reporting (zero risk)</span>
+<span class="keyword">var</span> columns = <span class="type">CsvSchemaInference</span>.<span class="method">InferSchema</span>(<span class="string">"data.csv"</span>, <span class="keyword">null</span>, progress => {
+    <span class="type">Console</span>.<span class="method">WriteLine</span>(<span class="string">$"Progress: </span>{progress:P0}<span class="string">"</span>);
+});
+
+<span class="comment">// Generate CREATE TABLE statement</span>
+<span class="keyword">string</span> sql = <span class="type">CsvSchemaInference</span>.<span class="method">GenerateCreateTableStatement</span>(columns, <span class="string">"MyTable"</span>);
+<span class="comment">// CREATE TABLE [dbo].[MyTable] (</span>
+<span class="comment">//     [Id] int NOT NULL,</span>
+<span class="comment">//     [Name] nvarchar(100) NULL,</span>
+<span class="comment">//     [Price] decimal(10,2) NOT NULL,</span>
+<span class="comment">//     [Created] datetime2 NULL</span>
+<span class="comment">// );</span>
+
+<span class="comment">// Detected types: uniqueidentifier, bit, int, bigint,</span>
+<span class="comment">// decimal(p,s), datetime2, varchar(n), nvarchar(n)</span></code></pre>
             </div>
 
             <div class="code-block" id="code-compressed">
