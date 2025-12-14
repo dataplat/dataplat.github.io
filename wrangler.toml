@@ -1,0 +1,11 @@
+name = "dataplat-url-rewriter"
+main = "cloudflare-worker.js"
+compatibility_date = "2024-12-01"
+
+# Optional: Set the account ID if you have multiple Cloudflare accounts
+# account_id = "your-account-id-here"
+
+# Route configuration (can also be set in Cloudflare dashboard)
+[[routes]]
+pattern = "dataplat.dbatools.io/*"
+zone_name = "dbatools.io"
